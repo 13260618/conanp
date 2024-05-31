@@ -1,0 +1,279 @@
+---
+title: "Bosquejo Numeralia"
+author: "CONANP"
+format: html
+---
+
+# NUMERALIA
+
+```{r warning=FALSE, message=FALSE, include=FALSE}
+#getwd()
+library(plotly)
+library(orca)
+library(readr)
+library(ggplot2)
+library(sf)
+library(rnaturalearth)
+library(rnaturalearthdata)
+library(maps)
+library(plotly)
+
+ 
+
+library(webshot)
+```
+
+
+## Áreas Naturales Protegidas Federales según su Categoría de Manejo		
+
+```{r echo=FALSE}
+colores = c("#2A6C5C", "#B19354", "#6E152E")
+```
+
+
+
+
+ 
+```{r echo=FALSE}
+#datos
+manejo <- data.frame(
+  Categoria = c("APFF", "APRN", "MN", "PN", "RB", "SANT", "ADVC") ,
+  Numero = c(54, 13, 5, 78, 48, 28, 581),
+  Superficie = c(7469180, 4563474, 16269, 17569683, 64033711, 155488,1137650),
+  Porcentaje = c(7.96, 4.86, 0.02, 18.73, 68.26, 0.17,0.10)
+)
+
+ 
+manejo_ordenado <- manejo[order(-manejo$Numero), ]
+
+manejo_ordenado$Categoria <- reorder(manejo_ordenado$Categoria, -manejo_ordenado$Superficie)
+
+ 
+#modificar para que solo aparezca el eje de numero y el eje de 
+
+plot_ly(manejo_ordenado, x = ~Categoria, y = ~Superficie, type = 'bar', name = 'Superficie (ha)', marker = list(color = colores[2])) %>%
+  add_trace(y = ~Numero, name = 'Número', yaxis = "y2", marker = list(color = colores[1])) %>%
+  layout(title = "Categoría de Manejo en Áreas Naturales Protegidas",
+         yaxis = list(title = "Superficie en hectáreas", tickfont = list(color = colores[2], showline = FALSE)),
+         yaxis2 = list(#title = "Superficie (hectáreas)", 
+                       overlaying = "y",
+                       side = "right",
+		 tickfont = list(color = "white")
+		 ),
+         xaxis = list(title = "Categoría de Manejo", tickfont = list(color = colores[2])),
+		   plot_bgcolor = 'white',   
+         paper_bgcolor = 'white'  
+)
+```
+
+## Protección del Medio Terrestre y Marino por las ANP Federales
+ 
+```{r echo=FALSE}
+ambientes <- data.frame(
+  Tipo = c("Terrestres", "Marinos"),
+  Superficie = c(23013380, 70794424),
+  Porcentaje_ANP = c(24.53, 75.47),
+  Porcentaje_Territorio = c(11.71, 22.47)
+)
+
+notas_terrestres <- paste("Representa un", ambientes$Porcentaje_Territorio[1], "% de la superficie terrestre nacional")
+notas_marinos <- paste("Representa un", ambientes$Porcentaje_Territorio[2], "% de la superficie marina del territorio nacional")
+
+# par(mfrow=c(1,2))
+# plot_ly(ambientes, labels = ~Tipo, values = ~Superficie, type = 'pie', text = c(notas_terrestres, notas_marinos), hoverinfo = "text+value+percent", 
+#         textinfo = "label+percent",marker = list(colors = colores)) %>%
+#   layout(title = "Tipos de Ambiente",
+#          showlegend = FALSE)
+
+
+plot_ly(ambientes, labels = ~Tipo, values = ~Superficie, type = 'pie', text = c(notas_terrestres, notas_marinos), hoverinfo = "text+value+percent", 
+        textinfo = "label+percent", hole = 0.4, marker = list(colors = colores  )) %>%
+  layout(title = "Tipos de Ambiente",
+         showlegend = FALSE)
+par(mfrow=c(1,1))
+```
+
+## Protección de Tipos de Vegetación y Uso de Suelo o Ecosistemas por las ANP Federales		
+
+
+```{r echo=FALSE}
+tipos_vegetacion <- c("Agroecosistemas", "Bosque de Coníferas", "Bosque de Encino",
+                       "Bosque Mesófilo de Montaña", "Manglar", "Matorral Xerófilo",
+                       "Otros tipos de vegetación", "Pastizal", "Selva Caducifolia",
+                       "Selva Perennifolia", "Vegetación Hidrófila", "Sin Vegetación aparente", "Mar Territorial")
+ 
+superficie_anp <- c(1145131, 2321581, 2481197,
+                    284669, 472274, 8007039,
+                    1873588, 676975, 1949236,
+                    2169652, 764201, 867837, 70794424)
+ 
+porcentaje_anp_federal <- c(1.22, 2.47, 2.64,
+                            0.30, 0.50, 8.54,
+                            2.00, 0.72, 2.08,
+                            2.31, 0.81, 0.93, 75.47)
+
+
+df <- data.frame(
+  Tipos_Vegetacion = tipos_vegetacion,
+  Superficie_ANP = superficie_anp,
+  Porcentaje_ANP_Federal = porcentaje_anp_federal
+)
+
+ 
+df <- df %>% arrange(desc(Superficie_ANP))
+
+
+#colores <- c("#1f77b4", "#aec7e8", "#ff7f0e", "#ffbb78", "#2ca02c", "#98df8a", "#d62728", "#ff9896", "#9467bd", "#c5b0d5", "#8c564b", "#c49c94", "#e377c2")
+
+
+vegetacion = df
+```
+
+
+```{r echo=FALSE, include=FALSE}
+fig <- plot_ly(df, x = ~Tipos_Vegetacion, y = ~Superficie_ANP, type = 'bar', name = 'Superficie dentro de las ANP (ha)',
+               marker = list(color = colores)) %>%
+  add_trace(x = ~Tipos_Vegetacion, y = ~Superficie_ANP, text = ~paste(Porcentaje_ANP_Federal, "%"), 
+            type = 'bar', name = 'Porcentaje del total protegido por ANP Federales (%)',
+            marker = list(color = 'rgba(0,0,0,0)', line = list(color = colores, width = 2))) %>%
+  layout(title = 'Superficie de Vegetación Agrupado/Ecosistema en ANP Federales',
+         xaxis = list(title = 'Tipo de Vegetación Agrupado o Ecosistema'),
+         yaxis = list(title = 'Superficie (ha)'),
+         barmode = 'group')
+fig
+```
+
+
+```{r echo=FALSE}
+df <- df[c(which(df$Tipos_Vegetacion == "Mar Territorial"), setdiff(1:nrow(df), which(df$Tipos_Vegetacion == "Mar Territorial"))), ]
+df=df[-1,]
+#df %>% arrange(desc(Superficie_ANP))
+ 
+
+
+ plot_ly(df, x = ~reorder(Tipos_Vegetacion, -Superficie_ANP), y = ~Superficie_ANP, type = 'bar', 
+               marker = list(color = colores[3])) %>%
+  layout(title = "Superficie de Vegetación Agrupado/Ecosistema en ANP Federales",
+         xaxis = list(title = "Tipo de Vegetación Agrupado o Ecosistema", tickangle = -45, tickfont = list(size = 10)),
+         yaxis = list(title = "Superficie en hectáreas"),
+         showlegend = FALSE)
+ 
+```
+
+
+## Categoría de manejo de ANPs por Entidad Federativa
+
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+entidades_anp <- read_csv("data-entidadesanp.csv",show_col_types = FALSE)
+entidades_anp = as.data.frame(entidades_anp)
+
+total_entidades <- entidades_anp %>%
+  group_by(entidad_federativa) %>%
+  summarise(total = sum(suma_superficie_dentro_entidad))
+```
+
+
+```{r echo=FALSE}
+head(as.data.frame(total_entidades), 10)
+```
+
+
+
+```{r echo=FALSE}
+resumen_ordenado <- total_entidades[order(-total_entidades$total), ]
+
+df = as.data.frame(resumen_ordenado)
+ 
+
+par(mfrow=c(1,2))
+# plot_ly(df,x = ~total, y = ~entidad_federativa , type = 'bar', orientation = 'h')
+ 
+
+resumen_ordenado <- df[order(df$total), ]
+
+# plot_ly(resumen_ordenado, x = ~total, y = ~reorder(entidad_federativa, total), type = 'bar', orientation = 'h') %>%
+#   layout(title = "Total por entidad federativa en México",
+#          xaxis = list(title = "Total"),
+#          yaxis = list(title = "Entidad Federativa"))
+ 
+
+
+plot_ly(resumen_ordenado, x = ~total, y = ~reorder(entidad_federativa, -total), type = 'bar', orientation = 'h', marker = list(color = colores[2])) %>%
+  layout(title = "Total por entidad federativa en México",
+         xaxis = list(title = "Total"),
+         yaxis = list(title = "Entidad Federativa"))
+ 
+```
+
+### sumas de superficie por categoría de manejos
+
+
+```{r echo=FALSE}
+names(entidades_anp)
+categoria_manejo <- aggregate(suma_superficie_dentro_entidad ~ categoria_manejo, data = entidades_anp, FUN = sum)
+
+#ordenar las barras de la menor a la mayor en función de las ANP con myo superficie y poner sus valores arriba de cada barra
+
+resumen_ordenado <- categoria_manejo[order(-categoria_manejo$suma_superficie_dentro_entidad), ]
+plot_ly(resumen_ordenado, x = ~categoria_manejo, y = ~suma_superficie_dentro_entidad, type = 'bar', marker = list(color = colores[1])) %>%
+  add_text(text = ~paste0(suma_superficie_dentro_entidad), position = "inside", color = colores[3], showlegend = FALSE, textposition = "inside") %>%
+  layout(title = "Total de Superficie por Categoría de Manejo en ANP",
+         xaxis = list(title = "Categoría de Manejo"),
+         yaxis = list(title = "Suma de Superficie"),
+         uniformtext = list(mode = "hide", minsize = 10))
+```
+
+
+```{r echo=FALSE}
+
+cat_manejo_order <- categoria_manejo[order(-categoria_manejo$suma_superficie_dentro_entidad), ]
+
+
+ plot_ly(cat_manejo_order, x = ~suma_superficie_dentro_entidad, y = ~reorder(categoria_manejo, -suma_superficie_dentro_entidad), type = 'bar',  marker = list(color = colores[2])) %>%
+  layout(title = "Total de Superficie por Categoría de Manejo en ANP",
+         xaxis = list(title = "Categoría de Manejo"),
+         yaxis = list(title = "Suma de superficie"))
+
+```
+
+
+
+
+```{r echo=FALSE}
+
+df <- as.data.frame(total_entidades)
+
+# coordenadas México
+mexico <- ne_countries(country = "mexico", returnclass = "sf")
+
+colnames(total_entidades)[1] <- "name"
+
+# Fusionar los datos geográficos con los datos del resumen
+mexico <- merge(mexico, total_entidades, by = "name", all.x = TRUE)
+par(mfrow = c(1,2))
+
+ggplot() +
+  geom_sf(data = mexico, aes(fill = total)) +
+  scale_fill_gradient(low = "lightblue", high = "darkblue", name = "Total") +
+  labs(title = "Total por entidad federativa en México") +
+  theme_void()
+
+
+ggplot() +
+  geom_sf(data = mexico, aes(fill = total)) +
+  scale_fill_gradient(name = "Total", 
+                      limits = range(mexico$total),  
+                      low = "lightblue", 
+                      high = "darkblue") +
+  labs(title = "Total por entidad federativa en México") +
+  theme_void()
+```
+ 
+
+
+
+
+
+ 
+ 
