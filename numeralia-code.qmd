@@ -73,7 +73,8 @@ fig
  
  
  
-```{r echo=FALSE}
+```{r include=FALSE}
+
 categorias_ordenadas <- c("RB", "PN", "APFF", "SANT", "APRN", "MN")
 manejo_filtrado <- manejo[manejo$Categoria %in% categorias_ordenadas, ]
 manejo_filtrado$Categoria <- factor(manejo_filtrado$Categoria, levels = categorias_ordenadas)
@@ -91,20 +92,97 @@ fig <- plot_ly(manejo_filtrado,
   layout(yaxis = list(title = '', color = "white"), 
          xaxis = list(title = 'Categoría de Manejo'),
          barmode = 'stack',
-         title = "Categoría de Manejo en Áreas Naturales Protegidas")
+         title = "Categoría de Manejo en Áreas Naturales Protegidas"
+         )
 
 fig
 ```
  
+
+```{r echo=FALSE}
+fig <- plot_ly(manejo_filtrado,
+               x = ~Categoria, y = ~Numero,
+               type = 'bar', 
+               name = 'Número de ANP',
+               marker = list(color = colores[1])
+               ) %>%
+  add_trace(y = ~Porcentaje, 
+            name = 'Porcentaje cubierto',
+            type = 'bar',
+            marker = list(color = colores[3 ])) %>%
+  layout(
+    yaxis = list(title = '', color = "white"), 
+    xaxis = list(title = 'Categoría de Manejo'),
+    barmode = 'stack',
+    title = list(
+      text = "Categoría de Manejo en Áreas Naturales Protegidas",
+      x = 0.5,  # Centra el título horizontalmente
+      xanchor = 'center',
+      yanchor = 'top'
+    ),
+    margin = list(t = 80)  # Ajusta el margen superior para dejar espacio al título
+  )
+
+fig
+```
+
+
+
+```{r  include=FALSE}
+
+fig <- plot_ly(manejo_filtrado,
+               x = ~Categoria, y = ~Numero,
+               type = 'bar', 
+               name = 'Número de ANP',
+               marker = list(color = colores[1]),
+               text = ~Numero,
+               textposition = 'inside',
+               textfont = list(color = 'white', size = 12, family = "Arial", weight = "bold")
+               ) %>%
+  add_trace(y = ~Porcentaje, 
+            name = 'Porcentaje cubierto',
+            type = 'bar',
+            marker = list(color = colores[2]),
+            text = ~Porcentaje,
+            textposition = 'inside',
+            textfont = list(color = 'white', 
+                            size = 12,
+                            family = "Arial",
+                            weight = "bold")
+            ) %>%
+  layout(
+    yaxis = list(title = '', color = "white"), 
+    xaxis = list(title = 'Categoría de Manejo'),
+    barmode = 'stack',
+    title = list(
+      text = "Categoría de Manejo en Áreas Naturales Protegidas",
+      x = 0.5,  # Centra el título horizontalmente
+      xanchor = 'center',
+      yanchor = 'top'
+    ),
+    margin = list(t = 80)  # Ajusta el margen superior para dejar espacio al título
+  )
+
+fig
+```
 
 
 ```{r echo=FALSE}
 numanp.plotly <- plot_ly(data = manejo_ordenado, 
                    x = ~Categoria, y = ~Numero,
                    type = 'bar', name = "Número de ANP",
-                   marker = list(color = colores[3]),
+                   marker = list(color = colores[1]),
                    text = ~Numero,
-                   textposition ='auto',
+                 #  textposition ='auto',
+                   
+                             #  text = ~Porcentaje,
+            textposition = 'inside',
+            textfont = list(color = 'white', 
+                            size = 13,
+                            family = "Arial",
+                            weight = "bold"),
+                   
+                   
                    hoverinfo = 'text',
                    hovertext = paste('<br> Numero de ANP:', manejo_ordenado$Numero,
                                      "<br> Superficie (ha):", manejo_ordenado$Superficie,
@@ -119,7 +197,7 @@ numanp.plotly
 ```
 
 
-```{r echo=FALSE}
+```{r include=FALSE}
 advc <- manejo[manejo$Categoria == "ADVC", ]
 
 plot_ly(data = advc, 
@@ -359,23 +437,22 @@ total_entidades <- entidades_anp %>%
 ```
 
 ```{r echo=FALSE}
+
+
 resumen_ordenado <- total_entidades[order(-total_entidades$total), ]
-
 df = as.data.frame(resumen_ordenado)
-
-
-
 resumen_ordenado <- df[order(df$total), ]
-
-
 plot_ly(resumen_ordenado,
         x = ~total, y = ~reorder(entidad_federativa, -total), type = 'bar',
         orientation = 'h', marker = list(color = colores[2])) %>%
-  layout(title = "Total por entidad federativa en México",
+  layout(title = "Distribución de superficies de las ANP federales por Entidad Federativa",
          xaxis = list(title = "Total"),
          yaxis = list(title = "Entidad Federativa"))
  
 ```
+
+
+
 
 ### sumas de superficie por categoría de manejos
 
@@ -399,13 +476,11 @@ cat_manejo_order <- categoria_manejo[order(-categoria_manejo$suma_superficie_den
  plot_ly(cat_manejo_order, 
          x = ~suma_superficie_dentro_entidad, y = ~reorder(categoria_manejo,
                                                            suma_superficie_dentro_entidad), type = 'bar',  marker = list(color = colores[1])) %>%
-   layout(title = "Total de Superficie por Categoría de Manejo en ANP",
+   layout(title = "Distribución de superficies de las ANP por categoría de manejo",
          xaxis = list(title = "Categoría de Manejo"),
          yaxis = list(title = "Suma de superficie"))
 
  
- 
- #- en suma_superficie_dentro_entidad si mayor abajo
 ```
 
 ## Mapa de méxico: Distribución de superficies de las ANP federales por Entidad Federativa
@@ -439,7 +514,7 @@ mex_map_anp <- mex_map %>%
 #head(mex_map_anp)
 ```
 
-```{r echo=FALSE}
+```{r include=FALSE}
 mex_map_anp %>%
   # usamos el aesthetic fill para indicar la columna de casos
   ggplot(aes(fill = total)) +
@@ -514,11 +589,11 @@ mex_map1 <- st_read("shape_anp/226_ANP_ITRF08_27022024.shp")
 names(mex_map1)
 ```
 
-```{r}
+```{r echo=FALSE}
 plot <- mex_map1 %>%
   ggplot(aes( text = paste(ESTADOS, "<br>Superficie: "))) +
   geom_sf(colour = "grey75", size = 0.07) +
-  labs(title = "México: Distribución de anp",
+  labs(title = " Shape de ANP de México",
        subtitle = "Actualizado al 5 de Junio, 2024",
        caption = "Datos: https://simec.conanp.gob.mx/numeralia.php") +
   scale_fill_gradient("Distribución de superficie", high = colores[1], low = "white") +
@@ -530,4 +605,8 @@ plotly_map <- ggplotly(plot, tooltip = "text") %>%
 
 plotly_map
 ```
+
+
+
+
 
