@@ -1,0 +1,739 @@
+---
+title: "Bosquejo Numeralia"
+author: "CONANP"
+format: html
+---
+
+# NUMERALIA
+
+```{r warning=FALSE, message=FALSE, include=FALSE}
+#getwd()
+#data
+library(plotly)
+library(orca)
+library(readr)
+library(ggplot2)
+#maps
+library(tidyverse)
+library(sf)
+library(rnaturalearth)
+library(rnaturalearthdata)
+library(maps)
+
+ library(dplyr)
+
+#interactive graphs
+library(plotly)
+library(webshot)
+
+
+#static images
+library(processx)
+
+```
+
+## Áreas Naturales Protegidas Federales según su Categoría de Manejo
+
+```{r echo=FALSE}
+colores = c("#2A6C5C", "#B19354", "#6E152E")
+
+convert_to_rgba <- function(color, alpha) {
+  rgb_values <- col2rgb(color) / 255
+  rgba <- paste0("rgba(", paste(rgb_values, collapse = ", "), ", ", alpha, ")")
+  return(rgba)
+}
+
+alpha <- 0.5 # transparente
+
+rgba_colores <- sapply(colores, convert_to_rgba, alpha = alpha)#[[1]]
+ 
+```
+
+```{r echo=FALSE}
+#datos
+manejo <- data.frame(
+  Categoria = c("APFF", "APRN", "MN", "PN", "RB", "SANT", "ADVC") ,
+  Numero = c(54, 13, 5, 78, 48, 28, 581),
+  Superficie = c(7469180, 4563474, 16269, 17569683, 64033711, 155488,1137650),
+  Porcentaje = c(7.96, 4.86, 0.02, 18.73, 68.26, 0.17,0.58)
+)
+
+manejo_filtrado <- manejo[manejo$Categoria != "ADVC",]
+manejo_ordenado <- manejo_filtrado[order(-manejo_filtrado$Numero),]
+```
+
+```{r include=FALSE}
+fig <- plot_ly(manejo_ordenado,
+               x = ~Categoria, y = ~Numero,
+               type = 'bar', 
+               name = 'Numero de ANP',
+               marker = list(color = colores[3])
+               )
+fig <- fig %>% add_trace(y = ~Porcentaje, 
+                         name = 'Porcentaje cubierto',
+                         marker = list(color = colores[2]))
+fig <- fig %>% layout(yaxis = list(title = 'Count'), 
+                      barmode = 'stack')
+
+fig
+```
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(plotly)
+
+# Crear el gráfico radar
+fig1 <- plot_ly(
+  type = 'scatterpolar',
+  mode = 'lines+markers',
+  fill = 'toself'
+)
+
+fig1 <- fig1 %>%
+  add_trace(
+    r = manejo_ordenado$Numero, 
+    theta = manejo_ordenado$Categoria, 
+    name = 'Número de ANP',
+    text = paste("Categoría: ", manejo_ordenado$Categoria, 
+                 "<br>Número de ANP: ", manejo_ordenado$Numero),
+    hoverinfo = "text",
+    mode = 'lines+markers',
+    line = list(color = colores[1]),  # Líneas punteadas , dash = 'dot'
+    marker = list(color = colores[1]),
+    fillcolor = convert_to_rgba(colores[1], 0.3)  # Color verde con transparencia
+  ) 
+
+fig1 <- fig1 %>%
+  layout(
+    polar = list(
+      radialaxis = list(
+        visible = T,
+        range = c(0, 80)
+      ),
+      angularaxis = list(
+        linecolor = "rgba(128, 128, 128, 0.3)",  # Color gris más bajo
+        gridcolor = "rgba(128, 128, 128, 0.3)",  # Color gris más bajo
+        tickcolor = "rgba(128, 128, 128, 0.3)"  # Color gris más bajo
+      ),
+      bgcolor = "rgba(0, 0, 0, 0)"  # Hacer el fondo transparente para que las líneas circulares no se muestren
+    ),
+    paper_bgcolor = 'white',
+    plot_bgcolor = 'white',
+    font = list(color = colores[3]),
+    title = list(text = "Radar Chart - Número de ANP por Categoría", 
+                 font = list(color = colores[3], 
+                             size = 20, 
+                             family = "Arial",
+                             weight = "bold"),
+                 x = 0.5, 
+                 y = 0.975
+                 #xanchor = "center", 
+                 #yanchor = "bottom", 
+                 #pad = list(t = 40)
+                 )
+  )
+fig1
+# Guardar la imagen usando orca()
+#orca(fig1, file = "radar_chart.png")
+#plotly::export(fig1, file = "radar_chart.png")
+
+```
+
+```{r include=FALSE}
+
+categorias_ordenadas <- c("RB", "PN", "APFF", "SANT", "APRN", "MN")
+manejo_filtrado <- manejo[manejo$Categoria %in% categorias_ordenadas, ]
+manejo_filtrado$Categoria <- factor(manejo_filtrado$Categoria, levels = categorias_ordenadas)
+
+fig <- plot_ly(manejo_filtrado,
+               x = ~Categoria, y = ~Numero,
+               type = 'bar', 
+               name = 'Número de ANP',
+               marker = list(color = colores[1])
+               ) %>%
+  add_trace(y = ~Porcentaje, 
+            name = 'Porcentaje cubierto',
+            type = 'bar',
+            marker = list(color = colores[2])) %>%
+  layout(yaxis = list(title = '', color = "white"), 
+         xaxis = list(title = 'Categoría de Manejo'),
+         barmode = 'stack',
+         title = "Categoría de Manejo en Áreas Naturales Protegidas"
+         )
+
+fig
+```
+
+```{r echo=FALSE}
+fig <- plot_ly(manejo_filtrado,
+               x = ~Categoria, y = ~Numero,
+               type = 'bar', 
+               name = 'Número de ANP',
+               marker = list(color = colores[1])
+               ) %>%
+  add_trace(y = ~Porcentaje, 
+            name = 'Porcentaje protegido',
+            type = 'bar',
+            marker = list(color = colores[3 ])) %>%
+  layout(
+    yaxis = list(title = '', color = "white"), 
+    xaxis = list(title = 'Categoría de Manejo'),
+    barmode = 'stack',
+    title = list(
+      text = "Categoría de Manejo en Áreas Naturales Protegidas",
+      x = 0.5,  # Centra el título horizontalmente
+      xanchor = 'center',
+      yanchor = 'top'
+    ),
+    margin = list(t = 80)  # Ajusta el margen superior para dejar espacio al título
+  )
+
+fig
+```
+
+```{r  include=FALSE}
+
+fig <- plot_ly(manejo_filtrado,
+               x = ~Categoria, y = ~Numero,
+               type = 'bar', 
+               name = 'Número de ANP',
+               marker = list(color = colores[1]),
+               text = ~Numero,
+               textposition = 'inside',
+               textfont = list(color = 'white', size = 12, family = "Arial", weight = "bold")
+               ) %>%
+  add_trace(y = ~Porcentaje, 
+            name = 'Porcentaje cubierto',
+            type = 'bar',
+            marker = list(color = colores[2]),
+            text = ~Porcentaje,
+            textposition = 'inside',
+            textfont = list(color = 'white', 
+                            size = 12,
+                            family = "Arial",
+                            weight = "bold")
+            ) %>%
+  layout(
+    yaxis = list(title = '', color = "white"), 
+    xaxis = list(title = 'Categoría de Manejo'),
+    barmode = 'stack',
+    title = list(
+      text = "Categoría de Manejo en Áreas Naturales Protegidas",
+      x = 0.5,  # Centra el título horizontalmente
+      xanchor = 'center',
+      yanchor = 'top'
+    ),
+    margin = list(t = 80)  # Ajusta el margen superior para dejar espacio al título
+  )
+
+fig
+```
+
+```{r echo=FALSE}
+numanp.plotly <- plot_ly(data = manejo_ordenado, 
+                   x = ~Categoria, y = ~Numero,
+                   type = 'bar', name = "Número de ANP",
+                   marker = list(color = colores[1]),
+                   text = ~Numero,
+                 #  textposition ='auto',
+                   
+                             #  text = ~Porcentaje,
+            textposition = 'inside',
+            textfont = list(color = 'white', 
+                            size = 13,
+                            family = "Arial",
+                            weight = "bold"),
+                   
+                   
+                   hoverinfo = 'text',
+                   hovertext = paste('<br> Numero de ANP:', manejo_ordenado$Numero,
+                                     "<br> Superficie (ha):", manejo_ordenado$Superficie,
+                                     "<br> Porcentaje del total protegido:", manejo_ordenado$Porcentaje, "%"
+                   )
+                   )%>%
+  layout(title = "Número de Áreas Naturales Protegidas Federales según su Categoría de Manejo",
+         yaxis = list(title = "Número de ANP"),
+         xaxis = list(title = "Categoría", categoryorder = "total descending"))
+
+numanp.plotly
+```
+
+```{r include=FALSE}
+advc <- manejo[manejo$Categoria == "ADVC", ]
+
+plot_ly(data = advc, 
+               x = ~Categoria, 
+               y = ~Numero, 
+               type = 'bar', 
+               name = 'Número', 
+               marker = list(color = colores[1])) %>%
+  add_trace(y = ~Porcentaje, 
+            name = 'Porcentaje', 
+            type = 'bar', 
+            marker = list(color = colores[2])) %>%
+  layout(title = "ADVC - Número y Porcentaje",
+         yaxis = list(title = 'Valores'),
+         xaxis = list(title = 'Categoría'),
+         barmode = 'group',
+         hoverlabel = list(#bgcolor='rgba(255, 255, 255, 0.75)',
+                           bordercolor='rgba(0, 0, 0, 0.5)',
+                           font = list(family = 'DM Sans',
+                                       size = 13,
+                                       color = 'white',
+                                       bold = TRUE),
+                           borderwidth = 2,
+                           borderpad = 4))
+
+
+
+```
+
+```{r echo=FALSE}
+fig1 <- plot_ly(
+  type = 'scatterpolar',
+  mode = 'lines+markers',
+  fill = 'toself'
+)
+
+fig1 <- fig1 %>%
+  add_trace(
+    r = manejo_ordenado$Numero, 
+    theta = manejo_ordenado$Categoria, 
+    name = 'Número de ANP',
+    text = paste(" Categoría: ", manejo_ordenado$Categoria, 
+                 "<br> Número de ANP: ", manejo_ordenado$Numero,
+                 "<br> Superficie (ha):", manejo_ordenado$Superficie,
+                 "<br> Porcentaje del total protegido:", manejo_ordenado$Porcentaje,"%"
+                 ),
+    hoverinfo = "text",
+    mode = 'lines+markers',
+    line = list(color = colores[1]),  # Líneas punteadas , dash = 'dot'
+    marker = list(color = colores[1]),
+    fillcolor = convert_to_rgba(colores[1], 0.3)  # Color verde con transparencia
+  ) 
+
+fig1 <- fig1 %>%
+  layout(
+    polar = list(
+      radialaxis = list(
+        visible = T,
+        range = c(0, 80)
+      )
+    ),
+    paper_bgcolor = 'white',
+    plot_bgcolor = 'white',
+    font = list(color = colores[3]),
+    title = list(text = "Número de ANP por Categoría")
+  )
+
+fig1
+```
+
+```{r include=FALSE}
+ 
+# Separar ADVC
+advc <- manejo[manejo$Categoria == "ADVC", ]
+otros <- manejo[manejo$Categoria != "ADVC", ]
+
+# Ordenar las otras categorías por superficie de mayor a menor
+otros <- otros[order(-otros$Superficie), ]
+
+# Gráfico para las demás categorías
+plot_otros <- plot_ly(otros, x = ~Categoria, y = ~Superficie, type = 'bar', 
+                      name = 'Superficie (ha)', marker = list(color = colores[1])) %>%
+  add_trace(y = ~Numero, name = 'Número', yaxis = "y2", marker = list(color = colores[3]))
+
+# Añadir la barra de ADVC al principio
+plot_otros <- add_trace(plot_otros, data = advc, x = ~Categoria, y = ~Numero, type = 'bar',
+                        name = 'Número - ADVC', yaxis = "y2", marker = list(color = colores[2])) %>%
+  add_trace(data = advc, x = ~Categoria, y = ~Superficie, type = 'bar',
+            name = 'Superficie (ha) - ADVC', marker = list(color = colores[3]))
+
+# Definir diseño con barras de "Número" detrás de "Superficie (ha)"
+layout(plot_otros, title = "Categoría de Manejo en Áreas Naturales Protegidas",
+       yaxis = list(title = "Superficie en hectáreas", tickfont = list(color = colores[1])),
+       yaxis2 = list(overlaying = "y", side = "right", tickfont = list(color = colores[3])),
+       xaxis = list(title = "Categoría de Manejo", tickfont = list(color = colores[1])),
+       barmode = 'overlay')
+```
+
+```{r include=FALSE}
+manejo_ordenado <- manejo[order(-manejo$Numero), ]
+
+```
+
+## Protección del Medio Terrestre y Marino por las ANP Federales
+
+```{r echo=FALSE}
+ambientes <- data.frame(
+  Tipo = c("Terrestres", "Marinos"),
+  Superficie = c(23013380, 70794424),
+  Porcentaje_ANP = c(24.53, 75.47),
+  Porcentaje_Territorio = c(11.71, 22.47)
+)
+
+notas_terrestres <- paste0("Representa un ", 
+                          ambientes$Porcentaje_Territorio[1], 
+                          "% de la superficie terrestre nacional")
+notas_marinos <- paste0("Representa un ", 
+                       ambientes$Porcentaje_Territorio[2],
+                       "% de la superficie marina del territorio nacional")
+```
+
+```{r echo=FALSE}
+plot_ly(ambientes, labels = ~Tipo, values = ~Superficie, type = 'pie', 
+            text = c(
+            paste0(notas_terrestres,
+                   "<br>Superficie (ha): ", ambientes$Superficie[1], 
+                   "<br>Porcentaje del total protegido: ",
+                   ambientes$Porcentaje_ANP[1], "%"),
+            paste0(notas_marinos, 
+                   "<br>Superficie (ha): ", ambientes$Superficie[2],
+                   "<br>Porcentaje del total protegido: ",
+                   ambientes$Porcentaje_ANP[2], "%")
+  ),
+               hoverinfo = "text", 
+               textinfo = "label+percent", 
+        hole = 0.4, 
+               marker = list(colors = colores),
+               textfont = list(color = 'white', size = 13, bold = TRUE)) %>% # family = 'DM Sans',
+  layout(title = "Protección del Medio terrestre y marino por las ANP",
+         showlegend = FALSE,
+         hoverlabel = list(#bgcolor='rgba(255, 255, 255, 0.75)',
+                           bordercolor='rgba(0, 0, 0, 0.5)',
+                           font = list(#family = 'DM Sans',
+                                       size = 13,
+                                       color = 'white',
+                                       bold = TRUE),
+                           borderwidth = 2,
+                           borderpad = 4))
+
+     
+
+```
+
+```{r echo=FALSE}
+plot_ly(ambientes, labels = ~Tipo, values = ~Superficie, type = 'pie', 
+         text = c(
+            paste0(notas_terrestres,
+                   "<br>Superficie (ha): ", ambientes$Superficie[1], 
+                   "<br>Porcentaje del total protegido: ",
+                   ambientes$Porcentaje_ANP[1], "%"),
+            paste0(notas_marinos, 
+                   "<br>Superficie (ha): ", ambientes$Superficie[2],
+                   "<br>Porcentaje del total protegido: ",
+                   ambientes$Porcentaje_ANP[2], "%")
+  ),
+        textfont = list(color = 'white', 
+                        size = 13,
+                        bold = TRUE),
+        hoverinfo = "text", 
+        textinfo = "label+percent", 
+        hole = 0.4, 
+        marker = list(colors = colores)) %>%
+  layout(title = "Tipos de Ambiente",
+         showlegend = FALSE,
+         hovermode = 'x',
+         hoverlabel = list(bgcolor='rgba(255,255,255,1)',
+                           font = list(#familiy = 'DM Sans',
+                                       size = 13,
+                                       color = colores)))
+```
+
+## Protección de Tipos de Vegetación y Uso de Suelo por las ANP Federales
+
+```{r echo=FALSE}
+tipos_vegetacion <- c("Agroecosistemas", "Bosque de Coníferas", "Bosque de Encino",
+                       "Bosque Mesófilo de Montaña", "Manglar", "Matorral Xerófilo",
+                       "Otros tipos de vegetación", "Pastizal", "Selva Caducifolia",
+                       "Selva Perennifolia", "Vegetación Hidrófila", "Sin Vegetación aparente", "Mar Territorial")
+ 
+superficie_anp <- c(1145131, 2321581, 2481197,
+                    284669, 472274, 8007039,
+                    1873588, 676975, 1949236,
+                    2169652, 764201, 867837, 70794424)
+ 
+porcentaje_anp_federal <- c(1.22, 2.47, 2.64,
+                            0.30, 0.50, 8.54,
+                            2.00, 0.72, 2.08,
+                            2.31, 0.81, 0.93, 75.47)
+
+
+vegetacion <- data.frame(
+  Tipos_Vegetacion = tipos_vegetacion,
+  Superficie_ANP = superficie_anp,
+  Porcentaje_ANP_Federal = porcentaje_anp_federal
+)
+
+ 
+vegetacion <- vegetacion %>% arrange(desc(Superficie_ANP))
+
+df.vegetacion = vegetacion
+```
+
+```{r echo=FALSE}
+vegetacion <- vegetacion[c(which(vegetacion$Tipos_Vegetacion == "Mar Territorial"),
+                           setdiff(1:nrow(vegetacion),
+                                   which(vegetacion$Tipos_Vegetacion == "Mar Territorial"))), ]
+vegetacion=vegetacion[-1,]
+#df %>% arrange(desc(Superficie_ANP))
+ 
+
+
+ plot_ly(vegetacion,
+         x = ~reorder(Tipos_Vegetacion, -Superficie_ANP), y = ~Superficie_ANP,
+         type = 'bar', 
+         marker = list(color = colores[3])) %>%
+  layout(title = "Superficie de Vegetación Agrupado/Ecosistema en ANP Federales",
+         xaxis = list(title = "Tipo de Vegetación o Ecosistema", 
+                      tickangle = -45, 
+                      tickfont = list(size = 10)),
+         yaxis = list(title = "Superficie en hectáreas"),
+         showlegend = FALSE)
+ 
+```
+
+```{r echo=FALSE}
+p<- ggplot(vegetacion, aes(x = reorder(Tipos_Vegetacion, Superficie_ANP), y = Superficie_ANP)) +
+  geom_segment(aes(x = reorder(Tipos_Vegetacion, Superficie_ANP),
+                   xend = reorder(Tipos_Vegetacion, Superficie_ANP),
+                   y = 0, yend = Superficie_ANP), color = "grey") +
+  geom_point(color = "dodgerblue", size = 4) +
+  coord_flip() +
+  labs(title = "Superficie de ANP por Tipo de Vegetación",
+       x = "Tipo de Vegetación",
+       y = "Superficie ANP (ha)") +
+  theme_minimal()
+
+fig <- ggplotly(p)
+fig
+```
+
+
+
+
+```{r include=FALSE}
+p <- ggplot(vegetacion,
+            aes(x = reorder(Tipos_Vegetacion, Superficie_ANP), 
+                y = Superficie_ANP)) +
+  geom_segment(aes(x = reorder(Tipos_Vegetacion,
+                               Superficie_ANP), 
+                   xend = reorder(Tipos_Vegetacion, 
+                                  Superficie_ANP), 
+                   y = 0, 
+                   yend = Superficie_ANP),
+               color = "grey") +
+  geom_point(aes(color = Superficie_ANP), 
+             size = 4) +
+  scale_color_gradient(low = "lightblue",
+                       high = "blue") +
+  coord_flip() +
+  labs(title = "Superficie de ANP por Tipo de Vegetación",
+       x = "Tipo de Vegetación",
+       y = "Superficie ANP (ha)") +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(size = 10, color = "grey40"),
+    axis.text.y = element_text(size = 10, color = "grey40"),
+    plot.title = element_text(size = 14, face = "bold", color = "grey40"),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    panel.background = element_blank(),
+    axis.line = element_line(color = "grey40")
+  )
+
+ggplotly(p)
+```
+
+
+```{r echo=FALSE}
+p <- ggplot(vegetacion, aes(x = reorder(Tipos_Vegetacion, Superficie_ANP), y = Superficie_ANP)) +
+  geom_segment(aes(x = reorder(Tipos_Vegetacion, Superficie_ANP), xend = reorder(Tipos_Vegetacion, Superficie_ANP), 
+                   y = 0, yend = Superficie_ANP), color = "grey") +
+  geom_point(aes(text = paste("Tipo vegetación:", Tipos_Vegetacion, 
+                              "<br>Superficie (ha):", Superficie_ANP,
+                              "<br>Porcentaje Federal:", Porcentaje_ANP_Federal, "%")),
+             size = 4, color = "orange") +
+  labs(title = "Distribución de la Superficie ANP por Tipo de Vegetación",
+       x = "Tipos de Vegetación",
+       y = "Superficie ANP (ha)") +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    plot.title = element_text(hjust = 0.5, size = 14, face = "bold"),
+    legend.position = "none"
+  )
+
+# Convertir el gráfico ggplot2 a plotly
+fig <- ggplotly(p, tooltip = "text")
+
+# Mostrar el gráfico interactivo
+fig
+
+```
+
+
+
+
+## Categoría de manejo de ANP por Entidad Federativa
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+entidades_anp <- read_csv("data-entidadesanp.csv",show_col_types = FALSE)
+entidades_anp = as.data.frame(entidades_anp)
+
+total_entidades <- entidades_anp %>%
+  group_by(entidad_federativa) %>%
+  summarise(total = sum(suma_superficie_dentro_entidad))
+```
+
+```{r echo=FALSE}
+
+
+resumen_ordenado <- total_entidades[order(-total_entidades$total), ]
+df = as.data.frame(resumen_ordenado)
+resumen_ordenado <- df[order(df$total), ]
+plot_ly(resumen_ordenado,
+        x = ~total, y = ~reorder(entidad_federativa, -total), type = 'bar',
+        orientation = 'h', marker = list(color = colores[2])) %>%
+  layout(title = "Distribución de superficies de las ANP federales por Entidad Federativa",
+         xaxis = list(title = "Total"),
+         yaxis = list(title = "Entidad Federativa"))
+ 
+```
+
+### sumas de superficie por categoría de manejos
+
+```{r echo=FALSE}
+categoria_manejo <- aggregate(suma_superficie_dentro_entidad ~ categoria_manejo, data = entidades_anp, FUN = sum)
+
+resumen_ordenado <- categoria_manejo[order(-categoria_manejo$suma_superficie_dentro_entidad), ]
+cat.manejo = plot_ly(resumen_ordenado, x = ~categoria_manejo, y = ~suma_superficie_dentro_entidad, type = 'bar', marker = list(color = colores[1])) %>%
+  add_text(text = ~paste0(suma_superficie_dentro_entidad), position = "inside", color = colores[3], showlegend = FALSE, textposition = "inside") %>%
+  layout(title = "Total de Superficie por Categoría de Manejo en ANP",
+         xaxis = list(title = "Categoría de Manejo"),
+         yaxis = list(title = "Suma de Superficie"),
+         uniformtext = list(mode = "hide", minsize = 10))
+```
+
+```{r echo=FALSE}
+
+cat_manejo_order <- categoria_manejo[order(-categoria_manejo$suma_superficie_dentro_entidad), ]
+
+
+ plot_ly(cat_manejo_order, 
+         x = ~suma_superficie_dentro_entidad, y = ~reorder(categoria_manejo,
+                                                           suma_superficie_dentro_entidad), type = 'bar',  marker = list(color = colores[1])) %>%
+   layout(title = "Distribución de superficies de las ANP por categoría de manejo",
+         xaxis = list(title = "Categoría de Manejo"),
+         yaxis = list(title = "Suma de superficie"))
+
+ 
+```
+
+## Mapa de méxico: Distribución de superficies de las ANP federales por Entidad Federativa
+
+(solo es título de visualización)
+
+```{r echo=FALSE}
+mex_map <- st_read("data/destdv1gw.shp")
+```
+
+```{r include=FALSE}
+mex_map %>%
+  ggplot() + 
+  geom_sf()
+
+```
+
+```{r echo=FALSE}
+cve_edos <- sprintf("%02d", 1:32)
+#cve_edos<- paste0("0", cve_edos)
+total_entidades$CVE_EDO <- cve_edos
+#write.csv(total_entidades, "total_anp_edos.csv")
+```
+
+```{r echo=FALSE}
+mex_map_anp <- mex_map %>%
+  left_join(total_entidades)
+#head(mex_map_anp)
+```
+
+```{r include=FALSE}
+mex_map_anp %>%
+  # usamos el aesthetic fill para indicar la columna de casos
+  ggplot(aes(fill = total)) +
+  # cambia el color y el grosor de las líneas
+  geom_sf(colour = "grey75", size = 0.07) +
+  # agrega títulos
+  labs(title = "México: Distribución de superficie por anp",
+       subtitle = "Actualizado al 5 de Junio, 2024",
+       caption = "Datos: https://simec.conanp.gob.mx/numeralia.php") +
+  # cambia el color de relleno y el título de la leyenda
+  scale_fill_gradient("Distribución de superficie", high = colores[1], low = "white") +
+  # retirar el fondo gris
+  theme_bw()
+```
+
+```{r echo=FALSE}
+plot <- mex_map_anp %>%
+  ggplot(aes(fill = total, text = paste(ENTIDAD, "<br>Superficie: ", total))) +
+  geom_sf(colour = "grey75", size = 0.07) +
+  labs(title = "México: Distribución de anp",
+       subtitle = "Actualizado al 5 de Junio, 2024",
+       caption = "Datos: https://simec.conanp.gob.mx/numeralia.php") +
+  scale_fill_gradient("Distribución de superficie", high = colores[1], low = "white") +
+  theme_bw()
+
+# Convertir el gráfico ggplot a un gráfico interactivo con plotly
+plotly_map <- ggplotly(plot, tooltip = "text") %>%
+  layout(hoverlabel = list(bgcolor = "mistyrose"))
+
+plotly_map
+
+#Ayuda: https://www.prestevez.com/es/post/tutorial-mapas-tidyverse/
+
+```
+
+```{r include=FALSE}
+library(circlepackeR)
+data <- data.frame(
+  root=rep("root", 15),
+  group=c(rep("group A",5), rep("group B",5), rep("group C",5)), 
+  subgroup= rep(letters[1:5], each=3),
+  subsubgroup=rep(letters[1:3], 5),
+  value=sample(seq(1:15), 15)
+)
+
+# Change the format. This use the data.tree library. This library needs a column that looks like root/group/subgroup/..., so I build it
+library(data.tree)
+data$pathString <- paste("world", data$group, data$subgroup, data$subsubgroup, sep = "/")
+population <- as.Node(data)
+
+# Make the plot
+#circlepackeR(population, size = "value")
+
+# You can custom the minimum and maximum value of the color range.
+p <- circlepackeR(population, size = "value", color_min = "hsl(56,80%,80%)", color_max = "hsl(341,30%,40%)")
+p
+```
+
+```{r include=FALSE, message=FALSE, warning=FALSE}
+mex_map1 <- st_read("shape_anp/226_ANP_ITRF08_27022024.shp")
+names(mex_map1)
+```
+
+```{r echo=FALSE}
+plot <- mex_map1 %>%
+  ggplot(aes( text = paste(ESTADOS, "<br>Superficie: "))) +
+  geom_sf(colour = "grey75", size = 0.07) +
+  labs(title = " Shape de ANP de México",
+       subtitle = "Actualizado al 5 de Junio, 2024",
+       caption = "Datos: https://simec.conanp.gob.mx/numeralia.php") +
+  scale_fill_gradient("Distribución de superficie", high = colores[1], low = "white") +
+  theme_bw()
+
+# Convertir el gráfico ggplot a un gráfico interactivo con plotly
+plotly_map <- ggplotly(plot, tooltip = "text") %>%
+  layout(hoverlabel = list(bgcolor = "mistyrose"))
+
+plotly_map
+```
