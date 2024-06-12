@@ -1,0 +1,206 @@
+---
+title: "NUMERALIA versión 1.2"
+author: "CONANP"
+format: pdf
+---
+
+
+```{r include=FALSE}
+library(ggplot2)
+library(dplyr)
+library(plotly)
+library(scales)
+```
+# Gráfica 1
+sfsf
+
+
+# Gráfica 5
+
+
+
+
+```{r echo=FALSE}
+tipos_vegetacion <- c("Agroecosistemas", "Bosque de Coníferas", "Bosque de Encino",
+                      "Bosque Mesófilo de Montaña", "Manglar", "Matorral Xerófilo",
+                      "Otros tipos de vegetación", "Pastizal", "Selva Caducifolia",
+                      "Selva Perennifolia", "Vegetación Hidrófila", "Sin Vegetación aparente", "Mar Territorial")
+
+superficie_anp <- c(1145131, 2321581, 2481197,
+                    284669, 472274, 8007039,
+                    1873588, 676975, 1949236,
+                    2169652, 764201, 867837, 70794424)
+
+porcentaje_anp_federal <- c(1.22, 2.47, 2.64,
+                            0.30, 0.50, 8.54,
+                            2.00, 0.72, 2.08,
+                            2.31, 0.81, 0.93, 75.47)
+
+vegetacion <- data.frame(
+  Tipos_Vegetacion = tipos_vegetacion,
+  Superficie_ANP = superficie_anp,
+  Porcentaje_ANP_Federal = porcentaje_anp_federal
+)
+
+
+vegetacion <- vegetacion %>% arrange(desc(Superficie_ANP))
+
+vegetacion <- vegetacion[c(which(vegetacion$Tipos_Vegetacion == "Mar Territorial"),
+                           setdiff(1:nrow(vegetacion),
+                                   which(vegetacion$Tipos_Vegetacion == "Mar Territorial"))), ]
+vegetacion=vegetacion[-1,]
+
+```
+
+
+
+```{r echo=FALSE, fig.dim=c(7,5)}
+ggplot(vegetacion,
+            aes(x = reorder(Tipos_Vegetacion, Superficie_ANP), 
+                y = Superficie_ANP)) +
+  geom_segment(aes(x = reorder(Tipos_Vegetacion, Superficie_ANP), 
+                   xend = reorder(Tipos_Vegetacion, Superficie_ANP), 
+                   y = 0, 
+                   yend = Superficie_ANP),
+               color = "grey",
+               linewidth = 1.2) +
+  geom_point(aes(color = Superficie_ANP), 
+             size = 4) +
+  scale_y_continuous(labels = scales::label_number(scale_cut = cut_short_scale()),
+                     limits = c(0, 9000000)) + 
+  scale_color_gradient(low = "#CEBA92", high = "#B53C0D",
+                       labels = scales::label_number(scale_cut = cut_short_scale())
+                       ) +
+    geom_text(aes(label =Superficie_ANP),
+            nudge_y = 0.05 * max(vegetacion$Superficie_ANP),
+            hjust = 0, 
+            size = 3, 
+            fontface = "bold",
+            color = "#B53C0d") +
+
+  guides(color ="none")+
+  coord_flip() +
+  labs(title = "Superficie de ANP por Tipo de Vegetación",
+       x = "",
+       y = "Superficie ANP ( Millones de hectáreas - M)") +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(size = 10, color = "grey40"),
+    axis.text.y = element_text(size = 10, color = "grey40"),
+    plot.title = element_text(size = 12, face = "bold", color = "grey40"),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    panel.background = element_blank(),
+    axis.line = element_line(color = "grey40")
+  )
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```{r eval=FALSE, include=FALSE}
+ggplot(vegetacion,
+       aes(x = reorder(Tipos_Vegetacion, Superficie_ANP), 
+           y = Superficie_ANP)) +
+  geom_segment(aes(x = reorder(Tipos_Vegetacion, Superficie_ANP), 
+                   xend = reorder(Tipos_Vegetacion, Superficie_ANP), 
+                   y = 0, 
+                   yend = Superficie_ANP,),
+               color = "grey",
+               linewidth =1.2) +
+  geom_point(aes(color = Superficie_ANP),
+             size = 4,
+             color =  colores[3],
+             fill =alpha(colores[2], 0.6),
+             alpha =0.7,shape =21, stroke = 2) +
+  geom_text(aes(label =Superficie_ANP),
+            nudge_y = 0.05 * max(vegetacion$Superficie_ANP),
+            hjust = 0, 
+            size = 3, 
+            fontface = "bold",
+            color = "#B53C0d") +  # Color de texto
+  scale_y_continuous(labels = scales::label_number(scale_cut = cut_short_scale())) + 
+ # scale_color_gradient(low = "#CEBA92", high = "#B53C0D",
+  #                     labels = scales::label_number(scale_cut = cut_short_scale())) +
+  guides(color = "none")+
+  coord_flip() +
+  labs(title = "Superficie de ANP por Tipo de Vegetación",
+       x = "",
+       y = "Superficie ANP (ha)") +
+  theme_minimal() +
+  theme(
+    #axis.text.x = element_text(size = 10, color = "grey40"),
+    axis.text.y = element_text(size = 10, color = "grey1"),
+    plot.title = element_text(size = 14, face = "bold", color = "grey40"),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    panel.background = element_blank(),
+    axis.line = element_line(color = "grey40"),
+    axis.text.x = element_text(size = 10, color = "grey1"),  # Color de texto x
+    plot.margin = margin(1, 6, 1, 6)  # Ajuste del margen para extender el eje x
+  )
+```
+
+
+
