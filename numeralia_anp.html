@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.553">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>numeralia_anp</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="numeralia_anp_files/libs/clipboard/clipboard.min.js"></script>
+<script src="numeralia_anp_files/libs/quarto-html/quarto.js"></script>
+<script src="numeralia_anp_files/libs/quarto-html/popper.min.js"></script>
+<script src="numeralia_anp_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="numeralia_anp_files/libs/quarto-html/anchor.min.js"></script>
+<link href="numeralia_anp_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="numeralia_anp_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="numeralia_anp_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="numeralia_anp_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="numeralia_anp_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="numeralia_anp_files/libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+
+<script src="numeralia_anp_files/libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+
+<script src="numeralia_anp_files/libs/jquery-3.5.1/jquery.min.js"></script>
+
+<script src="numeralia_anp_files/libs/proj4js-2.3.15/proj4.js"></script>
+
+<link href="numeralia_anp_files/libs/highcharts-9.3.1/css/motion.css" rel="stylesheet">
+
+<script src="numeralia_anp_files/libs/highcharts-9.3.1/highcharts.js"></script>
+
+<script src="numeralia_anp_files/libs/highcharts-9.3.1/highcharts-3d.js"></script>
+
+<script src="numeralia_anp_files/libs/highcharts-9.3.1/highcharts-more.js"></script>
+
+<script src="numeralia_anp_files/libs/highcharts-9.3.1/modules/stock.js"></script>
+
+<script src="numeralia_anp_files/libs/highcharts-9.3.1/modules/map.js"></script>
+
+<script src="numeralia_anp_files/libs/highcharts-9.3.1/modules/data.js"></script>
+
+<script src="numeralia_anp_files/libs/highcharts-9.3.1/modules/exporting.js"></script>
+
+<script src="numeralia_anp_files/libs/highcharts-9.3.1/modules/offline-exporting.js"></script>
+
+<script src="numeralia_anp_files/libs/highcharts-9.3.1/modules/drilldown.js"></script>
+
+<script src="numeralia_anp_files/libs/highcharts-9.3.1/modules/item-series.js"></script>
+
+<script src="numeralia_anp_files/libs/highcharts-9.3.1/modules/overlapping-datalabels.js"></script>
+
+<script src="numeralia_anp_files/libs/highcharts-9.3.1/modules/annotations.js"></script>
+
+<script src="numeralia_anp_files/libs/highcharts-9.3.1/modules/export-data.js"></script>
+
+<script src="numeralia_anp_files/libs/highcharts-9.3.1/modules/funnel.js"></script>
+
+<script src="numeralia_anp_files/libs/highcharts-9.3.1/modules/heatmap.js"></script>
+
+<script src="numeralia_anp_files/libs/highcharts-9.3.1/modules/treemap.js"></script>
+
+<script src="numeralia_anp_files/libs/highcharts-9.3.1/modules/sankey.js"></script>
+
+<script src="numeralia_anp_files/libs/highcharts-9.3.1/modules/dependency-wheel.js"></script>
+
+<script src="numeralia_anp_files/libs/highcharts-9.3.1/modules/organization.js"></script>
+
+<script src="numeralia_anp_files/libs/highcharts-9.3.1/modules/solid-gauge.js"></script>
+
+<script src="numeralia_anp_files/libs/highcharts-9.3.1/modules/streamgraph.js"></script>
+
+<script src="numeralia_anp_files/libs/highcharts-9.3.1/modules/sunburst.js"></script>
+
+<script src="numeralia_anp_files/libs/highcharts-9.3.1/modules/vector.js"></script>
+
+<script src="numeralia_anp_files/libs/highcharts-9.3.1/modules/wordcloud.js"></script>
+
+<script src="numeralia_anp_files/libs/highcharts-9.3.1/modules/xrange.js"></script>
+
+<script src="numeralia_anp_files/libs/highcharts-9.3.1/modules/tilemap.js"></script>
+
+<script src="numeralia_anp_files/libs/highcharts-9.3.1/modules/venn.js"></script>
+
+<script src="numeralia_anp_files/libs/highcharts-9.3.1/modules/gantt.js"></script>
+
+<script src="numeralia_anp_files/libs/highcharts-9.3.1/modules/timeline.js"></script>
+
+<script src="numeralia_anp_files/libs/highcharts-9.3.1/modules/parallel-coordinates.js"></script>
+
+<script src="numeralia_anp_files/libs/highcharts-9.3.1/modules/bullet.js"></script>
+
+<script src="numeralia_anp_files/libs/highcharts-9.3.1/modules/coloraxis.js"></script>
+
+<script src="numeralia_anp_files/libs/highcharts-9.3.1/modules/dumbbell.js"></script>
+
+<script src="numeralia_anp_files/libs/highcharts-9.3.1/modules/lollipop.js"></script>
+
+<script src="numeralia_anp_files/libs/highcharts-9.3.1/modules/series-label.js"></script>
+
+<script src="numeralia_anp_files/libs/highcharts-9.3.1/plugins/motion.js"></script>
+
+<script src="numeralia_anp_files/libs/highcharts-9.3.1/custom/reset.js"></script>
+
+<script src="numeralia_anp_files/libs/highcharts-9.3.1/modules/boost.js"></script>
+
+<script src="numeralia_anp_files/libs/highchart-binding-0.9.4/highchart.js"></script>
+
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+
+
+
+<section id="numeralia" class="level1">
+<h1>NUMERALIA</h1>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;margin:auto;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:12px; /* Reducido el tamaño de la fuente */
+  overflow:hidden;padding:8px 5px;word-break:normal;text-align:center;} /* Alineación centrada */
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:12px; /* Reducido el tamaño de la fuente */
+  font-weight:normal;overflow:hidden;padding:8px 5px;word-break:normal;text-align:center;} /* Alineación centrada */
+.tg .tg-3b5r{background-color:#FFBE3B;color:#FFF;font-weight:bold;vertical-align:top}
+.tg .tg-3i4j{border-color:#efefef;font-family:Arial, Helvetica, sans-serif;text-align:left;vertical-align:top}
+.tg .tg-py3e{background-color:#BCB800;color:#FFF;font-weight:bold;vertical-align:top}
+.tg .tg-w6io{background-color:#E60000;color:#FFF;font-weight:bold;vertical-align:top}
+.tg .tg-mxe9{background-color:#ABCD66;color:#FFF;font-weight:bold;vertical-align:top}
+.tg .tg-qfl9{background-color:#3166FF;color:#FFF;font-weight:bold;vertical-align:top}
+.tg .tg-fl67{background-color:#6665CD;color:#FFF;font-weight:bold;vertical-align:top}
+</style>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:12px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:12px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-py3e{background-color:#BCB800;border-color:#efefef;color:#FFF;font-family:Arial, Helvetica, sans-serif !important;
+  font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-w6io{background-color:#E60000;border-color:#efefef;color:#FFF;font-family:Arial, Helvetica, sans-serif !important;
+  font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-3b5r{background-color:#FFBE3B;border-color:#efefef;color:#FFF;font-family:Arial, Helvetica, sans-serif !important;
+  font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-3i4j{border-color:#efefef;font-family:Arial, Helvetica, sans-serif !important;text-align:left;vertical-align:top}
+.tg .tg-mxe9{background-color:#ABCD66;border-color:#efefef;color:#FFF;font-family:Arial, Helvetica, sans-serif !important;
+  font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-qfl9{background-color:#3166FF;border-color:#efefef;color:#FFF;font-family:Arial, Helvetica, sans-serif !important;
+  font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-fl67{background-color:#6665CD;border-color:#efefef;color:#FFF;font-family:Arial, Helvetica, sans-serif !important;
+  font-weight:bold;text-align:center;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+<tr>
+<th class="tg-3b5r">
+APFF
+</th>
+<th class="tg-3i4j">
+Área de Protección de Flora y Fauna
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tg-py3e">
+APRN
+</td>
+<td class="tg-3i4j">
+Área de Protección de Recursos Naturales
+</td>
+</tr>
+<tr>
+<td class="tg-w6io">
+MN
+</td>
+<td class="tg-3i4j">
+Monumentos Naturales
+</td>
+</tr>
+<tr>
+<td class="tg-mxe9">
+RB
+</td>
+<td class="tg-3i4j">
+Reserva de la biosfera
+</td>
+</tr>
+<tr>
+<td class="tg-qfl9">
+SANT
+</td>
+<td class="tg-3i4j">
+Santuario
+</td>
+</tr>
+<tr>
+<td class="tg-fl67">
+ADVC
+</td>
+<td class="tg-3i4j">
+Áreas Destinadas Voluntariamente a la Conservación
+</td>
+</tr>
+</tbody>
+</table>
+<h2 font-size:="" 28px;="" class="anchored" data-anchor-id="numeralia">Áreas Naturales Protegidas Federales según su Categoría de Manejo</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div class="highchart html-widget html-fill-item" id="htmlwidget-27af711c91bc3304b43f" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-27af711c91bc3304b43f">{"x":{"hc_opts":{"chart":{"reflow":true,"type":"column"},"title":{"text":""},"yAxis":[{"min":0,"title":{"text":"Número de ANP"}},{"title":{"text":"Porcentaje protegido"},"opposite":true}],"credits":{"enabled":false},"exporting":{"enabled":true},"boost":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0},"treemap":{"layoutAlgorithm":"squarified"},"column":{"grouping":false,"shadow":false,"borderWidth":0,"dataLabels":{"enabled":true}}},"xAxis":{"categories":["PN","APFF","RB","SANT","APRN","MN"]},"legend":{"shadow":false},"series":[{"name":"Número de ANP","colorByPoint":true,"data":[{"y":78,"color":"#a87000","superficie":"17,569,683"},{"y":54,"color":"#ffbe3b","superficie":"7,469,180"},{"y":48,"color":"#abcd66","superficie":"64,033,711"},{"y":28,"color":"#3166ff","superficie":"155,488"},{"y":13,"color":"#bcb800","superficie":"4,563,474"},{"y":5,"color":"#e60000","superficie":"16,269"}],"pointPadding":0.2},{"data":[18.73,7.96,68.26000000000001,0.17,4.86,0.02],"name":"Porcentaje de superficie protegida","color":"gray","pointPadding":0.3,"yAxis":1,"tooltip":{"valueSuffix":"%"}}],"tooltip":{"shared":true,"formatter":"\n      function() {\n        var header = '<span style=\"font-size: 10px\">' + this.x + '<\/span><br/>';\n        var body = this.points.reduce(function (s, point) {\n          return s + '<span style=\"color:' + point.color + '\">' + point.series.name + '<\/span>: <b>' + point.y + '<\/b><br/>';\n        }, '');\n        var superficie = this.points[0].point.superficie; // Obtener superficie del primer punto\n        var footer = '<span style=\"font-size: 10px\">Con un total de ' + superficie + ' ha protegidas<\/span>';\n        return header + body + footer;\n      }\n    "}},"theme":{"chart":{"backgroundColor":"transparent"},"colors":["#7cb5ec","#434348","#90ed7d","#f7a35c","#8085e9","#f15c80","#e4d354","#2b908f","#f45b5b","#91e8e1"]},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadCSV":"Download CSV","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","downloadXLS":"Download XLS","drillUpText":"◁ Back to {series.name}","exitFullscreen":"Exit from full screen","exportData":{"annotationHeader":"Annotations","categoryDatetimeHeader":"DateTime","categoryHeader":"Category"},"hideData":"Hide data table","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbolMagnitude":1000,"numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"shortWeekdays":["Sat","Sun","Mon","Tue","Wed","Thu","Fri"],"thousandsSep":" ","viewData":"View data table","viewFullscreen":"View in full screen","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":["hc_opts.tooltip.formatter"],"jsHooks":[]}</script>
+</div>
+</div>
+<h2 font-size:="" 28px;="" class="anchored">Protección del Medio terrestre y Marino por las ANP Federales</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div class="highchart html-widget html-fill-item" id="htmlwidget-6e803fb742f37a36552b" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-6e803fb742f37a36552b">{"x":{"hc_opts":{"chart":{"reflow":true,"type":"pie","polar":false,"inverted":false},"title":{"text":null},"yAxis":{"title":{"text":null}},"credits":{"enabled":false},"exporting":{"enabled":true},"boost":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"animation":false},"treemap":{"layoutAlgorithm":"squarified"}},"xAxis":{"categories":["Terrestres","Marinos"]},"series":[{"data":[{"name":"Terrestres","y":24.53,"color":"#8C5C47","hover_text":"Representa un 11.71% de la superficie terrestre nacional<br>Superficie (ha): 23,013,380<br>Porcentaje del total protegido: 24.53%"},{"name":"Marinos","y":75.47,"color":"#4A8CB0","hover_text":"Representa un 22.47% de la superficie marina del territorio nacional<br>Superficie (ha): 70,794,424<br>Porcentaje del total protegido: 75.47%"}],"type":null,"name":"ambientes","showInLegend":true,"innerSize":"33%"}],"tooltip":{"useHTML":true,"pointFormat":"{point.hover_text}"}},"theme":{"chart":{"backgroundColor":"transparent"},"colors":["#7cb5ec","#434348","#90ed7d","#f7a35c","#8085e9","#f15c80","#e4d354","#2b908f","#f45b5b","#91e8e1"]},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadCSV":"Download CSV","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","downloadXLS":"Download XLS","drillUpText":"◁ Back to {series.name}","exitFullscreen":"Exit from full screen","exportData":{"annotationHeader":"Annotations","categoryDatetimeHeader":"DateTime","categoryHeader":"Category"},"hideData":"Hide data table","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbolMagnitude":1000,"numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"shortWeekdays":["Sat","Sun","Mon","Tue","Wed","Thu","Fri"],"thousandsSep":" ","viewData":"View data table","viewFullscreen":"View in full screen","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<section id="protección-de-tipos-de-vegetación-y-uso-de-suelo-por-las-anp-federales" class="level2">
+<h2 class="anchored" data-anchor-id="protección-de-tipos-de-vegetación-y-uso-de-suelo-por-las-anp-federales">Protección de Tipos de Vegetación y Uso de Suelo por las ANP Federales</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div class="highchart html-widget html-fill-item" id="htmlwidget-d24abd949c9f04802b87" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-d24abd949c9f04802b87">{"x":{"hc_opts":{"chart":{"reflow":true,"type":"bar"},"title":{"text":null},"yAxis":[{"min":0,"title":{"text":"Hectáreas (M: Millones)"}}],"credits":{"enabled":false},"exporting":{"enabled":true},"boost":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"animation":false},"treemap":{"layoutAlgorithm":"squarified"}},"xAxis":{"categories":["Matorral Xerófilo","Bosque de Encino","Bosque de Coníferas","Selva Perennifolia","Selva Caducifolia","Otros tipos de vegetación","Agroecosistemas","Sin Vegetación aparente","Vegetación Hidrófila","Pastizal","Manglar","Bosque Mesófilo de Montaña"]},"series":[{"data":[{"name":"Matorral Xerófilo","y":8007039,"color":"#2c3e50","hover_text":"Matorral Xerófilo <br>Superficie ANP: 8,007,039 (ha) <br>Porcentaje ANP Federal: 8.54"},{"name":"Bosque de Encino","y":2481197,"color":"#2c3e50","hover_text":"Bosque de Encino <br>Superficie ANP: 2,481,197 (ha) <br>Porcentaje ANP Federal: 2.64"},{"name":"Bosque de Coníferas","y":2321581,"color":"#2c3e50","hover_text":"Bosque de Coníferas <br>Superficie ANP: 2,321,581 (ha) <br>Porcentaje ANP Federal: 2.47"},{"name":"Selva Perennifolia","y":2169652,"color":"#2c3e50","hover_text":"Selva Perennifolia <br>Superficie ANP: 2,169,652 (ha) <br>Porcentaje ANP Federal: 2.31"},{"name":"Selva Caducifolia","y":1949236,"color":"#2c3e50","hover_text":"Selva Caducifolia <br>Superficie ANP: 1,949,236 (ha) <br>Porcentaje ANP Federal: 2.08"},{"name":"Otros tipos de vegetación","y":1873588,"color":"#2c3e50","hover_text":"Otros tipos de vegetación <br>Superficie ANP: 1,873,588 (ha) <br>Porcentaje ANP Federal: 2"},{"name":"Agroecosistemas","y":1145131,"color":"#2c3e50","hover_text":"Agroecosistemas <br>Superficie ANP: 1,145,131 (ha) <br>Porcentaje ANP Federal: 1.22"},{"name":"Sin Vegetación aparente","y":867837,"color":"#2c3e50","hover_text":"Sin Vegetación aparente <br>Superficie ANP: 867,837 (ha) <br>Porcentaje ANP Federal: 0.93"},{"name":"Vegetación Hidrófila","y":764201,"color":"#2c3e50","hover_text":"Vegetación Hidrófila <br>Superficie ANP: 764,201 (ha) <br>Porcentaje ANP Federal: 0.81"},{"name":"Pastizal","y":676975,"color":"#2c3e50","hover_text":"Pastizal <br>Superficie ANP: 676,975 (ha) <br>Porcentaje ANP Federal: 0.72"},{"name":"Manglar","y":472274,"color":"#2c3e50","hover_text":"Manglar <br>Superficie ANP: 472,274 (ha) <br>Porcentaje ANP Federal: 0.5"},{"name":"Bosque Mesófilo de Montaña","y":284669,"color":"#2c3e50","hover_text":"Bosque Mesófilo de Montaña <br>Superficie ANP: 284,669 (ha) <br>Porcentaje ANP Federal: 0.3"}],"type":null,"name":"Superficie ANP (ha)","dataLabels":{"enabled":true}}],"tooltip":{"useHTML":true,"pointFormat":"{point.hover_text}"}},"theme":{"chart":{"backgroundColor":"transparent"},"colors":["#7cb5ec","#434348","#90ed7d","#f7a35c","#8085e9","#f15c80","#e4d354","#2b908f","#f45b5b","#91e8e1"]},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadCSV":"Download CSV","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","downloadXLS":"Download XLS","drillUpText":"◁ Back to {series.name}","exitFullscreen":"Exit from full screen","exportData":{"annotationHeader":"Annotations","categoryDatetimeHeader":"DateTime","categoryHeader":"Category"},"hideData":"Hide data table","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbolMagnitude":1000,"numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"shortWeekdays":["Sat","Sun","Mon","Tue","Wed","Thu","Fri"],"thousandsSep":" ","viewData":"View data table","viewFullscreen":"View in full screen","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="highchart html-widget html-fill-item" id="htmlwidget-35e71ecfb781b8f8beb1" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-35e71ecfb781b8f8beb1">{"x":{"hc_opts":{"chart":{"reflow":true,"type":"bar"},"title":{"text":null},"yAxis":[{"min":0,"title":{"text":"Total de superficie en hectáreas (M: Millones)"}}],"credits":{"enabled":false},"exporting":{"enabled":true},"boost":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"animation":false},"treemap":{"layoutAlgorithm":"squarified"}},"xAxis":{"categories":["Ciudad de México","Tlaxcala","Colima","Sinaloa","Morelos","Yucatán","Aguascalientes","Hidalgo","San Luis Potosí","Veracruz","Guanajuato","Puebla","México","Nuevo León","Michoacán","Oaxaca","Guerrero","Tabasco","Querétaro","Jalisco","Quintana Roo","Zacatecas","Tamaulipas","Nayarit","Durango","Chiapas","Sonora","Chihuahua","Campeche","Coahuila","Baja California Sur","Baja California"]},"series":[{"data":[{"name":"Ciudad de México","y":11661},{"name":"Tlaxcala","y":34111},{"name":"Colima","y":57270},{"name":"Sinaloa","y":93264},{"name":"Morelos","y":108844},{"name":"Yucatán","y":113333},{"name":"Aguascalientes","y":123841},{"name":"Hidalgo","y":131775},{"name":"San Luis Potosí","y":197489},{"name":"Veracruz","y":221208},{"name":"Guanajuato","y":238894},{"name":"Puebla","y":256675},{"name":"México","y":277766},{"name":"Nuevo León","y":290203},{"name":"Michoacán","y":334014},{"name":"Oaxaca","y":342795},{"name":"Guerrero","y":363566},{"name":"Tabasco","y":374398},{"name":"Querétaro","y":382836},{"name":"Jalisco","y":626164},{"name":"Quintana Roo","y":669321},{"name":"Zacatecas","y":745054},{"name":"Tamaulipas","y":872368},{"name":"Nayarit","y":989973},{"name":"Durango","y":1045639},{"name":"Chiapas","y":1140400},{"name":"Sonora","y":1403066},{"name":"Chihuahua","y":1622769},{"name":"Campeche","y":2001591},{"name":"Coahuila","y":2328468},{"name":"Baja California Sur","y":2591224},{"name":"Baja California","y":3023400}],"type":null,"name":"Superficie por Entidad (ha)","dataLabels":{"enabled":true}}]},"theme":{"chart":{"backgroundColor":"transparent"},"colors":["#7cb5ec","#434348","#90ed7d","#f7a35c","#8085e9","#f15c80","#e4d354","#2b908f","#f45b5b","#91e8e1"]},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadCSV":"Download CSV","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","downloadXLS":"Download XLS","drillUpText":"◁ Back to {series.name}","exitFullscreen":"Exit from full screen","exportData":{"annotationHeader":"Annotations","categoryDatetimeHeader":"DateTime","categoryHeader":"Category"},"hideData":"Hide data table","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbolMagnitude":1000,"numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"shortWeekdays":["Sat","Sun","Mon","Tue","Wed","Thu","Fri"],"thousandsSep":" ","viewData":"View data table","viewFullscreen":"View in full screen","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
+</div>
+<div class="cell-output-display">
+<div class="highchart html-widget html-fill-item" id="htmlwidget-eb9ae27287fa4aca1c6d" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-eb9ae27287fa4aca1c6d">{"x":{"hc_opts":{"chart":{"reflow":true,"type":"pyramid","polar":false,"inverted":false},"title":{"text":null},"yAxis":{"title":{"text":"Total de superficie en hectáreas (M: Millones)"}},"credits":{"enabled":false},"exporting":{"enabled":true},"boost":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"animation":false},"treemap":{"layoutAlgorithm":"squarified"}},"xAxis":{"categories":["Ciudad de México","Tlaxcala","Colima","Sinaloa","Morelos","Yucatán","Aguascalientes","Hidalgo","San Luis Potosí","Veracruz","Guanajuato","Puebla","México","Nuevo León","Michoacán","Oaxaca","Guerrero","Tabasco","Querétaro","Jalisco","Quintana Roo","Zacatecas","Tamaulipas","Nayarit","Durango","Chiapas","Sonora","Chihuahua","Campeche","Coahuila","Baja California Sur","Baja California"]},"series":[{"data":[{"name":"Ciudad de México","y":11661},{"name":"Tlaxcala","y":34111},{"name":"Colima","y":57270},{"name":"Sinaloa","y":93264},{"name":"Morelos","y":108844},{"name":"Yucatán","y":113333},{"name":"Aguascalientes","y":123841},{"name":"Hidalgo","y":131775},{"name":"San Luis Potosí","y":197489},{"name":"Veracruz","y":221208},{"name":"Guanajuato","y":238894},{"name":"Puebla","y":256675},{"name":"México","y":277766},{"name":"Nuevo León","y":290203},{"name":"Michoacán","y":334014},{"name":"Oaxaca","y":342795},{"name":"Guerrero","y":363566},{"name":"Tabasco","y":374398},{"name":"Querétaro","y":382836},{"name":"Jalisco","y":626164},{"name":"Quintana Roo","y":669321},{"name":"Zacatecas","y":745054},{"name":"Tamaulipas","y":872368},{"name":"Nayarit","y":989973},{"name":"Durango","y":1045639},{"name":"Chiapas","y":1140400},{"name":"Sonora","y":1403066},{"name":"Chihuahua","y":1622769},{"name":"Campeche","y":2001591},{"name":"Coahuila","y":2328468},{"name":"Baja California Sur","y":2591224},{"name":"Baja California","y":3023400}],"type":null,"name":"Superficie por Entidad (ha)","dataLabels":{"enabled":true}}]},"theme":{"chart":{"backgroundColor":"transparent"},"colors":["#7cb5ec","#434348","#90ed7d","#f7a35c","#8085e9","#f15c80","#e4d354","#2b908f","#f45b5b","#91e8e1"]},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadCSV":"Download CSV","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","downloadXLS":"Download XLS","drillUpText":"◁ Back to {series.name}","exitFullscreen":"Exit from full screen","exportData":{"annotationHeader":"Annotations","categoryDatetimeHeader":"DateTime","categoryHeader":"Category"},"hideData":"Hide data table","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbolMagnitude":1000,"numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"shortWeekdays":["Sat","Sun","Mon","Tue","Wed","Thu","Fri"],"thousandsSep":" ","viewData":"View data table","viewFullscreen":"View in full screen","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="highchart html-widget html-fill-item" id="htmlwidget-511991b6bdb729df62c1" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-511991b6bdb729df62c1">{"x":{"hc_opts":{"chart":{"reflow":true,"type":"column"},"title":{"text":"Resumen de Categorías de Manejo por Entidad Federativa"},"yAxis":{"title":{"text":"Cantidad"}},"credits":{"enabled":false},"exporting":{"enabled":false},"boost":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0},"treemap":{"layoutAlgorithm":"squarified"},"column":{"stacking":"normal"}},"xAxis":{"categories":["Aguascalientes","Baja California","Baja California","Baja California","Baja California Sur","Baja California Sur","Baja California Sur","Campeche","Campeche","Campeche","Campeche","Chiapas","Chiapas","Chiapas","Chiapas","Chiapas","Chiapas","Chihuahua","Chihuahua","Chihuahua","Chihuahua","Chihuahua","Ciudad de México","Ciudad de México","Ciudad de México","Coahuila","Coahuila","Coahuila","Coahuila","Coahuila","Colima","Colima","Colima","Colima","Durango","Durango","Guanajuato","Guerrero","Guerrero","Guerrero","Guerrero","Hidalgo","Hidalgo","Hidalgo","Jalisco","Jalisco","Jalisco","Jalisco","Jalisco","Michoacán","Michoacán","Michoacán","Michoacán","Morelos","Morelos","Morelos","México","México","México","México","Nayarit","Nayarit","Nayarit","Nayarit","Nayarit","Nuevo León","Nuevo León","Nuevo León","Oaxaca","Oaxaca","Oaxaca","Oaxaca","Oaxaca","Puebla","Puebla","Puebla","Querétaro","Querétaro","Querétaro","Quintana Roo","Quintana Roo","Quintana Roo","Quintana Roo","San Luis Potosí","San Luis Potosí","San Luis Potosí","Sinaloa","Sinaloa","Sonora","Sonora","Tabasco","Tabasco","Tamaulipas","Tamaulipas","Tamaulipas","Tlaxcala","Veracruz","Veracruz","Veracruz","Veracruz","Yucatán","Yucatán","Yucatán","Yucatán","Zacatecas","Zacatecas","Zacatecas"]},"series":[{"data":[2,2,3,7,3,4,4,3,1,5,1,5,1,2,3,7,1,8,1,2,2,1,1,1,9,3,2,1,2,1,2,1,2,1,2,2,2,1,4,2,2,1,3,2,2,1,1,3,5,1,6,2,3,1,3,1,3,3,8,1,1,1,1,3,1,1,1,2,2,1,6,1,5,1,5,2,1,2,2,12,6,5,1,3,2,2,4,3,5,2,2,2,1,2,1,2,1,4,1,2,1,3,2,1,2,2,1],"name":"Número de veces","colorByPoint":true}],"tooltip":{"pointFormat":"Cantidad: {point.y}"}},"theme":{"chart":{"backgroundColor":"transparent"},"colors":["#7cb5ec","#434348","#90ed7d","#f7a35c","#8085e9","#f15c80","#e4d354","#2b908f","#f45b5b","#91e8e1"]},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadCSV":"Download CSV","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","downloadXLS":"Download XLS","drillUpText":"◁ Back to {series.name}","exitFullscreen":"Exit from full screen","exportData":{"annotationHeader":"Annotations","categoryDatetimeHeader":"DateTime","categoryHeader":"Category"},"hideData":"Hide data table","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbolMagnitude":1000,"numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"shortWeekdays":["Sat","Sun","Mon","Tue","Wed","Thu","Fri"],"thousandsSep":" ","viewData":"View data table","viewFullscreen":"View in full screen","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
+</div>
+<div class="cell-output-display">
+<div class="highchart html-widget html-fill-item" id="htmlwidget-52c9a2cf0143fafd3cb1" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-52c9a2cf0143fafd3cb1">{"x":{"hc_opts":{"chart":{"reflow":true,"type":"column"},"title":{"text":"Resumen de Categorías de Manejo por Entidad Federativa"},"yAxis":{"title":{"text":"Cantidad"}},"credits":{"enabled":false},"exporting":{"enabled":false},"boost":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0},"treemap":{"layoutAlgorithm":"squarified"},"column":{"stacking":"normal"}},"xAxis":{"categories":["Aguascalientes","Baja California","Baja California","Baja California","Baja California Sur","Baja California Sur","Baja California Sur","Campeche","Campeche","Campeche","Campeche","Chiapas","Chiapas","Chiapas","Chiapas","Chiapas","Chiapas","Chihuahua","Chihuahua","Chihuahua","Chihuahua","Chihuahua","Ciudad de México","Ciudad de México","Ciudad de México","Coahuila","Coahuila","Coahuila","Coahuila","Coahuila","Colima","Colima","Colima","Colima","Durango","Durango","Guanajuato","Guerrero","Guerrero","Guerrero","Guerrero","Hidalgo","Hidalgo","Hidalgo","Jalisco","Jalisco","Jalisco","Jalisco","Jalisco","Michoacán","Michoacán","Michoacán","Michoacán","Morelos","Morelos","Morelos","México","México","México","México","Nayarit","Nayarit","Nayarit","Nayarit","Nayarit","Nuevo León","Nuevo León","Nuevo León","Oaxaca","Oaxaca","Oaxaca","Oaxaca","Oaxaca","Puebla","Puebla","Puebla","Querétaro","Querétaro","Querétaro","Quintana Roo","Quintana Roo","Quintana Roo","Quintana Roo","San Luis Potosí","San Luis Potosí","San Luis Potosí","Sinaloa","Sinaloa","Sonora","Sonora","Tabasco","Tabasco","Tamaulipas","Tamaulipas","Tamaulipas","Tlaxcala","Veracruz","Veracruz","Veracruz","Veracruz","Yucatán","Yucatán","Yucatán","Yucatán","Zacatecas","Zacatecas","Zacatecas"]},"series":[{"data":[2,2,3,7,3,4,4,3,1,5,1,5,1,2,3,7,1,8,1,2,2,1,1,1,9,3,2,1,2,1,2,1,2,1,2,2,2,1,4,2,2,1,3,2,2,1,1,3,5,1,6,2,3,1,3,1,3,3,8,1,1,1,1,3,1,1,1,2,2,1,6,1,5,1,5,2,1,2,2,12,6,5,1,3,2,2,4,3,5,2,2,2,1,2,1,2,1,4,1,2,1,3,2,1,2,2,1],"name":"Número de veces","colorByPoint":true}],"tooltip":{"pointFormat":"Cantidad: {point.y}"},"legend":{"enabled":true,"labelFormat":"{name}"}},"theme":{"chart":{"backgroundColor":"transparent"},"colors":["#7cb5ec","#434348","#90ed7d","#f7a35c","#8085e9","#f15c80","#e4d354","#2b908f","#f45b5b","#91e8e1"]},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadCSV":"Download CSV","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","downloadXLS":"Download XLS","drillUpText":"◁ Back to {series.name}","exitFullscreen":"Exit from full screen","exportData":{"annotationHeader":"Annotations","categoryDatetimeHeader":"DateTime","categoryHeader":"Category"},"hideData":"Hide data table","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbolMagnitude":1000,"numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"shortWeekdays":["Sat","Sun","Mon","Tue","Wed","Thu","Fri"],"thousandsSep":" ","viewData":"View data table","viewFullscreen":"View in full screen","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
+</div>
+<div class="cell-output-display">
+<div class="highchart html-widget html-fill-item" id="htmlwidget-6bbe8a2e6d75d6abbf8f" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-6bbe8a2e6d75d6abbf8f">{"x":{"hc_opts":{"chart":{"reflow":true,"type":"area"},"title":{"text":"Suma de Superficies por Categoría de Manejo y Entidad Federativa"},"yAxis":{"title":{"text":"Suma de Superficie protegida (ha)"}},"credits":{"enabled":false},"exporting":{"enabled":false},"boost":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0},"treemap":{"layoutAlgorithm":"squarified"},"area":{"stacking":"normal","lineColor":"#666666","lineWidth":1,"marker":{"lineWidth":1,"lineColor":"#666666"}}},"xAxis":{"categories":["Aguascalientes","Baja California","Baja California","Baja California","Baja California Sur","Baja California Sur","Baja California Sur","Campeche","Campeche","Campeche","Campeche","Chiapas","Chiapas","Chiapas","Chiapas","Chiapas","Chiapas","Chihuahua","Chihuahua","Chihuahua","Chihuahua","Chihuahua","Ciudad de México","Ciudad de México","Ciudad de México","Coahuila","Coahuila","Coahuila","Coahuila","Coahuila","Colima","Colima","Colima","Colima","Durango","Durango","Guanajuato","Guerrero","Guerrero","Guerrero","Guerrero","Hidalgo","Hidalgo","Hidalgo","Jalisco","Jalisco","Jalisco","Jalisco","Jalisco","Michoacán","Michoacán","Michoacán","Michoacán","Morelos","Morelos","Morelos","México","México","México","México","Nayarit","Nayarit","Nayarit","Nayarit","Nayarit","Nuevo León","Nuevo León","Nuevo León","Oaxaca","Oaxaca","Oaxaca","Oaxaca","Oaxaca","Puebla","Puebla","Puebla","Querétaro","Querétaro","Querétaro","Quintana Roo","Quintana Roo","Quintana Roo","Quintana Roo","San Luis Potosí","San Luis Potosí","San Luis Potosí","Sinaloa","Sinaloa","Sonora","Sonora","Tabasco","Tabasco","Tamaulipas","Tamaulipas","Tamaulipas","Tlaxcala","Veracruz","Veracruz","Veracruz","Veracruz","Yucatán","Yucatán","Yucatán","Yucatán","Zacatecas","Zacatecas","Zacatecas"]},"series":[{"data":[123841,2631730,78006,313664,69106,29501,2492617,670687,154,1330710,40,22162,177546,6978,30107,902880,727,1047340,726,10477,563807,419,360,2335,8966,633444,1605900,1449,3865,83810,25596,165,16765,14744,791987,253652,238894,282,6287,356635,362,9571,25971,96233,45419,335234,5210,239207,1094,23240,11127,299458,189,36472,24249,48123,56829,154695,44323,21919,23176,687216,74,279427,80,110642,5984,173577,5835,1076,28024,306644,1216,32269,38704,185702,4844,2506,375486,257863,5525,405922,11,132584,38500,26405,92182,1082,481768,921298,48529,325869,564741,305783,1844,34111,1186,64671,155122,229,15676,2132,94698,827,224436,519493,1125],"name":"Entidades"}],"tooltip":{"pointFormat":"Superficie: {point.y} ha"}},"theme":{"chart":{"backgroundColor":"transparent"},"colors":["#7cb5ec","#434348","#90ed7d","#f7a35c","#8085e9","#f15c80","#e4d354","#2b908f","#f45b5b","#91e8e1"]},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadCSV":"Download CSV","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","downloadXLS":"Download XLS","drillUpText":"◁ Back to {series.name}","exitFullscreen":"Exit from full screen","exportData":{"annotationHeader":"Annotations","categoryDatetimeHeader":"DateTime","categoryHeader":"Category"},"hideData":"Hide data table","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbolMagnitude":1000,"numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"shortWeekdays":["Sat","Sun","Mon","Tue","Wed","Thu","Fri"],"thousandsSep":" ","viewData":"View data table","viewFullscreen":"View in full screen","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hchart</span>(categoriaspentidad, <span class="st">'scatter'</span>, <span class="fu">hcaes</span>(</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">x =</span> entidad_federativa,</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">y =</span> conteo,</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">z =</span> suma_superficie,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">group =</span> categoria_manejo</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>)) <span class="sc">%&gt;%</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>     <span class="fu">hc_credits</span>(<span class="at">enabled =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>                <span class="at">text =</span> <span class="st">'InvestigaOnline.com'</span>,</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>                <span class="at">href =</span> <span class="st">'https://www.investigaonline.com'</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>     <span class="fu">hc_exporting</span>(<span class="at">enabled =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>     <span class="fu">hc_plotOptions</span>(<span class="at">series =</span> <span class="fu">list</span>(<span class="at">animation =</span> <span class="cn">FALSE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="highchart html-widget html-fill-item" id="htmlwidget-b3dfbb0dcdcad2d2b75e" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-b3dfbb0dcdcad2d2b75e">{"x":{"hc_opts":{"chart":{"reflow":true},"title":{"text":null},"yAxis":{"title":{"text":"conteo"},"type":"linear"},"credits":{"enabled":true,"text":"InvestigaOnline.com","href":"https://www.investigaonline.com"},"exporting":{"enabled":true},"boost":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"showInLegend":true,"animation":false},"treemap":{"layoutAlgorithm":"squarified"},"scatter":{"marker":{"symbol":"circle"}}},"series":[{"name":"APFF","data":[{"entidad_federativa":"Baja California","categoria_manejo":"APFF","conteo":2,"suma_superficie":2631730,"y":2,"z":2631730,"name":"Baja California"},{"entidad_federativa":"Baja California Sur","categoria_manejo":"APFF","conteo":3,"suma_superficie":69106,"y":3,"z":69106,"name":"Baja California Sur"},{"entidad_federativa":"Campeche","categoria_manejo":"APFF","conteo":3,"suma_superficie":670687,"y":3,"z":670687,"name":"Campeche"},{"entidad_federativa":"Chiapas","categoria_manejo":"APFF","conteo":5,"suma_superficie":22162,"y":5,"z":22162,"name":"Chiapas"},{"entidad_federativa":"Chihuahua","categoria_manejo":"APFF","conteo":8,"suma_superficie":1047340,"y":8,"z":1047340,"name":"Chihuahua"},{"entidad_federativa":"Ciudad de México","categoria_manejo":"APFF","conteo":1,"suma_superficie":360,"y":1,"z":360,"name":"Ciudad de México"},{"entidad_federativa":"Coahuila","categoria_manejo":"APFF","conteo":3,"suma_superficie":633444,"y":3,"z":633444,"name":"Coahuila"},{"entidad_federativa":"Colima","categoria_manejo":"APFF","conteo":2,"suma_superficie":25596,"y":2,"z":25596,"name":"Colima"},{"entidad_federativa":"Guerrero","categoria_manejo":"APFF","conteo":1,"suma_superficie":282,"y":1,"z":282,"name":"Guerrero"},{"entidad_federativa":"Jalisco","categoria_manejo":"APFF","conteo":2,"suma_superficie":45419,"y":2,"z":45419,"name":"Jalisco"},{"entidad_federativa":"Michoacán","categoria_manejo":"APFF","conteo":1,"suma_superficie":23240,"y":1,"z":23240,"name":"Michoacán"},{"entidad_federativa":"Morelos","categoria_manejo":"APFF","conteo":1,"suma_superficie":36472,"y":1,"z":36472,"name":"Morelos"},{"entidad_federativa":"México","categoria_manejo":"APFF","conteo":3,"suma_superficie":56829,"y":3,"z":56829,"name":"México"},{"entidad_federativa":"Nayarit","categoria_manejo":"APFF","conteo":1,"suma_superficie":23176,"y":1,"z":23176,"name":"Nayarit"},{"entidad_federativa":"Oaxaca","categoria_manejo":"APFF","conteo":2,"suma_superficie":5835,"y":2,"z":5835,"name":"Oaxaca"},{"entidad_federativa":"Quintana Roo","categoria_manejo":"APFF","conteo":12,"suma_superficie":257863,"y":12,"z":257863,"name":"Quintana Roo"},{"entidad_federativa":"San Luis Potosí","categoria_manejo":"APFF","conteo":3,"suma_superficie":132584,"y":3,"z":132584,"name":"San Luis Potosí"},{"entidad_federativa":"Sinaloa","categoria_manejo":"APFF","conteo":4,"suma_superficie":92182,"y":4,"z":92182,"name":"Sinaloa"},{"entidad_federativa":"Sonora","categoria_manejo":"APFF","conteo":5,"suma_superficie":481768,"y":5,"z":481768,"name":"Sonora"},{"entidad_federativa":"Tabasco","categoria_manejo":"APFF","conteo":2,"suma_superficie":48529,"y":2,"z":48529,"name":"Tabasco"},{"entidad_federativa":"Tamaulipas","categoria_manejo":"APFF","conteo":1,"suma_superficie":564741,"y":1,"z":564741,"name":"Tamaulipas"},{"entidad_federativa":"Yucatán","categoria_manejo":"APFF","conteo":1,"suma_superficie":15676,"y":1,"z":15676,"name":"Yucatán"},{"entidad_federativa":"Zacatecas","categoria_manejo":"APFF","conteo":2,"suma_superficie":224436,"y":2,"z":224436,"name":"Zacatecas"}],"type":"bubble"},{"name":"APRN","data":[{"entidad_federativa":"Aguascalientes","categoria_manejo":"APRN","conteo":2,"suma_superficie":123841,"y":2,"z":123841,"name":"Aguascalientes"},{"entidad_federativa":"Chiapas","categoria_manejo":"APRN","conteo":1,"suma_superficie":177546,"y":1,"z":177546,"name":"Chiapas"},{"entidad_federativa":"Ciudad de México","categoria_manejo":"APRN","conteo":1,"suma_superficie":2335,"y":1,"z":2335,"name":"Ciudad de México"},{"entidad_federativa":"Coahuila","categoria_manejo":"APRN","conteo":2,"suma_superficie":1605900,"y":2,"z":1605900,"name":"Coahuila"},{"entidad_federativa":"Colima","categoria_manejo":"APRN","conteo":1,"suma_superficie":165,"y":1,"z":165,"name":"Colima"},{"entidad_federativa":"Durango","categoria_manejo":"APRN","conteo":2,"suma_superficie":791987,"y":2,"z":791987,"name":"Durango"},{"entidad_federativa":"Hidalgo","categoria_manejo":"APRN","conteo":1,"suma_superficie":9571,"y":1,"z":9571,"name":"Hidalgo"},{"entidad_federativa":"Jalisco","categoria_manejo":"APRN","conteo":1,"suma_superficie":335234,"y":1,"z":335234,"name":"Jalisco"},{"entidad_federativa":"México","categoria_manejo":"APRN","conteo":3,"suma_superficie":154695,"y":3,"z":154695,"name":"México"},{"entidad_federativa":"Nayarit","categoria_manejo":"APRN","conteo":1,"suma_superficie":687216,"y":1,"z":687216,"name":"Nayarit"},{"entidad_federativa":"Nuevo León","categoria_manejo":"APRN","conteo":1,"suma_superficie":110642,"y":1,"z":110642,"name":"Nuevo León"},{"entidad_federativa":"Puebla","categoria_manejo":"APRN","conteo":1,"suma_superficie":32269,"y":1,"z":32269,"name":"Puebla"},{"entidad_federativa":"Querétaro","categoria_manejo":"APRN","conteo":1,"suma_superficie":4844,"y":1,"z":4844,"name":"Querétaro"},{"entidad_federativa":"Veracruz","categoria_manejo":"APRN","conteo":1,"suma_superficie":1186,"y":1,"z":1186,"name":"Veracruz"},{"entidad_federativa":"Zacatecas","categoria_manejo":"APRN","conteo":2,"suma_superficie":519493,"y":2,"z":519493,"name":"Zacatecas"}],"type":"bubble"},{"name":"MN","data":[{"entidad_federativa":"Chiapas","categoria_manejo":"MN","conteo":2,"suma_superficie":6978,"y":2,"z":6978,"name":"Chiapas"},{"entidad_federativa":"Chihuahua","categoria_manejo":"MN","conteo":1,"suma_superficie":726,"y":1,"z":726,"name":"Chihuahua"},{"entidad_federativa":"Coahuila","categoria_manejo":"MN","conteo":1,"suma_superficie":1449,"y":1,"z":1449,"name":"Coahuila"},{"entidad_federativa":"Nuevo León","categoria_manejo":"MN","conteo":1,"suma_superficie":5984,"y":1,"z":5984,"name":"Nuevo León"},{"entidad_federativa":"Oaxaca","categoria_manejo":"MN","conteo":1,"suma_superficie":1076,"y":1,"z":1076,"name":"Oaxaca"}],"type":"bubble"},{"name":"PN","data":[{"entidad_federativa":"Baja California","categoria_manejo":"PN","conteo":3,"suma_superficie":78006,"y":3,"z":78006,"name":"Baja California"},{"entidad_federativa":"Baja California Sur","categoria_manejo":"PN","conteo":4,"suma_superficie":29501,"y":4,"z":29501,"name":"Baja California Sur"},{"entidad_federativa":"Campeche","categoria_manejo":"PN","conteo":1,"suma_superficie":154,"y":1,"z":154,"name":"Campeche"},{"entidad_federativa":"Chiapas","categoria_manejo":"PN","conteo":3,"suma_superficie":30107,"y":3,"z":30107,"name":"Chiapas"},{"entidad_federativa":"Chihuahua","categoria_manejo":"PN","conteo":2,"suma_superficie":10477,"y":2,"z":10477,"name":"Chihuahua"},{"entidad_federativa":"Ciudad de México","categoria_manejo":"PN","conteo":9,"suma_superficie":8966,"y":9,"z":8966,"name":"Ciudad de México"},{"entidad_federativa":"Coahuila","categoria_manejo":"PN","conteo":2,"suma_superficie":3865,"y":2,"z":3865,"name":"Coahuila"},{"entidad_federativa":"Colima","categoria_manejo":"PN","conteo":2,"suma_superficie":16765,"y":2,"z":16765,"name":"Colima"},{"entidad_federativa":"Guerrero","categoria_manejo":"PN","conteo":4,"suma_superficie":6287,"y":4,"z":6287,"name":"Guerrero"},{"entidad_federativa":"Hidalgo","categoria_manejo":"PN","conteo":3,"suma_superficie":25971,"y":3,"z":25971,"name":"Hidalgo"},{"entidad_federativa":"Jalisco","categoria_manejo":"PN","conteo":1,"suma_superficie":5210,"y":1,"z":5210,"name":"Jalisco"},{"entidad_federativa":"Michoacán","categoria_manejo":"PN","conteo":6,"suma_superficie":11127,"y":6,"z":11127,"name":"Michoacán"},{"entidad_federativa":"Morelos","categoria_manejo":"PN","conteo":3,"suma_superficie":24249,"y":3,"z":24249,"name":"Morelos"},{"entidad_federativa":"México","categoria_manejo":"PN","conteo":8,"suma_superficie":44323,"y":8,"z":44323,"name":"México"},{"entidad_federativa":"Nayarit","categoria_manejo":"PN","conteo":1,"suma_superficie":74,"y":1,"z":74,"name":"Nayarit"},{"entidad_federativa":"Nuevo León","categoria_manejo":"PN","conteo":2,"suma_superficie":173577,"y":2,"z":173577,"name":"Nuevo León"},{"entidad_federativa":"Oaxaca","categoria_manejo":"PN","conteo":6,"suma_superficie":28024,"y":6,"z":28024,"name":"Oaxaca"},{"entidad_federativa":"Puebla","categoria_manejo":"PN","conteo":5,"suma_superficie":38704,"y":5,"z":38704,"name":"Puebla"},{"entidad_federativa":"Querétaro","categoria_manejo":"PN","conteo":2,"suma_superficie":2506,"y":2,"z":2506,"name":"Querétaro"},{"entidad_federativa":"Quintana Roo","categoria_manejo":"PN","conteo":6,"suma_superficie":5525,"y":6,"z":5525,"name":"Quintana Roo"},{"entidad_federativa":"San Luis Potosí","categoria_manejo":"PN","conteo":2,"suma_superficie":38500,"y":2,"z":38500,"name":"San Luis Potosí"},{"entidad_federativa":"Tlaxcala","categoria_manejo":"PN","conteo":2,"suma_superficie":34111,"y":2,"z":34111,"name":"Tlaxcala"},{"entidad_federativa":"Veracruz","categoria_manejo":"PN","conteo":4,"suma_superficie":64671,"y":4,"z":64671,"name":"Veracruz"},{"entidad_federativa":"Yucatán","categoria_manejo":"PN","conteo":3,"suma_superficie":2132,"y":3,"z":2132,"name":"Yucatán"},{"entidad_federativa":"Zacatecas","categoria_manejo":"PN","conteo":1,"suma_superficie":1125,"y":1,"z":1125,"name":"Zacatecas"}],"type":"bubble"},{"name":"RB","data":[{"entidad_federativa":"Baja California","categoria_manejo":"RB","conteo":7,"suma_superficie":313664,"y":7,"z":313664,"name":"Baja California"},{"entidad_federativa":"Baja California Sur","categoria_manejo":"RB","conteo":4,"suma_superficie":2492617,"y":4,"z":2492617,"name":"Baja California Sur"},{"entidad_federativa":"Campeche","categoria_manejo":"RB","conteo":5,"suma_superficie":1330710,"y":5,"z":1330710,"name":"Campeche"},{"entidad_federativa":"Chiapas","categoria_manejo":"RB","conteo":7,"suma_superficie":902880,"y":7,"z":902880,"name":"Chiapas"},{"entidad_federativa":"Chihuahua","categoria_manejo":"RB","conteo":2,"suma_superficie":563807,"y":2,"z":563807,"name":"Chihuahua"},{"entidad_federativa":"Coahuila","categoria_manejo":"RB","conteo":1,"suma_superficie":83810,"y":1,"z":83810,"name":"Coahuila"},{"entidad_federativa":"Colima","categoria_manejo":"RB","conteo":1,"suma_superficie":14744,"y":1,"z":14744,"name":"Colima"},{"entidad_federativa":"Durango","categoria_manejo":"RB","conteo":2,"suma_superficie":253652,"y":2,"z":253652,"name":"Durango"},{"entidad_federativa":"Guanajuato","categoria_manejo":"RB","conteo":2,"suma_superficie":238894,"y":2,"z":238894,"name":"Guanajuato"},{"entidad_federativa":"Guerrero","categoria_manejo":"RB","conteo":2,"suma_superficie":356635,"y":2,"z":356635,"name":"Guerrero"},{"entidad_federativa":"Hidalgo","categoria_manejo":"RB","conteo":2,"suma_superficie":96233,"y":2,"z":96233,"name":"Hidalgo"},{"entidad_federativa":"Jalisco","categoria_manejo":"RB","conteo":3,"suma_superficie":239207,"y":3,"z":239207,"name":"Jalisco"},{"entidad_federativa":"Michoacán","categoria_manejo":"RB","conteo":2,"suma_superficie":299458,"y":2,"z":299458,"name":"Michoacán"},{"entidad_federativa":"Morelos","categoria_manejo":"RB","conteo":1,"suma_superficie":48123,"y":1,"z":48123,"name":"Morelos"},{"entidad_federativa":"México","categoria_manejo":"RB","conteo":1,"suma_superficie":21919,"y":1,"z":21919,"name":"México"},{"entidad_federativa":"Nayarit","categoria_manejo":"RB","conteo":3,"suma_superficie":279427,"y":3,"z":279427,"name":"Nayarit"},{"entidad_federativa":"Oaxaca","categoria_manejo":"RB","conteo":1,"suma_superficie":306644,"y":1,"z":306644,"name":"Oaxaca"},{"entidad_federativa":"Puebla","categoria_manejo":"RB","conteo":2,"suma_superficie":185702,"y":2,"z":185702,"name":"Puebla"},{"entidad_federativa":"Querétaro","categoria_manejo":"RB","conteo":2,"suma_superficie":375486,"y":2,"z":375486,"name":"Querétaro"},{"entidad_federativa":"Quintana Roo","categoria_manejo":"RB","conteo":5,"suma_superficie":405922,"y":5,"z":405922,"name":"Quintana Roo"},{"entidad_federativa":"San Luis Potosí","categoria_manejo":"RB","conteo":2,"suma_superficie":26405,"y":2,"z":26405,"name":"San Luis Potosí"},{"entidad_federativa":"Sonora","categoria_manejo":"RB","conteo":2,"suma_superficie":921298,"y":2,"z":921298,"name":"Sonora"},{"entidad_federativa":"Tabasco","categoria_manejo":"RB","conteo":2,"suma_superficie":325869,"y":2,"z":325869,"name":"Tabasco"},{"entidad_federativa":"Tamaulipas","categoria_manejo":"RB","conteo":2,"suma_superficie":305783,"y":2,"z":305783,"name":"Tamaulipas"},{"entidad_federativa":"Veracruz","categoria_manejo":"RB","conteo":1,"suma_superficie":155122,"y":1,"z":155122,"name":"Veracruz"},{"entidad_federativa":"Yucatán","categoria_manejo":"RB","conteo":2,"suma_superficie":94698,"y":2,"z":94698,"name":"Yucatán"}],"type":"bubble"},{"name":"SANT","data":[{"entidad_federativa":"Campeche","categoria_manejo":"SANT","conteo":1,"suma_superficie":40,"y":1,"z":40,"name":"Campeche"},{"entidad_federativa":"Chiapas","categoria_manejo":"SANT","conteo":1,"suma_superficie":727,"y":1,"z":727,"name":"Chiapas"},{"entidad_federativa":"Chihuahua","categoria_manejo":"SANT","conteo":1,"suma_superficie":419,"y":1,"z":419,"name":"Chihuahua"},{"entidad_federativa":"Guerrero","categoria_manejo":"SANT","conteo":2,"suma_superficie":362,"y":2,"z":362,"name":"Guerrero"},{"entidad_federativa":"Jalisco","categoria_manejo":"SANT","conteo":5,"suma_superficie":1094,"y":5,"z":1094,"name":"Jalisco"},{"entidad_federativa":"Michoacán","categoria_manejo":"SANT","conteo":3,"suma_superficie":189,"y":3,"z":189,"name":"Michoacán"},{"entidad_federativa":"Nayarit","categoria_manejo":"SANT","conteo":1,"suma_superficie":80,"y":1,"z":80,"name":"Nayarit"},{"entidad_federativa":"Oaxaca","categoria_manejo":"SANT","conteo":5,"suma_superficie":1216,"y":5,"z":1216,"name":"Oaxaca"},{"entidad_federativa":"Quintana Roo","categoria_manejo":"SANT","conteo":1,"suma_superficie":11,"y":1,"z":11,"name":"Quintana Roo"},{"entidad_federativa":"Sinaloa","categoria_manejo":"SANT","conteo":3,"suma_superficie":1082,"y":3,"z":1082,"name":"Sinaloa"},{"entidad_federativa":"Tamaulipas","categoria_manejo":"SANT","conteo":1,"suma_superficie":1844,"y":1,"z":1844,"name":"Tamaulipas"},{"entidad_federativa":"Veracruz","categoria_manejo":"SANT","conteo":2,"suma_superficie":229,"y":2,"z":229,"name":"Veracruz"},{"entidad_federativa":"Yucatán","categoria_manejo":"SANT","conteo":1,"suma_superficie":827,"y":1,"z":827,"name":"Yucatán"}],"type":"bubble"}],"xAxis":{"type":"category","title":{"text":"entidad_federativa"},"categories":null}},"theme":{"chart":{"backgroundColor":"transparent"},"colors":["#7cb5ec","#434348","#90ed7d","#f7a35c","#8085e9","#f15c80","#e4d354","#2b908f","#f45b5b","#91e8e1"]},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadCSV":"Download CSV","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","downloadXLS":"Download XLS","drillUpText":"◁ Back to {series.name}","exitFullscreen":"Exit from full screen","exportData":{"annotationHeader":"Annotations","categoryDatetimeHeader":"DateTime","categoryHeader":"Category"},"hideData":"Hide data table","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbolMagnitude":1000,"numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"shortWeekdays":["Sat","Sun","Mon","Tue","Wed","Thu","Fri"],"thousandsSep":" ","viewData":"View data table","viewFullscreen":"View in full screen","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
