@@ -1,0 +1,203 @@
+---
+format: html
+---
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+library(highcharter)
+library(dplyr)
+
+#export graphs
+#library(htmlwidgets)
+```
+
+
+<div style="text-align: center; font-size: 25px;"> 
+Actualmente la CONANP protege <b>94.9 millones de hectáreas</b> del territorio nacional.
+</div>
+
+
+```{r echo=FALSE}
+#justify
+info_simec <- data.frame(
+  Tipo = c("ANP decretadas", "ADVC certificadas"),
+  Superficie = c( 93807805, 1137650.30),
+  Porcentajes= c(34.18, round(1137650.30/196437500*100,2)),
+  Porcentaje_Territorio = c(11.71, 22.47),
+    Porcentaje_ficticio = c(90, 10)
+)
+colores = c("#3E7C24", "#8e44ad","#CEBA92","#B53C0D",  "#123757")
+
+```
+
+```{r echo=FALSE}
+nota_anp <- paste0("Representa un <b>", 
+                          info_simec$Porcentajes[1],"%</b> de la superficie nacional,", 
+                   " del cual<br> <b>11.71%</b> corresponde al medio terrestre y <b>22.4%</b> al medio marino.")
+nota_advc <- paste0("Representa un <b>", 
+                       info_simec$Porcentajes[2],
+                       "% </b>de la superficie terrestre nacional,<br> en <b>28</b> entidades federativas")
+ 
+notas <- c(nota_anp, nota_advc)
+
+```
+
+
+ 
+
+
+```{r echo=FALSE}
+df <- data.frame(
+  name = c("ANP Decretadas", "ADVC Certificadas"),
+  r = c(93807805, 1137650.30),
+  y = c(90, 10)
+)
+
+df$note <- notas
+
+df <- df %>% mutate(y_formatted = format(y, big.mark = ","))
+df <- df %>% mutate(r_formatted = format(r, big.mark = ","))
+
+
+info_simec_plot <- highchart()
+
+info_simec_plot <- info_simec_plot %>%
+  #hc_title(text = "Áreas Naturales Protegidas (ANP) de competencia de la Federación") %>%
+ # hc_subtitle(text = "Actualización: Junio 2024") %>%  
+
+  hc_chart(
+    type = 'pie', 
+    polar = FALSE ,  
+    inverted = FALSE,
+    options3d = list(
+      enabled = TRUE,
+      alpha = 20,
+      beta = 5 #0
+    )
+  ) %>%
+  hc_plotOptions(
+    pie = list(
+      innerSize = '50%',  
+      depth = 25, 
+      startAngle = 160, 
+      dataLabels = list(
+        enabled = TRUE,
+        format = '{point.name}: {point.r_formatted} ha',  
+        style = list(color = '#000000', fontSize = '15px')
+      )
+    )
+  ) %>%
+  hc_xAxis(categories = df$name) %>%
+  hc_add_series(
+    name = 'Superficie', 
+    data = df, 
+    colorByPoint = TRUE,  
+    colors = colores,  
+    showInLegend = TRUE,
+    tooltip = list(
+      pointFormat = '{point.note}',    
+      headerFormat = ''   
+    )
+  ) %>%
+  hc_tooltip(
+    useHTML = TRUE,
+    headerFormat = '<span style="font-size: 45px">{point.key}</span><br/>',
+    pointFormat = '{point.note}' 
+  ) %>%
+  hc_exporting(enabled = FALSE) %>%
+  hc_credits(enabled=TRUE,
+             fontsize = "14px",
+             text="Actualizado: Junio 2024",
+             href = "",
+             style= list(fontSize="14px"),
+              position = list(
+                align = 'left',
+                x = 0,
+                y = -10
+    )
+             
+             )%>%
+  hc_plotOptions(series = list(animation = FALSE)) %>%
+  hc_legend(enabled = FALSE)
+
+info_simec_plot
+
+#saveWidget(as_widget(info_simec_plot), "plot-infosimec.html")
+
+
+
+```
+
+
+
+
+
+```{r include=FALSE, echo=FALSE, message=FALSE, warning=FALSE, fig.height=8, fig.width=10}
+
+df <- data.frame(
+  name = c("ANP", "ADVC"),
+  r = c(93807805, 1137650.30),
+  y = c(90, 10)
+)
+
+nota_anp <- paste0("Representa un ", 
+                   info_simec$Porcentajes[1],"% de la superficie nacional,", 
+                   "<br>del cual <b>11.71%</b> corresponde al medio terrestre y 22.4% al medio marino.")
+nota_advc <- paste0("Representa un ", 
+                    info_simec$Porcentajes[2],
+                    "% de la superficie terrestre nacional, <br> en 28 entidades federativas")
+
+notas <- c(nota_anp, nota_advc)
+
+df$note <- notas
+
+df <- df %>% mutate(y_formatted = format(y, big.mark = ","))
+df <- df %>% mutate(r_formatted = format(r, big.mark = ","))
+
+
+
+info_simec_plot = highchart()
+
+info_simec_plot = info_simec_plot %>%
+ # hc_title(text = "") %>%
+    hc_subtitle(text = "Actualización: Junio 2024") %>%  
+
+  hc_chart(type = 'pie', 
+           polar = FALSE,  
+           inverted = FALSE) %>%
+  hc_plotOptions(
+    pie = list(
+      innerSize = '50%',  
+      dataLabels = list(
+        enabled = TRUE,
+        format = '{point.name}: {point.r_formatted} ha',  
+        style = list(color = '#000000')  
+      )
+    )
+  ) %>%
+  hc_xAxis(categories = df$name) %>%
+  hc_add_series(
+    name = 'Superficie', 
+    data = df, 
+    colorByPoint = TRUE,  
+    colors = colores,  
+    showInLegend = TRUE,
+    tooltip = list(
+      pointFormat = '{point.note}',    
+      headerFormat = ''   
+    )
+  ) %>%
+  hc_tooltip(
+    useHTML = TRUE,
+    headerFormat = '<span style="font-size: 16px">{point.key}</span><br/>',
+    pointFormat = '{point.note}' 
+  ) %>%
+  hc_plotOptions(series = list(animation = FALSE))%>%
+   hc_legend(enabled = FALSE) 
+
+info_simec_plot
+#saveWidget(as_widget(info_simec_plot), "plot-infosimec.html")
+
+
+```
+
+

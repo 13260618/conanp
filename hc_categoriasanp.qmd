@@ -1,0 +1,448 @@
+---
+format: html
+---
+
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;margin-left:auto;margin-right:auto;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-9t0p{background-color:#e60000;border-color:inherit;color:#ffffff;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-hx8a{background-color:#abcd66;border-color:inherit;color:#ffffff;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-094m{background-color:#ffbe3b;border-color:inherit;color:#ffffff;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-775d{background-color:#bcb800;border-color:inherit;color:#ffffff;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-ghey{background-color:#3166ff;border-color:inherit;color:#ffffff;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-0g2w{background-color:#6665cd;border-color:inherit;color:#ffffff;font-weight:bold;text-align:center;vertical-align:top}
+</style>
+<div style="text-align: center;">
+  <table class="tg">
+    <thead>
+      <tr>
+        <th class="tg-094m">APFF</th>
+        <th class="tg-0pky">Área de Protección de Flora y Fauna</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="tg-775d">APRN</td>
+        <td class="tg-0pky">Área de Protección de Recursos Naturales</td>
+      </tr>
+      <tr>
+        <td class="tg-9t0p">MN</td>
+        <td class="tg-0pky">Monumentos Naturales</td>
+      </tr>
+      <tr>
+        <td class="tg-hx8a">RB</td>
+        <td class="tg-0pky">Reserva de la biosfera </td>
+      </tr>
+      <tr>
+        <td class="tg-ghey">SANT</td>
+        <td class="tg-0pky">Santuario</td>
+      </tr>
+      <tr>
+        <td class="tg-0g2w">ADVC</td>
+        <td class="tg-0pky">Áreas Destinadas Voluntariamente a la Conservación</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+
+```{r echo=FALSE, warning=FALSE, message=FALSE, include=FALSE}
+rm(list = ls())
+library(highcharter)
+library(dplyr)
+
+colores <- c("#2A6C5C", "#B19354", "#6E152E")
+
+cols_rgb <-c(
+  "rgb(171,205,102)",
+  "rgb(168,112,0",
+  "rgb(230,0,0)",
+  "rgb(188,184)",
+  "rgb(255,190,59)",
+  "rgb(8,69,222)",
+  "rgb(112,68,137)"
+)
+
+ # cols_sig <- c(
+# "APFF" = "#ffbe3b",
+# "APRN" = "#bcb800",
+# "MN" = "#e60000",
+# "PN" = "#a87000",
+# "RB" = "#abcd66",
+# "SANT" = "#0845de"
+# )
+
+
+```
+
+```{r echo=FALSE, warning=FALSE, message=FALSE, include=FALSE}
+manejo <- data.frame(
+  Categoria = c("APFF", "APRN", "MN", "PN", "RB", "SANT", "ADVC"),
+  Numero = c(54, 13, 5, 78, 48, 28, 581),
+  Superficie = c("7,469,180", "4,563,474", "16,269", "17,569,683", "64,033,711", "155,488", "1,137,650"),
+  Porcentaje = c(7.96, 4.86, 0.02, 18.73, 68.26, 0.17, 0.58)
+)
+
+manejo_filtrado <- manejo %>%
+  filter(Categoria != "ADVC") %>%
+  arrange(desc(Numero))
+
+categorias_ordenadas <- c("APFF", "PN", "RB", "SANT", "APRN", "MN")
+
+manejo_filtrado <- manejo_filtrado %>%
+   filter(Categoria %in% categorias_ordenadas) 
+
+manejo_filtrado$Categoria <- factor(manejo_filtrado$Categoria, levels = categorias_ordenadas)
+```
+
+```{r echo=FALSE}
+cols_sig = c("#a87000", "#ffbe3b","#abcd66","#3166ff","#bcb800","#e60000")
+
+
+manejo_filtrado <- manejo_filtrado %>%
+  mutate(color = cols_sig[Categoria])
+
+
+data_numero_anp <- manejo_filtrado %>%
+  arrange(match(Categoria, categorias_ordenadas)) %>%
+  mutate(color = cols_sig[Categoria]) %>%
+  select(Numero, color)
+
+data_numero_anp <- lapply(1:nrow(data_numero_anp), function(i) {
+  list(y = data_numero_anp$Numero[i], color = data_numero_anp$color[i])
+})
+```
+
+
+```{r echo=FALSE, eval=FALSE}
+hc <- highchart() %>%
+  hc_chart(type = "column") %>%
+  hc_title(text = "Categoría de manejo en Áreas Naturales Protegidas") %>%
+  hc_xAxis(categories = manejo_filtrado$Categoria) %>%
+  hc_yAxis_multiples(
+    list(
+      min = 0,
+      title = list(text = "Número de ANP")
+    ), 
+    list(
+      title = list(text = " "),
+      opposite = TRUE,
+      color = "white"
+    )
+  ) %>%
+  hc_legend(shadow = TRUE) %>%
+  hc_tooltip(shared = TRUE,
+             formatter = JS("
+      function() {
+        var tooltip = this.points[0].series.chart.tooltip;
+        var superficie = this.points[0].series.userOptions.superficie;
+        var header = '<span style=\"font-size: 10px\">' + this.x + '</span><br/>';
+        var body = this.points.reduce(function (s, point) {
+          return s + '<span style=\"color:' + point.color + '\">' + point.series.name + '</span>: <b>' + point.y + '</b><br/>';
+        }, '');
+        var superficie = this.points[0].point.superficie; // Obtener la suprficie del primer punto
+        var footer = '<span style=\"font-size: 10px\">Con un total de ' + superficie + ' ha protegidas</span>';
+        return header + body + footer;
+      }
+    ")
+             
+             ) %>%
+  hc_plotOptions(column = list(
+    grouping = FALSE,
+    shadow = FALSE,
+    borderWidth = 0,
+    dataLabels = list(
+      enabled = TRUE,
+      inside = TRUE,
+      align = 'center',
+      verticalAlign ='top', #'middle',
+      style = list(
+        fontSize = '12px',
+        fontWeight = 'bold',
+        color = c("white")
+      )
+    )
+  )) %>%
+  hc_add_series(
+    name = "Número de ANP",
+    colorByPoint = TRUE,
+    data = data_numero_anp,
+    pointPadding = 0.1
+  ) %>%
+  hc_add_series(
+    name = "Porcentaje protegido",
+    color = "gray",
+    data = manejo_filtrado$Porcentaje,
+    pointPadding = 0.3,
+    yAxis = 1,
+    tooltip = list(
+      valueSuffix = "%"  #
+    )
+    
+    
+  )
+hc
+```
+
+```{r eval=FALSE, echo=FALSE}
+#superficie_total_protegida <- sum(manejo_filtrado$Superficie)
+
+highchart() %>%
+  hc_chart(type = "column") %>%
+  hc_title(text = "Categoría de Manejo en Áreas Naturales Protegidas") %>%
+  hc_xAxis(categories = manejo_filtrado$Categoria) %>%
+  hc_yAxis_multiples(
+    list(
+      min = 0,
+      title = list(text = "Número de ANP")
+    ), 
+    list(
+      title = list(text = " "),
+      opposite = TRUE
+    )
+  ) %>%
+  hc_legend(shadow = FALSE) %>%
+  hc_tooltip(
+    shared = TRUE,
+    formatter = JS("function() {
+      var tooltip = '<b>' + this.x + '</b><br/>' +
+                    'Número de ANP: ' + this.points[0].y + '<br/>' +
+                    'Porcentaje protegido: ' + this.points[1].y + ' %<br/>' +
+                    'Superficie total protegida:' ; 
+      return tooltip;
+    }")
+  ) %>%
+  hc_plotOptions(column = list(
+    grouping = FALSE,
+    shadow = FALSE,
+    borderWidth = 0,
+    dataLabels = list(
+      enabled = TRUE,
+      inside = TRUE,
+      align = 'center',
+      verticalAlign ='top',
+      style = list(
+        fontSize = '12px',
+        fontWeight = 'bold',
+        color = 'white'
+      )
+    )
+  )) %>%
+  hc_add_series(
+    name = "Número de ANP",
+    colorByPoint = TRUE,
+    data = data_numero_anp,
+    pointPadding = 0.1
+  ) %>%
+  hc_add_series(
+    name = "Porcentaje protegido",
+    color = "gray",
+    data = manejo_filtrado$Porcentaje,
+    pointPadding = 0.3,
+    yAxis = 1
+    # ,
+    # tooltip = list(
+    #   valueSuffix = "%"  # 
+    # )
+  )
+```
+
+
+```{r echo=FALSE}
+
+
+data_numero_anp <- manejo_filtrado %>%
+  arrange(match(Categoria, categorias_ordenadas)) %>%
+  mutate(color = cols_sig) %>%
+  select(Numero, color, Superficie)
+
+
+data_numero_anp <- lapply(1:nrow(data_numero_anp), function(i) {
+  list(y = data_numero_anp$Numero[i], color = data_numero_anp$color[i], superficie = data_numero_anp$Superficie[i])
+})
+
+hc <- highchart() %>%
+  hc_chart(type = "column") %>%
+  hc_title(text = "Categoría de Manejo en Áreas Naturales Protegidas") %>%
+  hc_xAxis(categories = manejo_filtrado$Categoria) %>%
+  hc_yAxis_multiples(
+    list(
+      min = 0,
+      title = list(text = "Número de ANP")
+    ), 
+    list(
+      title = list(text = "Porcentaje protegido"),
+      opposite = TRUE
+    )
+  ) %>%
+  hc_legend(shadow = FALSE) %>%
+  hc_tooltip(shared = TRUE, formatter = JS("
+      function() {
+        var header = '<span style=\"font-size: 10px\">' + this.x + '</span><br/>';
+        var body = this.points.reduce(function (s, point) {
+          return s + '<span style=\"color:' + point.color + '\">' + point.series.name + '</span>: <b>' + point.y + '</b><br/>';
+        }, '');
+        var superficie = this.points[0].point.superficie; // Obtener superficie del primer punto
+        var footer = '<span style=\"font-size: 10px\">Con un total de ' + superficie + ' ha protegidas</span>';
+        return header + body + footer;
+      }
+    ")
+  ) %>%
+  hc_plotOptions(column = list(
+    grouping = FALSE,
+    shadow = FALSE,
+    borderWidth = 0,
+    dataLabels = list(
+      enabled = TRUE,
+      inside = TRUE,
+      align = 'center',
+      verticalAlign = 'middle',
+      style = list(
+        fontSize = '12px',
+        fontWeight = 'bold',
+        color = 'white'
+      )
+    )
+  )) %>%
+  hc_add_series(
+    name = "Número de ANP",
+    colorByPoint = TRUE,
+    data = data_numero_anp,
+    pointPadding = 0.2
+  ) %>%
+  hc_add_series(
+    name = "Porcentaje protegido",
+    color = "gray",# cols_sig[5], 
+    data = manejo_filtrado$Porcentaje,
+    pointPadding = 0.4,
+    yAxis = 1,
+    tooltip = list(
+      valueSuffix = "%"  
+    )
+  )
+
+hc
+
+```
+
+
+ 
+ 
+ 
+```{r echo=FALSE, warning=FALSE, message=FALSE, eval=FALSE}
+hc <- highchart() %>%
+  hc_chart(type = "column") %>%
+  hc_title(text = "Categoría de Manejo en Áreas Naturales Protegidas") %>%
+  hc_xAxis(categories = manejo_filtrado %>% arrange(match(Categoria, categorias_ordenadas)) %>% pull(Categoria)) %>% #categoria2
+  hc_yAxis(title = list(text = "Valores")) %>%
+  hc_add_series(name = "Número de ANP", 
+                data = manejo_filtrado %>% arrange(match(Categoria, categorias_ordenadas)) %>% pull(Numero), 
+                color = colores[1],
+                dataLabels = list(enabled = TRUE, format = '{point.y} ANP', color = "white")) %>%
+  hc_add_series(name = "Porcentaje protegido", 
+                data = manejo_filtrado %>% arrange(match(Categoria, categorias_ordenadas)) %>% pull(Porcentaje), 
+                color = colores[3],
+                dataLabels = list(enabled = TRUE, format = '{point.y}%', color = "white")) %>%
+  hc_tooltip(pointFormat = 'Superficie: {point.Superficie} ha<br>Porcentaje: {point.Porcentaje}%') %>%
+  hc_plotOptions(column = list(stacking = 'normal'))
+
+hc
+#saveWidget(as_widget(hc), "hc_cat_anp.html")
+```
+
+```{r echo=FALSE, warning=FALSE, message=FALSE, eval=FALSE}
+highchart() %>%
+  hc_chart(type = "column") %>%
+  #hc_title(text = " ") %>%
+  hc_xAxis_multiples(categories = manejo_filtrado$Categoria) %>%
+  hc_yAxis_multiples(list(
+    min = 0,
+    title = list(text = " ")
+  ), list(
+    title = list(text = ""),
+    opposite = TRUE
+  )) %>%
+  hc_legend(shadow = TRUE) %>%
+  hc_tooltip(shared = TRUE) %>%
+  hc_plotOptions(column = list(
+    grouping = FALSE,
+    shadow = FALSE,
+    borderWidth = 0
+  )) %>%
+  hc_add_series(
+    name = "Número de ANP",
+    colorBypoint ='TRUE',
+    color = colores[2], 
+    data = manejo_filtrado %>% arrange(match(Categoria, categorias_ordenadas)) %>% pull(Numero),  
+    pointPadding = 0.2#,
+#pointPlacement = -0.2
+  ) %>%
+  hc_add_series(
+    name = "Porcentaje protegido",
+    color ="gray", 
+    data = manejo_filtrado %>% arrange(match(Categoria, categorias_ordenadas)) %>% pull(Porcentaje), 
+   pointPadding = 0.3 
+  )  %>%
+  hc_plotOptions(series = list(animation = TRUE))
+```
+
+```{r include=FALSE, eval=FALSE}
+library(highcharter)
+library(dplyr)
+
+colores <- c("#2A6C5C", "#B19354", "#6E152E")
+
+# Datos
+manejo <- data.frame(
+  Categoria = c("APFF", "APRN", "MN", "PN", "RB", "SANT", "ADVC"),
+  Numero = c(54, 13, 5, 78, 48, 28, 581),
+  Superficie = c(7469180, 4563474, 16269, 17569683, 64033711, 155488, 1137650),
+  Porcentaje = c(7.96, 4.86, 0.02, 18.73, 68.26, 0.17, 0.58)
+)
+
+manejo_filtrado <- manejo %>%
+  filter(Categoria != "ADVC") %>%
+  arrange(desc(Numero))
+
+categorias_ordenadas <- c("RB", "PN", "APFF", "SANT", "APRN", "MN")
+
+# Reordenar los datos según las categorías ordenadas
+manejo_filtrado <- manejo_filtrado %>%
+  filter(Categoria %in% categorias_ordenadas) %>%
+  mutate(categoria2 = case_when(
+    Categoria == "APFF" ~ "Áreas de Protección de Flora y Fauna",
+    Categoria == "APRN" ~ "Área de Protección de Recursos Naturales",
+    Categoria == "MN" ~ "Monumentos",
+    Categoria == "PN" ~ "Parques Nacionales",
+    Categoria == "RB" ~ "Reserva de la Biosfera",
+    Categoria == "SANT" ~ "Santuarios"
+  ))
+
+manejo_filtrado$Categoria <- factor(manejo_filtrado$Categoria, levels = categorias_ordenadas)
+
+hc <- highchart() %>%
+  hc_chart(type = "bar") %>%
+  hc_title(text = "Categoría de Manejo en Áreas Naturales Protegidas") %>%
+  hc_xAxis(categories = manejo_filtrado %>% arrange(match(Categoria, categorias_ordenadas)) %>% pull(categoria2)) %>%
+  hc_yAxis(title = list(text = "Valores")) %>%
+  hc_add_series(name = "Número de ANP", 
+                data = manejo_filtrado %>% arrange(match(Categoria, categorias_ordenadas)) %>% pull(Numero), 
+                color = colores[1],
+                dataLabels = list(enabled = TRUE, format = '{point.y} ANP')) %>%
+  hc_add_series(name = "Porcentaje protegido", 
+                data = manejo_filtrado %>% arrange(match(Categoria, categorias_ordenadas)) %>% pull(Porcentaje), 
+                color = colores[3],
+                dataLabels = list(enabled = TRUE, format = '{point.y}%')) %>%
+  hc_tooltip(pointFormat = 'Superficie: {point.Superficie} ha<br>Porcentaje: {point.Porcentaje}%') %>%
+  hc_plotOptions(series = list(stacking = 'normal'))
+
+hc
+#saveWidget(as_widget(hc), "hc_anp.html")
+```

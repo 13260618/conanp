@@ -1,0 +1,115 @@
+---
+title: ''
+output: html_document
+date: 'Actualización: 28 de Junio de 2024'
+---
+
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+library(plotly)
+library(readr)
+library(ggplot2)
+
+library(tidyverse)
+library(sf)
+
+library(maps)
+
+ library(dplyr)
+
+
+library(plotly)
+
+
+library(scales)
+
+
+library(htmlwidgets)
+
+
+library(highcharter)
+
+```
+
+ 
+
+```{r echo=FALSE}
+colores = c("#2A6C5C", "#B19354", "#6E152E")
+
+convert_to_rgba <- function(color, alpha) {
+  rgb_values <- col2rgb(color) / 255
+  rgba <- paste0("rgba(", paste(rgb_values, collapse = ", "), ", ", alpha, ")")
+  return(rgba)
+}
+
+alpha <- 0.5 # transparente
+
+rgba_colores <- sapply(colores, convert_to_rgba, alpha = alpha)#[[1]]
+ 
+
+
+t <- list(
+  family = "sans serif",
+  size = 14,
+  color = toRGB("grey50"))
+
+
+```
+
+```{r echo=FALSE}
+manejo <- data.frame(
+  Categoria = c("APFF", "APRN", "MN", "PN", "RB", "SANT", "ADVC") ,
+  Numero = c(54, 13, 5, 78, 48, 28, 581),
+  Superficie = c(7469180, 4563474, 16269, 17569683, 64033711, 155488,1137650),
+  Porcentaje = c(7.96, 4.86, 0.02, 18.73, 68.26, 0.17,0.58)
+)
+
+manejo_filtrado <- manejo[manejo$Categoria != "ADVC",]
+manejo_ordenado <- manejo_filtrado[order(-manejo_filtrado$Numero),]
+```
+
+
+```{r echo=FALSE}
+categorias_ordenadas <- c("RB", "PN", "APFF", "SANT", "APRN", "MN")
+manejo_filtrado <- manejo[manejo$Categoria %in% categorias_ordenadas, ]
+manejo_filtrado$categoria2 <-c(
+               
+               "Áreas de Protección de Flora y Fauna",
+               "Área de Protección de Recursos Naturales",
+               "Monumentos",
+               "Parques Nacionales",
+               "Reserva de la Biosfera",
+               "Santuarios"
+               
+               
+               )
+manejo_filtrado$Categoria <- factor(manejo_filtrado$Categoria, levels = categorias_ordenadas)
+
+```
+
+ 
+```{r echo=FALSE}
+hc <- highchart() %>%
+  hc_chart(type = "column") %>%
+  hc_title(text = "Categoría de Manejo en Áreas Naturales Protegidas") %>%
+  hc_xAxis(categories = manejo_filtrado %>% arrange(match(Categoria, categorias_ordenadas)) %>% pull(categoria2)) %>%
+  hc_yAxis(title = list(text = "Valores")) %>%
+  hc_add_series(name = "Número de ANP", 
+                data = manejo_filtrado %>% arrange(match(Categoria, categorias_ordenadas)) %>% pull(Numero), 
+                color = colores[1],
+                dataLabels = list(enabled = TRUE, format = '{point.y} ANP', color = "white")) %>%
+  hc_add_series(name = "Porcentaje protegido", 
+                data = manejo_filtrado %>% arrange(match(Categoria, categorias_ordenadas)) %>% pull(Porcentaje), 
+                color = colores[3],
+                dataLabels = list(enabled = TRUE, format = '{point.y}%', color = "white")) %>%
+  hc_tooltip(pointFormat = 'Superficie: {point.Superficie} ha<br>Porcentaje: {point.Porcentaje}%') %>%
+  hc_plotOptions(column = list(stacking = 'normal'))
+
+hc
+
+#saveWidget(as_widget(plt.manejo), "plot-manejosuperfpercent.html")
+```
+
+
+ 
+ 
