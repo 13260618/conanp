@@ -1,0 +1,321 @@
+---
+format: html
+---
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+#library
+#rm(list=ls())
+library(tidyverse)
+library(sf)
+library(maps)
+library(dplyr)
+library(highcharter)
+library(plotly)
+library(ggplot2)
+
+cols_sig = c("#a87000", "#ffbe3b","#abcd66","#3166ff","#bcb800","#e60000")
+colores_identidad = c("#3E7C24", "#8e44ad","#CEBA92","#B53C0D",  "#123757")
+
+
+
+library(scales)
+library(htmlwidgets)
+
+library(readxl)
+
+
+```
+
+
+
+
+```{r echo=FALSE}
+df_advc <- read_excel("lista_advc_24.xlsx")
+#names(df_advc) <- gsub(" ", "_", names(df_advc))
+```
+
+
+## Número de certificaciones de ADVC por año
+
+```{r echo=FALSE}
+df_cert_year <- df_advc %>%
+  group_by(certification_year) %>%
+  summarise(count = n(),
+            total_superficie = sum(superficie_certificada, na.rm = TRUE),
+            .groups = 'drop')
+```
+
+ 
+  
+```{r echo=FALSE}
+plt_cert_year <- plot_ly(df_cert_year, 
+                         x = ~certification_year, 
+                         y = ~total_superficie, 
+                         type = 'bar', 
+                         name = 'Superficie total (ha)',
+                         marker = list(color = colores_identidad[3])
+)
+
+plt_cert_year <- plt_cert_year %>% 
+  add_trace(x = ~certification_year, 
+            y = ~count, 
+            type = 'scatter', 
+            mode = 'lines+markers', 
+            line = list(color = colores_identidad[1]), 
+            marker = list(color = colores_identidad[2]),
+            name = "Número de ADVC",
+            yaxis = "y2"
+  ) %>%
+  layout(title = 'Número y superficie de ADVC certificadas (2002-2024)',
+         xaxis = list(title = '',
+                      tickangle = 270, 
+                      tickmode = "linear"
+                      ),
+         yaxis = list(title = 'Superficie certificada (ha)', zeroline = FALSE),
+         yaxis2 = list(title = 'Número de ADVC', 
+                       overlaying = "y",
+                       side = "right", zeroline = FALSE),
+         margin = list(t = 80),
+         barmode = 'overlay',   
+         showlegend = TRUE,
+         hoverlabel = list(
+           #bgcolor = "white",
+           font = list(size = 12),
+           align = "left",
+          # bordercolor = "black",
+           borderwidth = 1,
+           namelength = -1  # Permite mostrar todo el nombre
+         )
+)
+
+plt_cert_year
+
+saveWidget(as_widget(plt_cert_year), "plot-advc_certif_superf.html")
+
+
+```
+
+
+ 
+
+
+
+## Superficies de ADVC por Entidad Federativa
+
+```{r echo=FALSE}
+df_surface_state <- df_advc %>%
+  group_by(estado) %>%
+  summarise(superficie = sum(superficie_certificada ))
+
+ 
+
+df_surface_state <- df_surface_state %>%
+  arrange(desc(superficie))
+
+#cat_manejo_order <- categoria_manejo[order(df_surface_state$superficie), ]
+df_surface_state <- df_surface_state[order(df_surface_state$superficie), ]
+
+
+
+plt_surf_state <- plot_ly(df_surface_state, 
+                          x = ~superficie, 
+                          y = ~reorder(estado, -superficie), #superficie, 
+                          type = 'bar',
+                          marker = list(color = colores_identidad[1])
+)
+
+# Establecer el diseño del gráfico
+plt_surf_state <- plt_surf_state %>% 
+  layout(title = 'Superficie certificada por Entidad Federativa',
+         xaxis = list(title = "(Hectáreas)"),
+         yaxis = list(title = " "),
+         margin = list(t = 80)
+  )
+
+plt_surf_state
+#saveWidget(as_widget(plt_surf_state), "plot-superficiesadvc-estados.html")
+
+```
+
+ 
+
+
+
+
+```{r echo=FALSE}
+df_bubble <- df_advc %>%
+  group_by(region_conanp) %>%
+  summarise(Count = n()) %>%
+  ungroup()
+
+df_bubble$region_conanp <- as.factor(df_bubble$region_conanp)
+```
+
+
+
+
+
+
+```{r echo=FALSE}
+propiedad_social <- c("Ejido\r\n(Tierras de Uso Común)", 
+                      "Comunidad \r\n(Bienes comunales)",
+                      "Ejido \r\n(Parcela)", 
+                      "Empresa de Participación Estatal",
+                      "Ejido\r\n((Tierras de Uso Común y Parcelas)"
+                      )
+propiedad_privada <- c("Persona física", "Persona moral")
+propiedad_publica <- c("Público Municipal", "Público Federal", "Público Estatal")
+
+# Crear la nueva columna basada en las categorías
+df_advc <- df_advc %>%
+  mutate(
+    categoria_propiedad = case_when(
+      tipo_propietario %in% propiedad_social ~ "Propiedad_social",
+      tipo_propietario %in% propiedad_privada ~ "Propiedad_privada",
+      tipo_propietario %in% propiedad_publica ~ "Propiedad_publica",
+      TRUE ~ "Otra"
+    )
+  )
+```
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+```{r echo=FALSE}
+library(rbokeh)
+df_advc$categoria_propiedad <- as.factor(df_advc$categoria_propiedad)
+```
+
+
+
+```{r echo=FALSE}
+
+df_propiedad <- df_advc %>%
+  group_by(categoria_propiedad) %>%
+  summarise(Count = n()) %>%
+  ungroup()
+
+ 
+```
+
+
+
+```{r echo=FALSE}
+sup_certificada = data.frame(
+  tipo_propiedad =c("Social", "Privada", "Pública"),
+  num_ADVC = c(397,175,9),
+  superficie = c(1075345.59,191373.41, 7771.56),
+  porc_cert=c(91.12,8.48,0.41)
+)
+tot = 1137650.30
+#sup_certificada$porc_certif =  round((sup_certificada$superficie/tot)*100,5)
+```
+
+
+## Tipo de propiedad
+
+
+
+```{r echo=FALSE}
+sup_certificada$tipo_propiedad <- factor(sup_certificada$tipo_propiedad, levels = c("Pública", "Privada", "Social"))
+
+colors <- c("Pública" = "#B53C0D",
+            "Privada" = "#3E7C24", 
+            "Social" = "#123757"
+            )
+
+ superficie_bar <- plot_ly(
+  sup_certificada, 
+  x = ~tipo_propiedad, 
+  y = ~superficie, 
+  type = 'bar', 
+  name = 'Superficie',
+  
+  text = ~ scales::comma(sup_certificada$superficie),
+   textposition = 'outside',
+         textfont = list(
+             color ="black", 
+             size = 13,
+             family = "Arial",
+             weight = "bold"
+         ),
+  
+  
+  marker = list(color = ~colors[tipo_propiedad])
+) %>%
+  layout(
+    title = 'Superficie certificada por tipo de propiedad',
+    xaxis = list(title = ''),
+    yaxis = list(title = '(Hectáreas)'),
+    margin=list(t=80)
+  )
+
+superficie_bar
+saveWidget(as_widget(superficie_bar), "plot-subplost-advc-superficie.html")
+advc_bar <- plot_ly(
+  sup_certificada, 
+  x = ~tipo_propiedad, 
+  y = ~num_ADVC, 
+  type = 'bar', 
+  name = 'Número de ADVC',
+  
+   text = ~ scales::comma(sup_certificada$num_ADVC),
+   textposition = 'outside',   
+         textfont = list(
+             color ="black", 
+             size = 13,
+             family = "Arial",
+             weight = "bold"
+         ),
+  
+  
+  marker = list(color = ~colors[tipo_propiedad])
+) %>%
+  layout(
+    title = 'Número de ADVC por tipo de propiedad ',
+    xaxis = list(title = ' '),
+    yaxis = list(title = 'Número de ADVC'),
+    margin=list(t=80)
+  )
+advc_bar
+saveWidget(as_widget(advc_bar), "plot-subplost-advc-numero.html")
+```
+
+
+
+```{r echo=FALSE}
+ring_chart <- plot_ly(
+  sup_certificada, 
+  labels = ~tipo_propiedad, 
+  values = ~porc_cert, 
+  type = 'pie',
+  textinfo = 'label+percent',
+  insidetextorientation = 'radial',
+  hole = 0.5,  # Tamaño del agujero en el centro del anillo (de 0 a 1)
+  marker = list(colors = ~colors[tipo_propiedad])
+) %>%
+  layout(
+    title = 'Porcentaje de superficie certificada por tipo de tropiedad',
+    margin=(list(t=80))
+  )
+
+ring_chart
+saveWidget(as_widget(ring_chart), "plot-anillo-advc-propiedad.html")
+
+
+
+```
+
+
