@@ -1,6 +1,11 @@
 ---
 format: html
 ---
+
+<p><h4 font-size: 28px; align ='center'><br><b>Áreas Naturales Protegidas Federales <br>según su categoría de manejo</br></br></b></h4></p>
+
+
+
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
 .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
@@ -8,50 +13,41 @@ format: html
 .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
   font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg .tg-t7k0{border-color:#efefef;color:#333;text-align:left;vertical-align:top}
-.tg .tg-7jzl{background-color:#a87000;border-color:#efefef;color:#FFF;font-weight:bold;text-align:center;vertical-align:top}
-.tg .tg-py3e{background-color:#BCB800;border-color:#efefef;color:#FFF;font-family:Arial, Helvetica, sans-serif !important;
+.tg .tg-w6io{background-color:#E60000;border-color:#efefef;color:#FFF;font-family:Arial, Helvetica, sans-serif !important;
   font-weight:bold;text-align:center;vertical-align:top}
-.tg .tg-3b5r{background-color:#FFBE3B;border-color:#efefef;color:#FFF;font-family:Arial, Helvetica, sans-serif !important;
-  font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-60gh{background-color:#A87000;border-color:#efefef;color:#FFF;font-weight:bold;text-align:center;vertical-align:top}
 .tg .tg-ly6r{border-color:#efefef;text-align:left;vertical-align:top}
 .tg .tg-3i4j{border-color:#efefef;font-family:Arial, Helvetica, sans-serif !important;text-align:left;vertical-align:top}
 .tg .tg-qoxt{background-color:#ABCD66;border-color:#efefef;color:#FFF;font-weight:bold;text-align:center;vertical-align:top}
-.tg .tg-bn00{background-color:#E60000;border-color:#efefef;color:#FFF;font-weight:bold;text-align:center;vertical-align:top}
-.tg .tg-u74t{background-color:#3166FF;border-color:#efefef;color:#FFF;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-hvfa{background-color:#BCB800;border-color:#efefef;color:#FFF;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-4icx{background-color:#FFBE3B;border-color:#efefef;color:#FFF;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-qfl9{background-color:#3166FF;border-color:#efefef;color:#FFF;font-family:Arial, Helvetica, sans-serif !important;
+  font-weight:bold;text-align:center;vertical-align:top}
 </style>
-
-<div style="display: flex; justify-content: center;">
-  <table class="tg">
-    <thead>
-      <tr>
-        <th class="tg-3b5r">APFF</th>
-        <th class="tg-3i4j">Áreas de Protección de Flora y Fauna</th>
-        <th class="tg-qoxt">RB</th>
-        <th class="tg-ly6r">Reservas de la Biosfera</th>
-        <th class="tg-bn00">MN</th>
-        <th class="tg-ly6r">Monumentos Naturales</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="tg-py3e">APRN</td>
-        <td class="tg-3i4j">Áreas de Protección de Recursos Naturales</td>
-        <td class="tg-u74t">SANT</td>
-        <td class="tg-ly6r">Santuarios</td>
-        <td class="tg-7jzl">PN</td>
-        <td class="tg-t7k0">Parques Nacionales</td>
-      </tr>
-    </tbody>
-  </table>
+<div style = "display: flex; justify-content:center;">
+<table class="tg"><thead>
+  <tr>
+    <th class="tg-qoxt">RB</th>
+    <th class="tg-ly6r">Reservas de la Biosfera </th>
+    <th class="tg-60gh">PN</th>
+    <th class="tg-t7k0">Parques Nacionales</th>
+    <th class="tg-w6io">MN</th>
+    <th class="tg-3i4j">Monumentos Naturales</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td class="tg-hvfa">APRN</td>
+    <td class="tg-t7k0">Áreas de Protección de Recursos Naturales</td>
+    <td class="tg-4icx">APFF</td>
+    <td class="tg-ly6r">Áreas de Protección de Flora y Fauna</td>
+    <td class="tg-qfl9">SANT</td>
+    <td class="tg-3i4j">Santuarios</td>
+  </tr>
+</tbody>
+</table>
 </div>
 
-
-
-
-<h2 font-size: 28px; align ='center'><br>Áreas Naturales Protegidas Federales según su Categoría de Manejo</br></h2>
-
-
-
+<br>
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 #library
@@ -73,8 +69,6 @@ library(htmlwidgets)
 ```
 
 
- 
- 
 ```{r echo=FALSE}
 #dataset
 manejo <- data.frame(
@@ -134,22 +128,170 @@ data_numero_anp <- lapply(1:nrow(data_numero_anp), function(i) {
 #                          }
 #                        )
 ```
-
-
 ```{r echo=FALSE}
 hc <- highchart() %>%
   hc_chart(type = "column") %>%
-  hc_title(text = "") %>% #Categoría de Manejo en Áreas Naturales Protegidas
-  hc_xAxis(categories = manejo_filtrado$Categoria) %>%
+  # hc_xAxis(
+  #   categories = manejo_filtrado$Categoria,
+  #          labels = list(style = list(color = 'black')
+  #                        
+  #                        
+  #                        )
+ 
+  
+  hc_xAxis(categories = c("Parque Nacional",
+                            "Área de Protección de Flora y Fauna",
+                            "Área de Protección de Recursos Naturales",
+                            "Monumento Natural", "Reservas de la Biosfera", "Santuarios"),
+           labels = list(style = list(color = 'black', fontSize = '13px'))
+
+ )%>%
   hc_yAxis_multiples(
     list(
       min = 0,
-      title = list(text = "Número de ANP")
+      title = list(text = "Número de ANP",
+                   style = list(color = 'black', fontSize = '14px')),
+      labels = list(style = list(color = 'black', fontSize = '13px'))
     ), 
     list(
-      title = list(text = "Porcentaje protegido"),
-      opposite = TRUE
+      title = list(text = "Porcentaje protegido",
+                   style = list(color = 'black', fontSize = '14px')),
+      opposite = TRUE,
+      labels = list(style = list(color = 'black', fontSize = '13px'))
     )
+  ) %>%
+  hc_legend(shadow = FALSE) %>%
+  
+  hc_plotOptions(column = list(
+    grouping = FALSE,
+    shadow = FALSE,
+    borderWidth = 0,
+    dataLabels = list(
+      enabled = TRUE,
+      formatter = JS("
+        function() {
+          if (this.series.name === 'Número de ANP') {
+            return this.y + ' ANP';
+          }
+          return null;
+        }
+      "),
+      style = list(
+      color = 'black',
+      #textOutline = "none",  # Remove white border around text
+      fontSize = '14px'      # Set font size to 14
+    )
+    )
+  ),
+  line = list(
+    dataLabels = list(
+      enabled = TRUE,
+      formatter = JS("
+        function() {
+          if (this.series.name === 'Porcentaje de superficie protegida') {
+            return this.y + ' %';
+          }
+          return null;
+        }
+      ")
+    )
+  )) %>%
+  
+  hc_exporting(enabled = TRUE) %>%
+  
+  hc_add_series(
+    name = "Número de ANP",
+    colorByPoint = TRUE,
+    data = data_numero_anp,
+    pointPadding = 0.1,
+    showInLegend = FALSE#,
+    #enableMouseTracking = FALSE
+  ) %>%
+  # hc_add_series(
+  #   name = "Porcentaje de superficie protegida",
+  #   type = 'line',
+  #   color = "gray",
+  #   data = manejo_filtrado$Porcentaje,
+  #   pointPadding = 0.3,
+  #   yAxis = 1,
+  #   tooltip = list(valueSuffix = "%"),
+  #   marker = list(lineWidth = 2),
+  #   lineWidth = 3
+  # ) 
+
+
+
+hc_add_series(
+  name = "Porcentaje de superficie protegida",
+  type = 'line',
+  color = "gray",
+  data = manejo_filtrado$Porcentaje,
+  pointPadding = 0.3,
+  yAxis = 1,
+  tooltip = list(valueSuffix = "%"),
+  marker = list(lineWidth = 2),
+  lineWidth = 3,
+  dataLabels = list(
+    enabled = TRUE,
+    style = list(
+      color = 'black',
+      fontSize = '14px',
+      textOutline = "none"  # Remove white border around text
+    )
+  )
+)%>%
+  
+  hc_tooltip(shared = TRUE, formatter = JS("
+    function() {
+      var header = '<span style=\"font-size: 11px\">' + this.x + '</span><br/>';
+      var body = this.points.reduce(function (s, point) {
+        return s + '<span style=\"color:' + point.color + '\">' + point.series.name + '</span>: <b>' + point.y + '</b><br/>';
+      }, '');
+      var superficie = this.points[0].point.superficie; // Obtener superficie del primer punto
+      var footer = '<span style=\"font-size: 10px\">Con un total de ' + superficie + ' ha protegidas</span>';
+      return header + body + footer;
+    }
+  ")) 
+
+hc
+saveWidget(as_widget(hc), "plt-numanp.html")
+
+```
+
+```{r eval=FALSE, include=FALSE}
+
+cols_sig = c("#a87000", "#ffbe3b","#abcd66","#3166ff","#bcb800","#e60000")
+
+
+hc <- highchart() %>%
+  hc_chart(type = "column") %>%
+  #hc_title(text = "") %>% #Categoría de Manejo en Áreas Naturales Protegidas
+  
+    # hc_xAxis(categories = c("Parque Nacional", 
+    #                         "Área de Protección de Flora y Fauna", 
+    #                         "Área de Protección de Recursos Naturales",
+    #                         "Monumento Natural", "Reservas de la Biosfera", "Santuarios"),
+
+  hc_xAxis(categories = manejo_filtrado$Categoria,
+           labels = list(style = list(color = 'black'))
+           ) %>%
+  hc_yAxis_multiples(
+    list(min = 0,
+         title = list(text = "Número de ANP",
+                      style = list(color = 'black', 
+                                   fontSize = '13px'
+                                   ))
+         ), 
+    list(
+      title = list(text = "Porcentaje protegido",
+                   style = list(color = 'black', 
+                                fontSize = '13px'
+                                )
+                   ),
+      opposite = TRUE,
+      labels = list(fontSize = "16px")
+    )
+    
   ) %>%
   hc_legend(shadow = FALSE) %>%
   hc_plotOptions(column = list(
@@ -157,7 +299,18 @@ hc <- highchart() %>%
     shadow = FALSE,
     borderWidth = 0,
     dataLabels = list(
-      enabled = FALSE
+      enabled = TRUE
+      ,
+      formatter = JS("
+        function() {
+          if (this.series.name === 'Número de ANP') {
+            return this.y + ' ANP';
+          } else if (this.series.name === 'Porcentaje de superficie protegida') {
+            return this.y + ' %';
+          }
+          return this.y;
+        }
+      ")
       )
     )) %>%
     hc_exporting(enabled = TRUE) %>%
@@ -165,28 +318,33 @@ hc <- highchart() %>%
     name = "Número de ANP",
     colorByPoint = TRUE,
     data = data_numero_anp,#,
-   pointPadding = 0.1
+   pointPadding = 0.1,
+   showInLegend = FALSE#,
+   #enableMouseTracking = FALSE
   ) %>%
   hc_add_series(
     name = "Porcentaje de superficie protegida",
-    #colorByPoint = TRUE,
-   color ="#A8A8A8",# cols_sig[5], 
+    #type = 'column',
+   color ="gray",
     data = manejo_filtrado$Porcentaje,
-    pointPadding = 0.3,#,
-    #pointPlacement = -0.2,
-    yAxis = 1
+    pointPadding = 0.4,
+    yAxis = 1,
    # ,
-   #  tooltip = list(
-   #    valueSuffix = "%"  
-   #  )
+   #   tooltip = list(
+   #     valueSuffix = "%"  
+   #   ),
+   marker = list(#fillColor = colores_identidad[4], 
+                              lineWidth = 2
+                              #lineColor = NULL
+                 )
   )%>%
   hc_tooltip(shared = TRUE, formatter = JS("
       function() {
-        var header = '<span style=\"font-size: 10px\">' + this.x + '</span><br/>';
+        var header = '<span style=\"font-size: 11px\">' + this.x + '</span><br/>';
         var body = this.points.reduce(function (s, point) {
           return s + '<span style=\"color:' + point.color + '\">' + point.series.name + '</span>: <b>' + point.y + '</b><br/>';
         }, '');
-        var superficie = this.points[0].point.superficie; // Obtener superficie del primer punto
+        var superficie = this.points[0].point.superficie; 
         var footer = '<span style=\"font-size: 10px\">Con un total de ' + superficie + ' ha protegidas</span>';
         return header + body + footer;
       }
@@ -194,74 +352,331 @@ hc <- highchart() %>%
   ) 
 
 hc
+
+#saveWidget(as_widget(hc), "plt-numanp.html")
+
+
 ```
 
-<h2 font-size: 28px; align ='center'>Protección del medio Terrestre y Marino por las ANP Federales</h2>
+
+```{r eval=FALSE, include=FALSE}
+manejo_filtrado$color =cols_sig
+
+df <-select(manejo_filtrado, Categoria, Numero,Superficie,Porcentaje,color)
+
+colnames(df)[1] <- "name"
+colnames(df)[2] <- "y"
+
+#df$Superficie = scales::comma(df$Superficie)
+df <- mutate(df,
+             hover_text = paste("Número de ANP:", y,
+                                "<br>Superficie protegida: ", "<b>", Porcentaje,"</b>", "%",
+                                "<br>Con un total de", "<b>", Superficie,"</b>", "ha protegidas"
+             )
+)
 
 
+# df$hover_text <- paste("Número de ANP:", df$y,
+#                        "<br>Superficie protegida: ", "<b>",df$Porcentaje,"</b>", "%",
+#                       "<br>Con un total de", "<b>",df$Superficie,"</b>", "ha protegidas"
+#                    
+# )
+
+hc0 <- highchart() %>%
+  hc_chart(type = "column") %>%
+  hc_xAxis(categories = df$name,
+           labels = list(style = list(color = 'black'))
+  ) %>%
+  hc_yAxis_multiples(
+    list(min = 0,
+         title = list(text = "Número de ANP",
+                      style = list(color = 'black', 
+                                   fontSize = '13px')
+         )
+    )
+    ) %>%
+  hc_legend(shadow = FALSE) %>%
+  hc_plotOptions(
+    column = list(
+      grouping = FALSE,
+      shadow = FALSE,
+      borderWidth = 0,
+      dataLabels = list(
+        enabled = TRUE
+      ),
+      colorByPoint = TRUE,  
+      colors = cols_sig,   
+      series = list(
+        states = list(
+          hover = list(
+            brightness = -0.1    
+          )
+        )
+      ),
+      states = list(
+        hover = list(
+          brightness = -0.1    
+        )
+      )
+    )
+  ) %>%
+  hc_exporting(enabled = TRUE) %>%
+  hc_add_series(df, name = "Número de ANP",
+    colorByPoint = TRUE,
+   # data = data_numero_anp,
+    pointPadding = 0.1,
+    showInLegend = FALSE
+   ) %>%
+  hc_tooltip(
+    useHTML = TRUE,
+    pointFormat = '{point.hover_text}' )
+
+
+hc00 <- highchart() %>%
+  hc_chart(type = "column") %>%
+  hc_xAxis(categories = df$name,
+           labels = list(style = list(color = 'black'))
+  ) %>%
+  hc_yAxis_multiples(
+    list(min = 0,
+         title = list(text = "Número de ANP",
+                      style = list(color = 'black', 
+                                   fontSize = '13px')
+         )
+    )
+    ) %>%
+  hc_legend(shadow = FALSE) %>%
+  hc_plotOptions(
+    column = list(
+      grouping = FALSE,
+      shadow = FALSE,
+      borderWidth = 0,
+      dataLabels = list(
+        enabled = TRUE
+      ),
+      colorByPoint = TRUE,  
+      colors = cols_sig,   
+      series = list(
+        states = list(
+          hover = list(
+            brightness = -0.1    
+          )
+        )
+      ),
+      states = list(
+        hover = list(
+          brightness = -0.1    
+        )
+      )
+    )
+  ) %>%
+  hc_exporting(enabled = TRUE) %>%
+  hc_add_series( name = "Porcentaje protegido por ANP",
+    colorByPoint = TRUE,
+   data = df$Porcentaje,
+    pointPadding = 0.1,
+    showInLegend = FALSE
+   ) %>%
+  hc_tooltip(
+    useHTML = TRUE,
+    pointFormat = '{point.hover_text}' )
+
+
+
+
+html <- '
+<div id="graph-container">
+  <div id="hc0-container" class="chart-container">
+    <div id="hc0" style="height: 400px;"></div>
+  </div>
+  <div id="hc00-container" class="chart-container">
+    <div id="hc00" style="height: 400px;"></div>
+  </div>
+</div>
+<div id="nav-container">
+  <button id="btn-hc0" class="nav-btn">Gráfico 1</button>
+  <button id="btn-hc00" class="nav-btn">Gráfico 2</button>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $("#hc00-container").hide(); // Ocultar hc00 inicialmente
+    
+    $("#btn-hc0").click(function() {
+      $("#hc00-container").hide();
+      $("#hc0-container").show();
+    });
+    
+    $("#btn-hc00").click(function() {
+      $("#hc0-container").hide();
+      $("#hc00-container").show();
+    });
+  });
+</script>
+'
+htmltools::HTML(html)
+```
+
+
+
+<h4 font-size: 28px; align ='center'><br><br><b>Protección del medio terrestre y marino <br>en las ANP Federales</br></b></h4>
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
-
-manejo_ordenado <- manejo[order(-manejo$Numero), ]
+manejo_ordenado <- manejo[order(-manejo$Numero), ] #(-manejo$
 
 ambientes <- data.frame(
-  Tipo = c("Terrestres", "Marinos"),
+  Tipo = c("Ambiente terrestre", "Ambiente marino"),
   Superficie = c(23013380, 70794424),
   Porcentaje_ANP = c(24.53, 75.47),
   Porcentaje_Territorio = c(11.71, 22.47)
 )
 
 notas_terrestres <- paste0("Representa un ", 
-                          ambientes$Porcentaje_Territorio[1], 
-                          "% de la superficie terrestre nacional")
+                          "<b>",ambientes$Porcentaje_Territorio[1],"%","</b>", 
+                          " de la superficie terrestre nacional")
 notas_marinos <- paste0("Representa un ", 
-                       ambientes$Porcentaje_Territorio[2],
-                       "% de la superficie marina del territorio nacional")
+                       "<b>",ambientes$Porcentaje_Territorio[2],"%","</b>",
+                       " de la superficie marina del territorio nacional")
 
 
 
 ambientes$hover_text <- paste(c(
             paste0(notas_terrestres,
-                   "<br>Superficie (ha): ",
-                   scales::comma(ambientes$Superficie[1]),  
+                   "<br>Superficie: ",
+                   "<b>",scales::comma(ambientes$Superficie[1]),"</b>"," ha", 
                    "<br>Porcentaje del total protegido: ",
-                   ambientes$Porcentaje_ANP[1], "%"),
+                   "<b>",ambientes$Porcentaje_ANP[1],"</b>", "%"),
             paste0(notas_marinos, 
-                   "<br>Superficie (ha): ", 
-                   scales::comma(ambientes$Superficie[2]),
+                   "<br>Superficie: ", 
+                   "<b>",scales::comma(ambientes$Superficie[2]),"</b>", " ha",
                    "<br>Porcentaje del total protegido: ",
-                   ambientes$Porcentaje_ANP[2], "%")
+                   "<b>",ambientes$Porcentaje_ANP[2], "%","</b>")
 )
 )
 
 colnames(ambientes)[1] <- "name"
 colnames(ambientes)[3] <- "y"
 ambientes$color =c("#8C5C47","#4A8CB0")
-df <-select(ambientes, name, y, color, hover_text)
+ambientes$Superficie =scales::comma(ambientes$Superficie)
+df <-select(ambientes, name, y, color, hover_text,r=Superficie)
 
 
 
+fig <- highchart() 
 
-highchart() %>%
+fig <- fig %>%
   hc_chart(type = 'pie',
            polar = FALSE,
-           inverted = FALSE) %>%
+           inverted = FALSE,
+           options3d = list(
+             enabled = TRUE,
+             alpha = 20,
+             beta = 5 #0
+    )
+           ) %>%
   hc_xAxis(categories = df$name) %>%
   hc_add_series(df,
                 name = 'ambientes',
                 showInLegend = TRUE,
                 innerSize = '33%',
-              dataLabels = list(enabled = TRUE, format = '{point.name}: {point.percentage:.2f}%')
+              dataLabels = list(enabled = TRUE,
+                                format = '{point.name}: {point.percentage:.2f}%',
+                                style = list(color = '#000000', fontSize = '14px')
+)
                 ) %>%
-  hc_plotOptions(series = list(animation = FALSE))%>%
+  hc_plotOptions(series = list(animation = TRUE))%>%
     hc_tooltip(
     useHTML = TRUE,
     pointFormat = '{point.hover_text}'
   )%>%
   hc_exporting(enabled = TRUE) 
+fig
+```
+
+
+```{r eval=FALSE, include=FALSE}
+df <- data.frame(
+  name = c("Medio marino", "Medio terrestre"),
+  r = c("70,794,424", "23,013,380"),
+  y = c(75.47, 24.53)
+)
+
+#df <- df %>% mutate(y_formatted = format(y, big.mark = ","))
+df <- df %>% mutate(r_formatted = format(r, big.mark = ","))
+colores = c("#4A8CB0","#8C5C47")
+
+prueba_marterr <- highchart()
+
+prueba_marterr <- prueba_marterr %>%
+  hc_chart(
+    type = 'pie', 
+    polar = FALSE ,  
+    inverted = FALSE,
+    options3d = list(
+      enabled = TRUE,
+      alpha = 20,
+      beta = 20 #0
+    )
+  ) %>%
+  hc_plotOptions(
+    pie = list(
+      innerSize = '50%',  
+      depth = 25, 
+      startAngle = 80)
+  ) %>%
+  hc_xAxis(categories = df$name) %>%
+  hc_add_series(
+    name = 'ambientes',
+    innerSize = '30%',
+    data = list(
+      list(
+        name = 'Medio terrestre',
+        y = df$y[1],
+        r = df$r[1],
+        percentage = df$percentage[1],
+        color ="#8C5C47",
+        dataLabels = list(
+          enabled = TRUE,
+          format = '<b>{point.name}</b>: <br> Superficie: {point.r} ha<br>Porcentaje protegido: {point.percentage:.2f} %',
+          distance = -175,
+          style = list(fontWeight = 'bold',fontSize = '18px',  color = 'white', textOutline = 'none')
+        )
+      ),
+      list(
+        name = 'Medio marino',
+        y = df$y[2],
+        r = df$r[2],
+        percentage = df$percentage[2],
+        color ="#4A8CB0",
+        dataLabels = list(
+          enabled = TRUE,
+          format = '<b>{point.name}</b>: <br> Superficie: {point.r} ha<br>Porcentaje protegido: {point.percentage:.2f} %',
+          distance = -138,
+          style = list(fontWeight = 'bold', fontSize = '18px', color = 'white', textOutline = 'none')
+        )
+      )
+    )) %>%
+  hc_exporting(enabled = TRUE) %>% 
+  hc_plotOptions(series = list(animation = FALSE)) %>%
+  hc_legend(enabled = FALSE)
+
+prueba_marterr
+
+saveWidget(as_widget(prueba_marterr), "plt-protecanp1.html")
+
+
+
+
+
 
 ```
 
-<h2 font-size: 28px; align ='center'>Protección de tipos de vegetación y uso de suelo por las ANP Federales</h2>
+
+
+
+
+
+
+<h4 font-size: 28px; align ='center'><br><br><b>Protección de tipos de vegetación y uso de suelo <br> en las ANP Federales</br></b> </h4>
 
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
@@ -289,7 +704,7 @@ vegetacion <- data.frame(
 )
 
  
-vegetacion <- vegetacion %>% arrange(desc(Superficie_ANP))
+vegetacion <- vegetacion %>% arrange((Superficie_ANP)) # desc
 
 df.vegetacion = vegetacion
 
@@ -299,15 +714,18 @@ vegetacion <- vegetacion[c(which(vegetacion$Tipos_Vegetacion == "Mar Territorial
 vegetacion=vegetacion[-1,] 
 
 
-vegetacion <- vegetacion[order(vegetacion$Superficie_ANP), ]
+vegetacion <- vegetacion[order(-vegetacion$Superficie_ANP), ]
 #df = as.data.frame(resumen_ordenado)
 #resumen_ordenado <- df[order(df$total), ]
 
 
 
 vegetacion$hover_text <- paste(#vegetacion$Tipos_Vegetacion,
-                               "Superficie en ANP:", scales::comma(vegetacion$Superficie_ANP), "ha",# vegetacion$Superficie_ANP,
-                               "<br>Porcentaje en ANP Federales:", vegetacion$Porcentaje_ANP_Federal)
+                               "Superficie en ANP:", "<b>",scales::comma(vegetacion$Superficie_ANP),"</b>", "ha",# vegetacion$Superficie_ANP,
+                               "<br>Porcentaje en ANP Federales:", "<b>",vegetacion$Porcentaje_ANP_Federal,"</b>")
+
+
+
 ```
 
 
@@ -328,7 +746,7 @@ highchart() %>%
       min = 0,
       title = list(text = "Hectáreas (M: Millones)")
     ))%>%
-  hc_add_series(df1, name = 'Superficie ANP ha',
+  hc_add_series(df1, name = 'Superficie en ANP',
                 dataLabels = list(enabled = TRUE),
                 color = cols_ident[3]) %>%
     hc_tooltip(
@@ -351,15 +769,25 @@ color_low <- '#F4E9D3'
 
 
 
-highchart() %>%
+hc3 <- highchart( ) %>%
   hc_chart(type = 'bar') %>%
-  hc_xAxis(categories = df1$name) %>%
+  hc_xAxis(categories = df1$name,
+    labels = list(style = list(color = 'black', 
+                               fontSize = '12px')
+                  )
+    ) %>%
   hc_yAxis_multiples(
     list(
       min = 0,
-      title = list(text = "Hectáreas (M: Millones)")
-    )) %>%
-  hc_add_series(df1, name = 'Superficie ANP ha',
+      max = 9100000, 
+      title = list(text = "Total de superficie protegida en hectáreas (M: Millones)",
+                   style = list(color = 'black')
+                   ),
+    labels = list(style = list(color = 'black'))
+    )
+    ) %>%
+  hc_add_series(df1, name = 'Superficie en ANP',
+    labels = list(style = list(color = 'black')),
                 dataLabels = list(enabled = TRUE),
                 color = list(
                   linearGradient = list(x1 = 0, x2 = 1, y1 = 0, y2 = 0),
@@ -367,16 +795,34 @@ highchart() %>%
                     list(0, color_low),
                     list(1, color_high)
                   )
-                )
+                ),
+    showInLegend = FALSE
                 ) %>%
   hc_tooltip(
     useHTML = TRUE,
     pointFormat = '{point.hover_text}'
   ) %>%
-  hc_plotOptions(series = list(animation = FALSE),
+  hc_plotOptions(series = list(animation = TRUE),
                  series = list(borderRadius = 14)
   ) %>%
-  hc_exporting(enabled = TRUE)
+ hc_exporting(
+   enabled = TRUE#,
+  # buttons = list(
+  #   contextButton = list(
+  #     align = "center",
+  #     verticalAlign = "bottom",
+  #     y = -2,
+  #     x = 360
+  #     )
+  #   )
+  )
+
+
+hc3
+
+saveWidget(as_widget(hc3), "plt-protecanp.html")
+
+
 
 ```
 
@@ -384,7 +830,11 @@ highchart() %>%
 
 
 
-<h2 font-size: 28px; align ='center'>Distribución de superficie protegida por Entidad Federativa </h2>
+
+
+
+
+<h4 font-size: 28px; align ='center'><br><br><b>Distribución de la superficie terrestre protegida <br> por entidad federativa</br></b> </h4>
 
 ```{r echo=FALSE}
 entidades_anp <- read_csv("data-entidadesanp.csv",show_col_types = FALSE)
@@ -396,36 +846,48 @@ total_entidades <- entidades_anp %>%
             num_anp = n()
             )
 
-resumen_ordenado <- total_entidades[order(-total_entidades$total), ]
+resumen_ordenado <- total_entidades[order(total_entidades$total), ] #order(-total
 df = as.data.frame(resumen_ordenado)
-resumen_ordenado <- df[order(df$total), ]
+resumen_ordenado <- df[order(-df$total), ]
 ```
 
-```{r echo=FALSE}
+```{r echo=FALSE, fig.dim=c(6,6)}
 colnames(resumen_ordenado)[1] <- "name"
 colnames(resumen_ordenado)[2] <- "y"
 
-color_high <- '#3E7C24'
-color_low <- '#CAFF70'
+color_high <- cols_ident[1] #'#3E7C24'
+color_low <- '#7CCD7C'
 
 resumen_ordenado$hover_text <- paste("Superficie protegida", 
-                                     scales::comma(resumen_ordenado$y),"ha",
+                                     "<b>",scales::comma(resumen_ordenado$y),"</b>","ha",
                                      "<br>Cuenta con:",
-                                     resumen_ordenado$num_anp, "ANP")
+                                     "<b>",resumen_ordenado$num_anp,"</b>", "ANP")
 df1 = select(resumen_ordenado, name, y, hover_text)
 
-highchart() %>%
+hc_map<- highchart() %>%
   hc_chart(type = 'bar',
            polar = FALSE,
            inverted =FALSE
            ) %>%
-  hc_xAxis(categories = df1$name) %>%
-    hc_yAxis(title = list(text = "Total de superficie en hectáreas (M: Millones)"),
-             labels = list(
-      formatter = JS("function() { return this.value / 1000000 + 'M'; }")
+  hc_xAxis(categories = df1$name,
+    labels = list(style = list(color = 'black'))
+    ) %>%
+    hc_yAxis(
+         # list(
+      # min = 0,
+      # max = 3500000,  # Establecer el máximo del eje y en 3.5 millones
+      title = list(text = "Total de superficie protegida en hectáreas (M: Millones)",
+                   style = list(color = 'black')),
+      labels = list(
+        max = 3500000,
+        formatter = JS("function() { return this.value / 1000000 + 'M'; }"),
+        style = list(color = 'black')
+     # )
     )
-    )%>%
-  hc_add_series(df1, name = 'Superficie por Entidad',
+      
+         )%>%
+  hc_add_series(df1, name = 'Superficie protegida',
+    labels = list(style = list(color = 'black')),
                 dataLabels = list(enabled = TRUE),
                 color = list(
                   linearGradient = list(x1 = 0, x2 = 1, 
@@ -434,17 +896,41 @@ highchart() %>%
                     list(0, color_low),
                     list(1, color_high)
                   )
-                )
-                
-                
-                ) %>%
+                ),
+    showInLegend = FALSE
+    ) %>%
   hc_tooltip(
     useHTML = TRUE,
     pointFormat = '{point.hover_text}'
   )%>%
-  hc_plotOptions(series = list(animation = FALSE))%>%
+  hc_plotOptions(series = list(animation = TRUE))%>%
   hc_exporting(enabled = TRUE)
+hc_map
+
+# %>%
+  # hc_caption(
+  #   text = '<span style="font-size: 14px;">Zoom</span> <span style="font-size: 26px;">&#11021;</span>',
+  #   style = list(color = "black", fontWeight='bold'),
+  #   align = "center",
+  #   verticalAlign = "bottom",
+  #   y = -80,
+  #   x=-370
+  # )
+
+  # hc_navigator(enabled = TRUE, 
+  #            xAxis = list(
+  #              labels = list(enabled = FALSE),
+  #              title = list(text = "Zoom")
+  #            )
+  #            
+  #            )%>%
+
+
+saveWidget(as_widget(hc_map), "plt-mapcanp.html")
+#saveWidget(hc3, "hc3.html", selfcontained = TRUE)
+#webshot("plt-mapcanp.html", file = "hc3.jpg")
 ```
+ 
 
 
 
@@ -469,17 +955,18 @@ categoria_manejo <- aggregate(suma_superficie_dentro_entidad ~ categoria_manejo,
 
 resumen_ordenado <- categoria_manejo[order(categoria_manejo$suma_superficie_dentro_entidad), ]
 
-```
-
-```{r echo=FALSE}
 #cat_manejo_order <- categoria_manejo[order(-categoria_manejo$suma_superficie_dentro_entidad), ] #order(-cate
+
 ```
- 
-<h2 font-size: 28px; align ='center'>Superficie protegida por Categoría de Manejo </h2>
 
 
 
-```{r echo=FALSE}
+
+
+
+```{r include=FALSE, eval=FALSE}
+
+#<h4 font-size: 28px; align ='center'>Superficie terrestre protegida por Categoría de Manejo</h4>
 cols_sig = c("#ffbe3b","#bcb800","#a87000","#e60000","#3166ff","#abcd66")
 cols_sig = rev(cols_sig)
 data_with_colors <- lapply(seq_along(resumen_ordenado$suma_superficie_dentro_entidad),
@@ -501,11 +988,12 @@ hc <- highchart() %>%
       enabled = TRUE
   ))%>%
   hc_tooltip(
-    pointFormat = 'Superficie: {point.y} ha'
+    pointFormat = 'Superficie terrestre: {point.y} ha'
   )%>%
   hc_legend(enabled = FALSE)
 
-hc
+
+
 ```
 
 
@@ -513,7 +1001,7 @@ hc
 
 
 
-<h2 font-size: 28px; align ='center'>Distribución de superficies de las ANP Federales por Entidad Federativa</h2>
+<h4 font-size: 28px; align ='center'><br><br><b>Distribución de la superficie terrestre protegida<br> por entidad federativa</br></b></h4>
 
 
 
@@ -534,34 +1022,7 @@ mex_map_anp <- mex_map %>%
   left_join(total_entidades)
 #head(mex_map_anp)
 ```
- 
 
-
-```{r echo=FALSE, eval=FALSE}
-
-superf.mex.plot <- mex_map_anp %>%
-  ggplot(aes(fill = total, text = paste(ENTIDAD, "<br>Superficie: ",
-                                        scales::comma(total), "hectáreas"))
-         ) +
-  geom_sf(colour = "grey75", size = 0.07) +
-  labs(title = "",
-       subtitle = "Actualizado al 5 de Junio, 2024",
-       caption = "Datos: https://simec.conanp.gob.mx/numeralia.php") +
-  scale_fill_gradient("Superficie (ha)",
-                      high = cols_ident[1],
-                      low = "white",
-                      labels = scales::comma) +
-  theme_bw() +
-  theme(legend.position = "top")  
-
-
-plotly_map.mex <- ggplotly(superf.mex.plot, tooltip = "text") %>%
-  layout(hoverlabel = list(bgcolor = "#EED5B7"),
-         margin = list(t = 80))
-plotly_map.mex <- plotly_map.mex %>% layout(dragmode = "pan")
-plotly_map.mex
-
-```
 
 
 ```{r echo=FALSE, include=FALSE}
@@ -591,8 +1052,9 @@ data_mexico <- total_entidades %>%
   #mutate(ANP = num_anp
       #  )
 
-
-
+data_mexico <- total_entidades %>%
+  mutate(entidad_federativa = ifelse(entidad_federativa == "Ciudad de México", "Distrito Federal", entidad_federativa)) %>%
+  select(Entidad = entidad_federativa, total, num_anp)
 
 #glimpse(data_mexico)
 ```
@@ -600,18 +1062,19 @@ data_mexico <- total_entidades %>%
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 data_mexico$hover_text <- paste("<b>",data_mexico$Entidad,"</b>",
-                                "cuenta con", data_mexico$num_anp, "ANP"
-                                ,"<br>con una superficie total de", 
-                                scales::comma(data_mexico$total),"ha"
+                                "cuenta con", "<b>",data_mexico$num_anp,"</b>", "ANP,"
+                                ,"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;con una superficie terrestre total de", 
+                               "<b>", scales::comma(data_mexico$total),"</b>","ha"
                                      )
 #df1 = select(resumen_ordenado, name, y, hover_text)
+
 
 
 ```
 
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
-hcmap("countries/mx/mx-all", 
+hc_mapmex<-hcmap("countries/mx/mx-all", 
       data = data_mexico, 
       value = "total",
       joinBy = c("woe-name", "Entidad"),
@@ -637,6 +1100,9 @@ hcmap("countries/mx/mx-all",
                      ) %>%
   hc_credits(enabled =FALSE)%>%
   hc_exporting(enabled = TRUE)
+
+hc_mapmex
+saveWidget(as_widget(hc_mapmex), "plt-mapmxanp.html")
 
 
 ```
