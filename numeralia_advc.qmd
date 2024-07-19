@@ -2,9 +2,12 @@
 format: html
 ---
 
+
+
+
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 #library
-#rm(list=ls())
+rm(list=ls())
 library(tidyverse)
 library(sf)
 library(maps)
@@ -16,26 +19,134 @@ library(ggplot2)
 cols_sig = c("#a87000", "#ffbe3b","#abcd66","#3166ff","#bcb800","#e60000")
 colores_identidad = c("#3E7C24", "#8e44ad","#CEBA92","#B53C0D",  "#123757")
 
-
-
 library(scales)
 library(htmlwidgets)
-
 library(readxl)
+```
+
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+###### frontend cards
+library(bslib)
+library(shiny)
+library(htmltools)
+library(ggplot2)
+library(bsicons)
+```
+
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+layout_columns(
+  fill = TRUE,
+  value_box(
+    title = HTML("<p style='text-align: center; color: white;'><b><h1></h1></b></p>"),
+    value = HTML("<p style='text-align: center; color: white;'><b><h1>581</h1></b></p>"),
+    showcase = bs_icon("tree-fill", style = "color: white;"),
+    theme = "success",
+    HTML("<p style='text-align: center; color: white;'><b>Número de ADVC certificadas</b></p>")
+  ),
+  value_box(
+    title = "",#HTML("<p style='text-align: center; color: white;'><b><h1></h1></b></p>"),,
+    value = HTML("<p style='text-align: center; color: white;'><b><h3>1,137,650.30 ha</h3></b></p>"),
+    showcase = tags$span(bs_icon("globe-americas", style = "color: white;")),
+    HTML("<p style='text-align: center; color: white;'><b>Superficie total certificada</b></p>"),
+    theme = "success"
+  ),
+  value_box(
+    title = HTML(" "),
+    value = HTML("<p style='text-align: center; color: white;'><b><h3>1,137,650.30 ha</h3></b></p>"),
+    showcase = bs_icon("geo-alt", style = "color: white;"),
+    HTML("<p style='text-align: center; color: white;'><b>Superficie sin traslape con las ANP federales</b></p>"),
+    theme = "success"
+  )
+)
 
 
 ```
+
+```{r include=FALSE}
+ 
+
+vbs <- list(
+  value_box(
+    title =  HTML("<b>Número de ADVC certificadas</b>"),
+    value = HTML("<b> 581</b>"),
+    showcase = bs_icon("tree-fill")#,
+    #color = "#58B097"#,
+   # p("The 1st detail")
+  ),
+  value_box(
+    title = HTML("<b>Superficie total certificada</b>"),
+    value = HTML("<b>1,137,650.30 ha</b>"),
+    
+    showcase = tags$span(bs_icon("globe-americas",
+                                 style = "color: #58B097;")
+    ),
+    #bs_icon("globe-americas")#,
+    theme = "teal"
+    #p("The 3rd detail")
+  ),
+  value_box(
+    title = HTML("<b>Superficie sin traslape</b>"),
+    value = HTML("<b>1,137,650.30 ha</b>"),
+    showcase = bs_icon("geo-alt"),
+    HTML("<i>*Sin traslape con las ANP federales</i>")#,
+    #p("The 6th detail")
+  )
+)
+
+layout_columns(
+  fill = FALSE,
+  width = "150px",
+  value_box(
+    title =  HTML("<b>Número de ADVC certificadas</b>"),
+    value = HTML("<b> 581</b>"),
+    showcase = bs_icon("tree-fill")#,
+    #color = "#58B097"#,
+   # p("The 1st detail")
+  ),
+  value_box(
+    title = HTML("<b>Superficie total certificada</b>"),
+    value = HTML("<b>1,137,650.30 ha</b>"),
+    
+    showcase = bs_icon("globe-americas"),
+    #bs_icon("globe-americas")#,
+    theme = "teal-100"
+    #p("The 3rd detail")
+  ),
+  value_box(
+    title = HTML("<b>Superficie sin traslape</b>"),
+    value = HTML("<b>1,137,650.30 ha</b>"),
+    showcase = bs_icon("geo-alt"),
+    HTML("<i>*Sin traslape con las ANP federales</i>")#,
+    #p("The 6th detail")
+  )
+)
+```
+
+
+
+
 
 
 
 
 ```{r echo=FALSE}
-df_advc <- read_excel("lista_advc_24.xlsx")
-#names(df_advc) <- gsub(" ", "_", names(df_advc))
+#df_advc <- read_excel("lista_advc_24.xlsx")
+
+
+
+df_advc <- read_csv("C:/Users/israel.monjaraz/OneDrive - Food and Agriculture Organization/Documentos/DailyTasks/Numeralia/ADVC/data/datasets/advc_abril24.csv",
+                     show_col_types = FALSE)
+
+
+
+
 ```
 
 
-## Número de certificaciones de ADVC por año
+<p><h2 font-size: 28px; align ='center'><br><b> Número de certificaciones de ADVC <br> por año (2002 - 2024) </p></h2><br></b>
+
 
 ```{r echo=FALSE}
 df_cert_year <- df_advc %>%
@@ -43,102 +154,64 @@ df_cert_year <- df_advc %>%
   summarise(count = n(),
             total_superficie = sum(superficie_certificada, na.rm = TRUE),
             .groups = 'drop')
+
+ 
 ```
 
  
-  
-```{r echo=FALSE}
-plt_cert_year <- plot_ly(df_cert_year, 
-                         x = ~certification_year, 
-                         y = ~total_superficie, 
-                         type = 'bar', 
-                         name = 'Superficie total (ha)',
-                         marker = list(color = colores_identidad[3])
-)
 
-plt_cert_year <- plt_cert_year %>% 
-  add_trace(x = ~certification_year, 
-            y = ~count, 
-            type = 'scatter', 
-            mode = 'lines+markers', 
-            line = list(color = colores_identidad[1]), 
-            marker = list(color = colores_identidad[2]),
-            name = "Número de ADVC",
-            yaxis = "y2"
+```{r echo=FALSE}
+hc <- highchart() %>%
+  hc_title(text = ' ') %>%
+  hc_xAxis(categories = df_cert_year$certification_year,
+           title = list(text = ""),
+           labels = list(rotation = 270
+                         
+                         # )
+                         ),
+           style =list(
+             fontSize = "14px",
+             fontWeight ='bold'
+           )
   ) %>%
-  layout(title = 'Número y superficie de ADVC certificadas (2002-2024)',
-         xaxis = list(title = '',
-                      tickangle = 270, 
-                      tickmode = "linear"
-                      ),
-         yaxis = list(title = 'Superficie certificada (ha)', zeroline = FALSE),
-         yaxis2 = list(title = 'Número de ADVC', 
-                       overlaying = "y",
-                       side = "right", zeroline = FALSE),
-         margin = list(t = 80),
-         barmode = 'overlay',   
-         showlegend = TRUE,
-         hoverlabel = list(
-           #bgcolor = "white",
-           font = list(size = 12),
-           align = "left",
-          # bordercolor = "black",
-           borderwidth = 1,
-           namelength = -1  # Permite mostrar todo el nombre
-         )
-)
+  hc_yAxis_multiples(
+    list(title = list(text = 'Superficie certificada (ha)'), opposite = FALSE, zeroline = FALSE),
+    list(title = list(text = 'Número de ADVC'), opposite = TRUE, zeroline = FALSE)
+  ) %>%
+  hc_add_series(name = 'Superficie total (ha)', 
+                data = df_cert_year$total_superficie, 
+                type = 'column', 
+                color = colores_identidad[1]) %>%
+  hc_add_series(name = 'Número de ADVC', 
+                data = df_cert_year$count, 
+                type = 'line', 
+                color = colores_identidad[4],
+                yAxis = 1,
+                marker = list(fillColor = colores_identidad[4], 
+                              lineWidth = 2, 
+                              lineColor = NULL)
+                ) %>% 
+  hc_plotOptions(series = list(
+    dataLabels = list(enabled = FALSE),
+    showInLegend = TRUE,
+      dataLabels = list(
+      enabled = TRUE
+      )
+    ))%>%
+  hc_exporting(
+    enabled = TRUE
+    
+  )%>%
+  hc_tooltip(shared = TRUE, crosshairs = TRUE) 
+  
+  
+  
 
-plt_cert_year
-
-saveWidget(as_widget(plt_cert_year), "plot-advc_certif_superf.html")
-
-
+ # card(
+ #    full_screen = TRUE,
+        hc
+#  )
 ```
-
-
- 
-
-
-
-## Superficies de ADVC por Entidad Federativa
-
-```{r echo=FALSE}
-df_surface_state <- df_advc %>%
-  group_by(estado) %>%
-  summarise(superficie = sum(superficie_certificada ))
-
- 
-
-df_surface_state <- df_surface_state %>%
-  arrange(desc(superficie))
-
-#cat_manejo_order <- categoria_manejo[order(df_surface_state$superficie), ]
-df_surface_state <- df_surface_state[order(df_surface_state$superficie), ]
-
-
-
-plt_surf_state <- plot_ly(df_surface_state, 
-                          x = ~superficie, 
-                          y = ~reorder(estado, -superficie), #superficie, 
-                          type = 'bar',
-                          marker = list(color = colores_identidad[1])
-)
-
-# Establecer el diseño del gráfico
-plt_surf_state <- plt_surf_state %>% 
-  layout(title = 'Superficie certificada por Entidad Federativa',
-         xaxis = list(title = "(Hectáreas)"),
-         yaxis = list(title = " "),
-         margin = list(t = 80)
-  )
-
-plt_surf_state
-#saveWidget(as_widget(plt_surf_state), "plot-superficiesadvc-estados.html")
-
-```
-
- 
-
 
 
 
@@ -150,10 +223,6 @@ df_bubble <- df_advc %>%
 
 df_bubble$region_conanp <- as.factor(df_bubble$region_conanp)
 ```
-
-
-
-
 
 
 ```{r echo=FALSE}
@@ -176,21 +245,8 @@ df_advc <- df_advc %>%
       TRUE ~ "Otra"
     )
   )
+
 ```
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
 
 
 ```{r echo=FALSE}
@@ -198,10 +254,7 @@ library(rbokeh)
 df_advc$categoria_propiedad <- as.factor(df_advc$categoria_propiedad)
 ```
 
-
-
 ```{r echo=FALSE}
-
 df_propiedad <- df_advc %>%
   group_by(categoria_propiedad) %>%
   summarise(Count = n()) %>%
@@ -214,108 +267,393 @@ df_propiedad <- df_advc %>%
 
 ```{r echo=FALSE}
 sup_certificada = data.frame(
-  tipo_propiedad =c("Social", "Privada", "Pública"),
+  tipo_propiedad =c("<span style=\"font-size: 12px\"> <b>Social</span></b>", 
+                    "<span style=\"font-size: 12px\"> <b>Privada</span></b>",
+                    "<span style=\"font-size: 12px\"> <b>Pública</span></b>"),
   num_ADVC = c(397,175,9),
   superficie = c(1075345.59,191373.41, 7771.56),
-  porc_cert=c(91.12,8.48,0.41)
+  porc_cert=c(84.37,15.02,0.61)
 )
 tot = 1137650.30
 #sup_certificada$porc_certif =  round((sup_certificada$superficie/tot)*100,5)
 ```
 
-
-## Tipo de propiedad
-
-
+<p><h2 font-size: 28px; align ='center'><br><b> Porcentaje de superficie de las ADVC certificadas <br> por tipo de propiedad </p></h2><br></b>
 
 ```{r echo=FALSE}
-sup_certificada$tipo_propiedad <- factor(sup_certificada$tipo_propiedad, levels = c("Pública", "Privada", "Social"))
+colnames(sup_certificada)[1] <- "name"
+colnames(sup_certificada)[4] <- "y"
+sup_certificada$color <- c("#123757","#B53C0D",  "#CEBA92")
 
-colors <- c("Pública" = "#B53C0D",
-            "Privada" = "#3E7C24", 
-            "Social" = "#123757"
-            )
 
- superficie_bar <- plot_ly(
-  sup_certificada, 
-  x = ~tipo_propiedad, 
-  y = ~superficie, 
-  type = 'bar', 
-  name = 'Superficie',
-  
-  text = ~ scales::comma(sup_certificada$superficie),
-   textposition = 'outside',
-         textfont = list(
-             color ="black", 
-             size = 13,
-             family = "Arial",
-             weight = "bold"
-         ),
+df <-select(sup_certificada, name, y,color,num_ADVC )
+df$hover_text <-paste("Actualmente cuenta con <b>", sup_certificada$num_ADVC, " </b> ADVC",
+                                   "<br>Porcentaje del total protegido por ADVC <b>", sup_certificada$y, "</b> %",
+                                   "<br>Superficie protegida:<b>", scales::comma(sup_certificada$superficie), "</b>ha") 
   
   
-  marker = list(color = ~colors[tipo_propiedad])
-) %>%
-  layout(
-    title = 'Superficie certificada por tipo de propiedad',
-    xaxis = list(title = ''),
-    yaxis = list(title = '(Hectáreas)'),
-    margin=list(t=80)
-  )
 
-superficie_bar
-saveWidget(as_widget(superficie_bar), "plot-subplost-advc-superficie.html")
-advc_bar <- plot_ly(
-  sup_certificada, 
-  x = ~tipo_propiedad, 
-  y = ~num_ADVC, 
-  type = 'bar', 
-  name = 'Número de ADVC',
+
+propiedades.plt<-highchart() %>%
+  hc_chart(
+    type = 'pie',
+    polar =FALSE,
+    inverted = FALSE
+    )%>%
+  hc_xAxis(
+    categories = df$name
+  )%>%
+  hc_add_series(
+    df,
+    name = "Número de ADVC",
+    showInLegend = TRUE,
+    innerSize = '35%',
+    dataLabels =list(enabled =TRUE,
+                     format = '{point.name}: {point.percentage:.2f}%'
+                      )
+  )%>%
+  hc_plotOptions( pie = list(
+    ignoreHiddenPoint = FALSE,  
+      animation = FALSE
+    ),
+    
+    series = list(animation =FALSE)
+                 
+                 )%>%
+  hc_exporting(enabled = TRUE)%>%
+  hc_tooltip(
+     useHTML =TRUE,
+     pointFormat ='{point.hover_text}'
+   )
+
+# card(
+#   full_screen = TRUE,
+  propiedades.plt
   
-   text = ~ scales::comma(sup_certificada$num_ADVC),
-   textposition = 'outside',   
-         textfont = list(
-             color ="black", 
-             size = 13,
-             family = "Arial",
-             weight = "bold"
-         ),
-  
-  
-  marker = list(color = ~colors[tipo_propiedad])
-) %>%
-  layout(
-    title = 'Número de ADVC por tipo de propiedad ',
-    xaxis = list(title = ' '),
-    yaxis = list(title = 'Número de ADVC'),
-    margin=list(t=80)
-  )
-advc_bar
-saveWidget(as_widget(advc_bar), "plot-subplost-advc-numero.html")
+#)
+
 ```
 
 
 
-```{r echo=FALSE}
-ring_chart <- plot_ly(
-  sup_certificada, 
-  labels = ~tipo_propiedad, 
-  values = ~porc_cert, 
-  type = 'pie',
-  textinfo = 'label+percent',
-  insidetextorientation = 'radial',
-  hole = 0.5,  # Tamaño del agujero en el centro del anillo (de 0 a 1)
-  marker = list(colors = ~colors[tipo_propiedad])
-) %>%
-  layout(
-    title = 'Porcentaje de superficie certificada por tipo de tropiedad',
-    margin=(list(t=80))
-  )
+<p><h2 font-size: 28px; align ='center'><br><b> Protección de ecosistemas por las ADVC </p></h2><br></b>
 
-ring_chart
-saveWidget(as_widget(ring_chart), "plot-anillo-advc-propiedad.html")
+```{r echo=FALSE, include=FALSE}
+ecosistema <-c("<span style=\"font-size: 12px\"> <b>Selva</span></b>",
+               "<span style=\"font-size: 12px\"> <b>Bosque de encino</span></b>",
+               "<span style=\"font-size: 12px\"> <b>Pastizal</span></b>",
+               "<span style=\"font-size: 12px\"> <b>Bosque de coníferas</span></b>",
+               "<span style=\"font-size: 12px\"> <b>Bosque mesófilo de montaña</span></b>",
+               "<span style=\"font-size: 12px\"> <b>Agroecosistemas</span></b>", 
+               "<span style=\"font-size: 12px\"> <b>Matorral xerófilo</span></b>",
+               "<span style=\"font-size: 12px\"> <b>Otros tipos de vegetación</span></b>"
+               )
+porcentaje_protegido = c(47, 17, 8, 8, 6,6,4,4)
+
+color = c("#2E8B57",
+          "#548B54",
+          "#CDAF95",
+          "#7CCD7C",
+          "#B4EEB4",
+          "#BCEE68",
+          "#CDAA7D",
+          "gray"
+          
+          )
+
+
+df_ecosistema <- data.frame(name = ecosistema,
+                            y=porcentaje_protegido,
+                            color = color
+                            )
+
+ 
+
+#card(
+#  full_screen = TRUE,
+
+
+#)
+highchart() %>%
+ # hc_title(text = 'Fruits pie') %>%
+  #hc_subtitle(text = 'My favourite fruits') %>%
+  hc_chart(type = 'pie',
+           polar = FALSE,
+           inverted = FALSE) %>%
+  hc_xAxis(categories = df_ecosistema$name) %>%
+  hc_add_series(df_ecosistema, name = 'Fruits', showInLegend = TRUE,
+                   dataLabels =list(enabled =TRUE,
+                     format = '{point.name}: {point.percentage:.1f}%'
+                      )
+                
+                
+                ) %>%
+  hc_plotOptions(series = list(animation = FALSE),
+                  pie = list(
+    ignoreHiddenPoint = FALSE,  
+      animation = FALSE
+    ))
+# %>%
+#     hc_tooltip(
+#      useHTML =TRUE,
+#      pointFormat ='{point.hover_text}'
+#    )
+
+
+```
+
+```{r echo=FALSE}
+library(lubridate)
+
+# df_ecosistema$hover_text <-paste("Actualmente cuenta con <b>", sup_certificada$num_ADVC, " </b> ADVC",
+#                                    "<br>Porcentaje del total protegido por ADVC <b>", sup_certificada$y, "</b> %",
+#                                    "<br>Superficie protegida:<b>", scales::comma(sup_certificada$superficie), "</b>ha") 
+#   
+#   
+
+ highchart() %>%
+  hc_chart(type = 'bar', polar = TRUE) %>%
+  hc_xAxis(categories = df_ecosistema$name) %>%
+  hc_add_series(df_ecosistema, name = 'Porcentaje protegido', 
+                dataLabels = list(enabled = TRUE,         
+                                  format = '{point.y:.0f} %'
+                ),
+                showInLegend = FALSE ) %>%
+  hc_exporting(enabled = TRUE) %>%
+  hc_pane(endAngle = 270) %>%
+  hc_plotOptions(series = list(animation = FALSE, 
+                               pointWidth = 20)) 
+
+```
+
+
+
+
+
+
+<p><h2 font-size: 28px; align ='center'><br><b> Superficie certificada por las ADVC <br> en las entidad federativa </p></h2><br></b>
+
+```{r echo=FALSE}
+
+df_surface_state <- df_advc %>%
+  group_by(estado) %>%
+  summarise(superficie = sum(superficie_certificada),
+            num_advc = n())
+
+
+
+df_surface_state <- df_surface_state %>%
+  arrange(desc(superficie))
+
+df_surface_state$hover_text <- paste("<b>",df_surface_state$estado,"</b>",
+                                "cuenta con <b>", df_surface_state$num_advc, "</b> ADVC,"
+                                ,"con una superficie total protegida de <b>", 
+                                scales::comma(df_surface_state$superficie),"</b>ha"
+                                     )
+
+
+colnames(df_surface_state)[1] <- "name"
+colnames(df_surface_state)[2] <- "y"
+
+df3 = select(df_surface_state, name, y, hover_text)
+
+
+
+hc_surf_state <- highchart() %>%
+  hc_title(text = '') %>%
+  hc_yAxis(title = list(text = "(Hectáreas)")) %>%
+  hc_xAxis(categories = df3$name,
+           title = list(text = ""),
+           reversed = TRUE) %>%
+  hc_add_series(df3, name = 'Superficie (ha)', 
+               # data = df3$y, 
+                type = 'bar', 
+                color = "darkgreen")%>%  
+  hc_tooltip(#shared = TRUE, crosshairs = TRUE,
+    useHTML = TRUE,
+    formatter = JS("function() {
+      return this.point.hover_text;
+    }")) %>%
+  hc_plotOptions(series = list(
+    dataLabels = list(enabled = FALSE),
+    showInLegend = FALSE
+  ),
+  pointWidth = 18)%>%
+  hc_exporting(enabled = TRUE)
+ 
+
+card(
+  full_screen = TRUE,
+hc_surf_state
+)
+
+
+  # hc_navigator(enabled = FALSE,
+  #              xAxis = list(
+  #              labels = list(enabled = FALSE),
+  #              title = list(text = "Zoom", color ="black")
+  #            )
+  #              
+  #              ) %>%
+  #hc_rangeSelector(enabled = TRUE) %>%
+  #,
+               #buttons = list(contextButton = list(
+                 #menuItems = c("zoomIn", "zoomOut"))
+                 #)
+ 
+# Mostrar el gráfico
+
+#saveWidget(as_widget(plt_surf_state), "plot-superficiesadvc-estados.html")
+```
+
+
+
+<p><h2 font-size: 28px; align ='center'><br><b> Distribución del número de Áreas Destinadas Voluntariamente a la Conservación por entidad federativa </p></h2><br></b>
+
+
+
+
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+library(sf)
+#advc_gjson <- read_sf("Json/EstadosMG2023.geojson")
+#mexico_map <- st_read("data/destdv1gw.geojson")
+mexico_json <- "countries/mx/mx-all"
+df_surface_state <- df_advc %>%
+  group_by(estado) %>%
+  summarise(superficie = sum(superficie_certificada),
+            num_advc = n())
+
+
+
+
+
+data_advc_mexico <- df_surface_state %>% 
+  select(Entidad = estado, superficie, num_advc)
+
+data_advc_mexico$hover_text <- paste("<b>",data_advc_mexico$Entidad,"</b>",
+                                "cuenta con <b>", data_advc_mexico$num_advc, "</b> ADVC,"
+                                ,"con una superficie total protegida de <b>", 
+                                scales::comma(data_advc_mexico$superficie),"</b>ha"
+                                     )
+
+new_data <- tibble(
+  Entidad = c("Zacatecas", "Querétaro", "Distrito Federal"),
+  superficie = c(0, 0,0),
+  num_advc = c(0, 0,0),
+  hover_text = c("La entidad actualmente no cuenta con ADVC")
+)
+
+
+data_advc_mexico <- bind_rows(data_advc_mexico, new_data)
+
+hcmap(mexico_json, 
+      data = data_advc_mexico, 
+      value = "num_advc",
+      joinBy = c("woe-name", "Entidad"),
+      name ="Superficie protegida",
+      dataLabels = list(enabled = TRUE, 
+                        format = '{point.name}'),
+      borderColor = "white", borderWidth = 0.5,
+      tooltip = list(
+        valueDecimals = 0, 
+        valuePrefix = "<br>Superficie:", valueSuffix = " ha",
+        useHTML = TRUE,
+        pointFormat = '{point.hover_text}'
+        
+        )
+      ) %>%
+        hc_mapNavigation(enabled = TRUE) %>%
+        hc_title(text = "",
+                 align = "center",
+                 style = list(color = "#000000", 
+                              fontWeight = "bold"))%>%
+        hc_colorAxis(stops = list(
+  list(0, "#C1FFC1"),   
+  list(0.035, "#76C76B"),  
+  list(0.5, "#48A73A"),  
+  list(1, "#008B45")      
+))%>%
+  hc_credits(enabled =FALSE) %>%
+  hc_exporting(enabled = TRUE)
+```
+
+
+```{r echo=FALSE, include=FALSE}
+library(mxmaps)
+library(ggpubr)
+library(jsonlite)
+
+data("df_mxstate_2020")
+df <- rbind(df_mxstate_2020, df_mxstate_2020)
+
+df$genero <- rep(c("m", "f"), each= 32)
+df$value <- ifelse(df$genero == "m", df$pop_male, df$pop_female)
+
+
+df$value <- cut(df$value, breaks = c(0, 5e4, 1e6, 2e6, 4e6, 20e7))
+
+f <- mxstate_choropleth(subset(df, genero == "f"),
+                        title = "F population, by state",
+                        num_colors = 5) 
+m <- mxstate_choropleth(subset(df, genero == "m"),
+                        title = "M population, by state",
+                        num_colors = 5)
+
+ 
+ggarrange(f, m,
+          labels = c("", ""),
+          ncol = 1, nrow = 2)
+```
+
+
+
+ 
+
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+
+library(mxmaps) 
+library(ggpubr)  
+library(jsonlite) 
+
+
+data("df_mxstate_2020", package = "mxmaps")
+df <- rbind(df_mxstate_2020, df_mxstate_2020)
+df$genero <- rep(c("m", "f"), each = 32)
+df$value <- ifelse(df$genero == "m", df$pop_male, df$pop_female)
+
+
+df$value <- cut(df$value, breaks = c(0, 5e4, 1e6, 2e6, 4e6, 20e7))
+
+# Función para crear mapa con highcharter
+create_map <- function(data, title) {
+  hcmap(
+        data = data, 
+        value = "value",
+        joinBy = c("woe-name", "state_name"),
+        name = "Population",
+        dataLabels = list(enabled = TRUE, format = '{point.name}'),
+        borderColor = "white", 
+        borderWidth = 0.5) %>%
+    hc_mapNavigation(enabled = TRUE) %>%
+    hc_title(text = title, align = "center",
+             style = list(color = "#000000", fontWeight = "bold")) %>%
+    hc_colorAxis(minColor = "#B4EEB4", maxColor = "#2A6C5C") %>%
+    hc_credits(enabled = FALSE) %>%
+    hc_exporting(enabled = TRUE)
+}
+
+# Crea los mapas para población femenina y masculina
+map_f <- create_map(subset(df, genero == "f"), "F population, by state")
+map_m <- create_map(subset(df, genero == "m"), "M population, by state")
 
 
 
 ```
+
+
+
+
 
 
