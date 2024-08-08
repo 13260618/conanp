@@ -1,0 +1,1004 @@
+﻿id,num_certificado,nombre_advc,superficie_certificada,municipio,estado,certification_year,vigencia,tipo_propietario,principales_ecosistemas,region_conanp
+1,CONANP-01/2002,Parque Ecológico Jaguaroundi,960.734884,Coatzacoalcos,Veracruz,2002,99,Empresa de Participación Estatal," selva alta perennifolia, manglar de agua dulce, pantano, vegetación acuática",Planicie Costera y Golfo de México
+2,CONANP-02/2003,"Rancho ""La Asunción"", con el Area Natural Protegida Yu-Balcah",572,Tacotalpa,Tabasco,2003,Perpetuidad,Persona física,"selva alta perennifolia inundable, manglar de agua dulce, pantano, vegetación acuática",Planicie Costera y Golfo de México
+3,CONANP-10/2004,Cerro Chango,700,Santiago  Jocotepec,Oaxaca,2004,Perpetuidad,"Ejido
+(Tierras de Uso Común)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola",Frontera Sur Istmo y Pacífico Sur
+4,CONANP-13/2004,Área de Conservación San Pedro Tlatepusco,5050,San Felipe Usila,Oaxaca,2004,25,"Comunidad 
+(Bienes comunales)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, bosque mesófilo de montaña, bosque de pino-encino",Frontera Sur Istmo y Pacífico Sur
+5,CONANP-14/2004,Área de Conservación Santiago Tlatepusco,4300,San Felipe Usila,Oaxaca,2004,25,"Comunidad 
+(Bienes comunales)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, bosque mesófilo de montaña, bosque de pino-encino",Frontera Sur Istmo y Pacífico Sur
+6,CONANP-15/2004,Área de Conservación San Antonio del Barrio,1500,San Felipe Usila,Oaxaca,2004,25,"Comunidad 
+(Bienes comunales)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, bosque mesófilo de montaña, bosque de pino-encino",Frontera Sur Istmo y Pacífico Sur
+7,CONANP-16/2004,Área de Conservación la Tierra del Faisán,9670,San Felipe Usila,Oaxaca,2004,25,"Comunidad 
+(Bienes comunales)","galería riparia, bosque mesófilo de montaña, bosque de pino-encino, bosque alpino",Frontera Sur Istmo y Pacífico Sur
+8,*CONANP-17/2005,Area de Preservación de la Naturaleza y Zona de Usos Múltiples para el Ecoturismo Kolijké,26,Zihuatehutla,Puebla,2005,Perpetuidad,Persona física,"selva mediana subperennifolia, bosque mesófilo de montaña, galería riparia de platanus, vegetación rupícola (relicto xerófilo), vegetación acuática",Planicie Costera y Golfo de México
+9,CONANP-23/2005,Zonas de Conservación comunitaria Santo Domingo Cacalotepec,999.19,Ixtlan de Juarez,Oaxaca,2005,20,"Comunidad 
+(Bienes comunales)","selva mediana subperennifolia, bosque mesófilo de montaña, bosque de pino-encino, bosque alpino",Frontera Sur Istmo y Pacífico Sur
+10,*CONANP-24/2005,Rancho Media Luna,15000,Ocampo,Coahuila,2005,50,Persona física,"matorral xerófilo micrófilo, matorral xerófilo halófito, matorral xerófilo gipsófilo, matorral xerófilo rosetófilo, matorral xerófilo crasicaule, pradera",Noreste y Sierra Madre Oriental
+11,CONANP-25/2005,Cacalotepec fracción primera y fracción segunda,36.478,Xicotepec de Juárez,Puebla,2005,50,Persona física,bosque mesófilo de montaña,Planicie Costera y Golfo de México
+12,CONANP-26/2005,Área Comunitaria Protegida San Isidro,5308,San Pedro Huamelula,Oaxaca,2005,Perpetuidad,"Comunidad 
+(Bienes comunales)","selva baja caducifolia, selva mediana caducifolia, selva baja espinosa, galería riparia, manglar, tular, matorral de dunas costeras",Frontera Sur Istmo y Pacífico Sur
+13,CONANP-29/2006,Zona de Reserva Ecológica Comunal de San Juan Teponaxtla,4000,San Juan Tepehuxila,Oaxaca,2006,Perpetuidad,"Comunidad 
+(Bienes comunales)","galería riparia, bosque mesófilo de montaña, bosque de pino-encino, bosque alpino",Frontera Sur Istmo y Pacífico Sur
+14,CONANP-30-BIS 1/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 1Z-1 P1/1,2.632599,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+15,CONANP-30-BIS 2/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 2Z-1 P1/1,7.358554,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+16,CONANP-30-BIS 3/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 3Z-1 P1/1,4.500508,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+17,CONANP-30-BIS 4/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 4Z-1 P1/1,9.99061,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+18,CONANP-30-BIS 5/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 5Z-1 P1/1,2.889649,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+19,CONANP-30-BIS 6/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 6Z-1 P1/1E,1.385399,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+20,CONANP-30-BIS 7/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 8Z-1 P1/1E,0.937231,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+21,CONANP-30-BIS 8/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 9 Z-1 P1/1,8.484835,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+22,CONANP-30-BIS 9/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 10 Z-1 P1/1,7.016356,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+23,CONANP-30-BIS 10/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 11 Z-1 P1/1 ,8.719543,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+24,CONANP-30-BIS 11/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 12-Z-1 P1/1,1.502856,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+25,CONANP-30-BIS 12/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 13 Z-1 P1/1,5.590399,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+26,CONANP-30-BIS 13/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 15 Z-1 P1/1 ,1.881143,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+27,CONANP-30-BIS 14/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 17 Z P1/1 ,5.585348,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+28,CONANP-30-BIS 15/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 19 Z-1 P1/1,8.882243,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+29,CONANP-30-BIS 16/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 20 Z-1 P1/1 ,14.855768,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+30,CONANP-30-BIS 17/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 21 Z-1 P1/1,0.636371,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+31,CONANP-30-BIS  18/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 22 Z-1 P1/1,1.130807,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+32,CONANP-30-BIS 19/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 23 Z-1 P1/1,3.514964,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+33,CONANP-30-BIS 20/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 24 Z-1  P1/1,12.086967,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+34,CONANP-30-BIS  21/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 25 Z-1  P1/1 ,1.73916,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+35,CONANP-30-BIS 22/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 26 Z-1  P1/1,3.910833,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+36,CONANP-30-BIS 23/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 28 Z-1  P1/1 ,0.315574,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+37,CONANP-30-BIS 24/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac  29 Z-1 P1/1,0.393579,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+38,CONANP-30-BIS 25/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 30 Z-1  P1/1,0.777222,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+39,CONANP-30-BIS 26/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 31 Z-1 P1/1,0.251224,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+40,CONANP-30-BIS 27/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 32 Z-1 P1/1,0.544401,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+41,CONANP-30-BIS 28/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 34 Z-1 P1/1,0.924576,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+42,CONANP-30-BIS 29/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 35 Z-1 P1/1,2.878738,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+43,CONANP-30-BIS 30/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 37 Z-1  P1/1,5.100669,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+44,CONANP-30-BIS 31/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 1 Z-1  P1/1,1.055822,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+45,CONANP-30-BIS 32/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 2 Z-1  P1/1,1.452494,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+46,CONANP-30-BIS 33/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 3 Z-1  P1/1,1.893981,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+47,CONANP-30-BIS 34/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 5Z-1 P1/1,0.212166,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+48,CONANP-30-BIS 35/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac  6 Z-1 P1/1,0.144951,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+49,CONANP-30-BIS 36/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 7 Z-1 P1/1 ,9.063499,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+50,CONANP-30-BIS 37/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 9 Z-1 P1/1 ,11.545134,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+51,CONANP-30-BIS 38/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 12 Z-1 P1/1,2.843918,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+52,CONANP-30-BIS 39/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 15 Z-1 P1/1 ,5.151196,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+53,CONANP-30-BIS 40/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 18 Z-1 P1/1,2.372648,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+54,CONANP-30-BIS 41/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 20 Z-1 P1/1 ,0.94717,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+55,CONANP-30-BIS 42/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 25 Z-1  P1/1 ,0.496182,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+56,CONANP-30-BIS 43/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 28 Z-1 P1/1,0.167063,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+57,CONANP-30-BIS 44/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 29 Z-1 P1/1,0.117582,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+58,CONANP-30-BIS 45/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 31 Z-1 P1/1,0.802911,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+59,CONANP-30-BIS 46/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 32 Z-1 P1/1,1.429689,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+60,CONANP-30-BIS 47/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 33 Z-1 P1/1,1.133455,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+61,CONANP-30-BIS 48/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 34 Z-1 P1/1,1.902438,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+62,CONANP-30-BIS 49/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 37 Z-1  P1/1,0.407352,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+63,CONANP-30-BIS 50/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 38 Z-1 P1/1,0.110476,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+64,CONANP-30-BIS 51/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 39 Z-1 P1/1,2.419823,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+65,CONANP-30-BIS 52/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 40 Z-1 P1/1 ,3.122699,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+66,CONANP-30-BIS 53/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 41 Z-1 P1/1,0.603706,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+67,CONANP-30-BIS 54/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 42 Z-1 P1/1 ,2.021532,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+68,CONANP-30-BIS 55/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 47 Z-1 P/1,0.197385,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+69,CONANP-30-BIS 56/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 49 Z-1 P1/1 ,0.09762,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+70,CONANP-30-BIS 57/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 50 Z-1 P1/1,0.238884,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+71,CONANP-30-BIS 58/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 52 Z-1 P1/1,4.990557,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+72,CONANP-30-BIS 59/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 53 Z-1 P1/1 ,1.23831,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+73,CONANP-30-BIS 60/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 54 Z-1 P1/1,1.805722,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+74,CONANP-30-BIS 61/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 55 Z-1 P1/1,0.076388,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+75,CONANP-30-BIS 62/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 63 Z-1 P1/1 ,6.278518,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+76,CONANP-30-BIS 63/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 64 Z-1 P1/1 ,1.466709,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+77,CONANP-30-BIS 64/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 66 Z-1 P1/1,2.692554,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+78,CONANP-30-BIS 65/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 67 Z-1 P1/1,0.8084,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+79,CONANP-30-BIS 66/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 73 Z-1 P1/1 ,1.130722,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+80,CONANP-30-BIS 67/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 74 Z-1 P1/1,1.144728,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+81,CONANP-30-BIS 68/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 75 Z-1 P1/1,1.183795,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+82,CONANP-30-BIS 69/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 76 Z-1 P1/1 ,2.814391,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+83,CONANP-30-BIS 70/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 78 Z-1 P1/1,2.234095,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+84,CONANP-30-BIS 71/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 79 Z-1 P1/1,5.443938,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+85,CONANP-30-BIS 72/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 84 Z-1 P1/1,0.190639,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+86,CONANP-30-BIS 73/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 86 Z-1 P1/1,0.177643,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+87,CONANP-30-BIS 74/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 89 Z-1 P1/1 ,0.076673,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+88,CONANP-30-BIS 75/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 93 Z-1 P1/1,0.078107,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+89,CONANP-30-BIS 76/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 95 Z-1 P1/1,0.797529,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+90,CONANP-30-BIS 77/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 96 Z-1 P1/1 ,0.7843,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+91,CONANP-30-BIS 78/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 97 Z-1 P1/1 ,1.172647,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+92,CONANP-30-BIS 79/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 98 Z-1 P1/1 ,1.157716,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+93,CONANP-30-BIS 80/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 99 Z-1 P1/1,1.023787,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+94,CONANP-30-BIS 81/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 100 Z-1 P1/1,4.575957,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+95,CONANP-30-BIS 82/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 102 Z-1 P1/1,1.3982,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+96,CONANP-30-BIS 83/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 103 Z-1 P1/1,0.611032,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+97,CONANP-30-BIS 84/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 104 Z-1 P1/1,1.631705,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+98,CONANP-30-BIS 85/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 106 Z-1 P1/1 ,0.865542,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+99,CONANP-30-BIS 86/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 107 Z-1 P1/1 ,2.865852,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+100,CONANP-30-BIS 87/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 109 Z-1 P1/1,8.92691,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+101,CONANP-30-BIS 88/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 113 Z-1 P1/1,3.144837,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+102,CONANP-30-BIS 89/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 114 Z-1 P1/1 ,1.219851,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+103,CONANP-30-BIS 90/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 115 Z-1 P1/1 ,2.452447,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+104,CONANP-30-BIS 91/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 116 Z-1 P1/1,4.980232,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+105,CONANP-30-BIS 92/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 117 Z-1 P1/1,6.008565,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+106,CONANP-30-BIS 93/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 118 Z-1 P1/1,0.383696,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+107,CONANP-30-BIS 94/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 119 Z-1 P1/1,1.740864,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+108,CONANP-30-BIS 95/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 121 Z-1 P1/1,3.66248,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+109,CONANP-30-BIS 96/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 125 Z-1 P1/1,2.435404,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+110,CONANP-30-BIS 97/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 127 Z-1 P1/1,0.710234,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+111,CONANP-30-BIS 98/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 128 Z-1 P1/1 ,0.33679,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+112,CONANP-30-BIS 99/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 129 Z-1 P1/1,5.723578,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+113,CONANP-30-BIS 100/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 130 Z-1 P1/1,5.706648,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+114,CONANP-30-BIS 101/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 134 Z-1 P1/1,1.855367,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+115,CONANP-30-BIS 102/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 136 Z-1 P1/1,3.899672,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+116,CONANP-30-BIS 103/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 137 Z-1 P1/1,13.671612,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+117,CONANP-30-BIS 104/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 138 Z-1 P1/1 ,0.877155,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+118,CONANP-30-BIS 105/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 139 Z-1 P1/1 ,1.566778,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+119,CONANP-30-BIS 106/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 140 Z-1 P1/1,4.24465,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+120,CONANP-30-BIS 107/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 141 Z-1 P1/1 ,0.980458,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+121,CONANP-30-BIS 108/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 142 Z-1 P1/1 ,1.249998,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+122,CONANP-30-BIS 109/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 149 Z-1 P1/1 ,3.258193,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+123,CONANP-30-BIS 110/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 147 Z-1 P1/1,3.785189,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+124,CONANP-30-BIS 111/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 149 Z-1 P1/1 ,2.107065,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+125,CONANP-30-BIS 112/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 150 Z-1 P1/1,1.115467,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+126,CONANP-30-BIS 113/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 151 Z-1 P1/1,5.46618,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+127,CONANP-30-BIS 114/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 152 Z-1 P1/1,3.45651,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+128,CONANP-30-BIS 115/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 154 Z-1 P1/1,9.807226,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+129,CONANP-30-BIS 116/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 155 Z-1 P1/1,4.486313,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+130,CONANP-30-BIS 117/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 156 Z-1 P1/1,14.368747,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+131,CONANP-30-BIS 118/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 157 Z-1 P1/1,1.677789,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+132,CONANP-30-BIS 119/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 158 Z-1 P1/1,2.988517,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+133,CONANP-30-BIS 120/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 159 Z-1 P1/1 ,1.156992,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+134,CONANP-30-BIS 121/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 160 Z-1 P1/1,1.335901,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+135,CONANP-30-BIS 122/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 161 Z-1 P1/1,2.976765,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+136,CONANP-30-BIS 123/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 163 Z-1 P1/1,2.701687,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+137,CONANP-30-BIS 124/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 164 Z-1 P1/1 ,3.05202,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+138,CONANP-30-BIS 125/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 2 Z-1 P1/3 ,1.201724,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+139,CONANP-30-BIS 126/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 5 Z-1 P1/3,2.171388,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+140,CONANP-30-BIS 127/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 22 Z-1 P1/3,7.875189,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+141,CONANP-30-BIS 128/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 29 Z-1 P1/3,10.744922,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+142,CONANP-30-BIS 129/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 37 Z-1  P1/3,2.418282,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+143,CONANP-30-BIS 130/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 39 Z-1 P1/3,6.177218,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+144,CONANP-30-BIS 131/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 46 Z-1 P1/3,2.396409,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+145,CONANP-30-BIS 132/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 49 Z-1 P1/3 ,2.200742,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+146,CONANP-30-BIS 133/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 50 Z-1 P1/3,0.901165,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+147,CONANP-30-BIS 134/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 51 Z-1 P1/3,6.440217,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+148,CONANP-30-BIS 135/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 52 Z-1 P1/3 ,6.720291,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+149,CONANP-30-BIS 136/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 57 Z-1 P1/3,1.094415,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+150,CONANP-30-BIS 137/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 59 Z-1 P1/3,1.027074,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+151,CONANP-30-BIS 138/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 74 Z-1 P1/3,1.729142,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+152,CONANP-30-BIS 139/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 88 Z-1 P1/3,3.987402,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+153,CONANP-30-BIS 140/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 93 Z-1 P1/3,2.123547,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+154,CONANP-30-BIS 141/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 201 Z-1 P1/3,6.121672,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+155,CONANP-30-BIS 142/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 203 Z-1 P1/3,6.740425,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+156,CONANP-30-BIS 143/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 299 Z-1 P1/3,1.342289,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+157,CONANP-30-BIS 144/2006,Reserva Ecológica Natural Cuenca Alta del Río Atoyac 40 Z-1 P1/3,9.134734,Amatlan de Reyes,Veracruz,2006,30,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistemas acuáticos",Planicie Costera y Golfo de México
+158,CONANP-31/2006,Área de Conservación y Protección San Jacobo,986,Santiago Jocotepec,Oaxaca,2006,20,"Ejido
+(Tierras de Uso Común)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola",Frontera Sur Istmo y Pacífico Sur
+159,CONANP-34/2006,Reserva Ejidal Vistahermosa,1242.647649,Santiago Jocotepec,Oaxaca,2006,30,"Ejido
+(Tierras de Uso Común)",selva alta perennifolia,Frontera Sur Istmo y Pacífico Sur
+160,*CONANP-36/2006,Área de Conservación los Ojos  1 fracciones A y B,11126.0907,Agua Prieta,Sonora,2006,Perpetuidad,Persona moral,"pradera, chaparral, galerías de sauce/platanus, sabana de pino/encino/junípero",Noroeste y Alto Golfo de California
+161,CONANP-37/2006,Área de Conservación los Ojos  2-fracciones C y D,10301.5505,Agua Prieta,Sonora,2006,Perpetuidad,Persona moral,"pradera, chaparral, galerías de sauce/platanus, sabana de pino/encino/junípero, bosque de pino-encino",Noroeste y Alto Golfo de California
+162,*CONANP-38/2006,Área de Conservación los Ojos  3-fracciones E F G H I,12839.1427,Agua Prieta,Sonora,2006,Perpetuidad,Persona moral,"pradera, chaparral, galerías de sauce/platanus, sabana de pino/encino/junípero, bosque de pino-encino",Noroeste y Alto Golfo de California
+163,CONANP-39/2006,Área de Conservación El Zapotal,2358.125,Tizimin,Yucatán,2006,Perpetuidad,Persona moral,"selva mediana subcaduciifolia, selva baja inundable, sabana, cenotes, ecosistema cavernícola",Península de Yucatán y Caribe Mexicano
+164,CONANP-40/2006,Reserva Comunal Mascalco,10000,San Pedro Huamelula,Oaxaca,2006,Perpetuidad,"Comunidad 
+(Bienes comunales)","selva baja caducifolia, selva mediana caducifolia, selva baja espinosa, galería riparia, manglar, tular, matorral de dunas costeras, ecosistemas acuáticos",Frontera Sur Istmo y Pacífico Sur
+165,CONANP-42/2006,Rancho San Pedro,805,Antiguo Morelos,Tamaulipas,2006,50,Persona física,"pradera, chaparral, galerías de sauce/platanus, sabana de pino/encino/junípero",Noreste y Sierra Madre Oriental
+166,CONANP-50/2006,La Pasionaria,1.75,Pluma Hidalgo,Oaxaca,2006,Perpetuidad,Persona física,"selva alta perennifolia, bosque mesófilo de montaña",Frontera Sur Istmo y Pacífico Sur
+167,CONANP-51/2006,El Corozal,2,Pluma Hidalgo,Oaxaca,2006,Perpetuidad,Persona física,"selva alta perennifolia, bosque mesófilo de montaña",Frontera Sur Istmo y Pacífico Sur
+168,CONANP-52/2006,Cafetal Soconusco,77,Pluma Hidalgo,Oaxaca,2006,Perpetuidad,Persona física,"selva alta perennifolia, bosque mesófilo de montaña, bosque de pino-encino",Frontera Sur Istmo y Pacífico Sur
+169,CONANP-53/2006,Cerro Azul,12.5,Pluma Hidalgo,Oaxaca,2006,Perpetuidad,Persona física,"selva alta perennifolia, bosque mesófilo de montaña",Frontera Sur Istmo y Pacífico Sur
+170,CONANP-54/2006,Huancastle,22,Pluma Hidalgo,Oaxaca,2006,Perpetuidad,Persona física,"selva alta perennifolia, bosque mesófilo de montaña",Frontera Sur Istmo y Pacífico Sur
+171,CONANP-56/2006,Concepción Vista Hermosa,109,Pluma Hidalgo,Oaxaca,2006,Perpetuidad,Persona física,"selva alta perennifolia, bosque mesófilo de montaña, bosque de pino-encino",Frontera Sur Istmo y Pacífico Sur
+172,CONANP-57/2006,EL Jordán,70.25,Pluma Hidalgo,Oaxaca,2006,Perpetuidad,Persona física,"selva alta perennifolia, bosque mesófilo de montaña, bosque de pino-encino",Frontera Sur Istmo y Pacífico Sur
+173,CONANP-58/2006,La Libertad,4,Pluma Hidalgo,Oaxaca,2006,Perpetuidad,Persona física,"selva alta perennifolia, bosque mesófilo de montaña",Frontera Sur Istmo y Pacífico Sur
+174,CONANP-59/2006,La Reforma,20,Pluma Hidalgo,Oaxaca,2006,Perpetuidad,Persona física,"selva alta perennifolia, bosque mesófilo de montaña",Frontera Sur Istmo y Pacífico Sur
+175,CONANP-60/2006,Los Lirios,3,Pluma Hidalgo,Oaxaca,2006,Perpetuidad,Persona física,selva alta perennifolia,Frontera Sur Istmo y Pacífico Sur
+176,CONANP-61/2006,Sacramento,6,Pluma Hidalgo,Oaxaca,2006,Perpetuidad,Persona física,"selva alta perennifolia, bosque mesófilo de montaña",Frontera Sur Istmo y Pacífico Sur
+177,CONANP-62/2006,Trapiche,4,Pluma Hidalgo,Oaxaca,2006,Perpetuidad,Persona física,selva alta perennifolia,Frontera Sur Istmo y Pacífico Sur
+178,CONANP-63/2006,La Soledad,10,Pluma Hidalgo,Oaxaca,2006,Perpetuidad,Persona física,"selva alta perennifolia, bosque mesófilo de montaña",Frontera Sur Istmo y Pacífico Sur
+179,CONANP-64/2006,Cafetal Las Flores,28,Pluma Hidalgo,Oaxaca,2006,Perpetuidad,Persona física,"selva alta perennifolia, bosque mesófilo de montaña",Frontera Sur Istmo y Pacífico Sur
+180,CONANP-65/2006,Juan Diego II,16,Pluma Hidalgo,Oaxaca,2006,Perpetuidad,Persona física,"selva alta perennifolia, bosque mesófilo de montaña",Frontera Sur Istmo y Pacífico Sur
+181,CONANP-66/2006,San Antonio,4,Pluma Hidalgo,Oaxaca,2006,Perpetuidad,Persona física,"selva alta perennifolia, bosque mesófilo de montaña",Frontera Sur Istmo y Pacífico Sur
+182,CONANP-67/2006,La Pasionaria,0.42,Pluma Hidalgo,Oaxaca,2006,Perpetuidad,Persona física,bosque mesófilo de montaña,Frontera Sur Istmo y Pacífico Sur
+183,CONANP-68/2006,Tierra Colorada,2,Pluma Hidalgo,Oaxaca,2006,Perpetuidad,Persona física,"selva alta perennifolia, bosque mesófilo de montaña",Frontera Sur Istmo y Pacífico Sur
+184,CONANP-69/2006,San Ignacio,110,Pluma Hidalgo,Oaxaca,2006,Perpetuidad,Persona física,"selva alta perennifolia, bosque mesófilo de montaña",Frontera Sur Istmo y Pacífico Sur
+185,CONANP-70/2006,Piedra Blanca,2,Pluma Hidalgo,Oaxaca,2006,Perpetuidad,Persona física,"selva alta perennifolia, bosque mesófilo de montaña",Frontera Sur Istmo y Pacífico Sur
+186,CONANP-71/2006,Las Flores,2,Pluma Hidalgo,Oaxaca,2006,Perpetuidad,Persona física,bosque mesófilo de montaña,Frontera Sur Istmo y Pacífico Sur
+187,CONANP-72/2006,San Vicente,22,Pluma Hidalgo,Oaxaca,2006,Perpetuidad,Persona física,"selva alta perennifolia, bosque mesófilo de montaña",Frontera Sur Istmo y Pacífico Sur
+188,CONANP-73/2006,Fraccionamiento Santa Fe,4,Pluma Hidalgo,Oaxaca,2006,Perpetuidad,Persona física,selva alta perennifolia,Frontera Sur Istmo y Pacífico Sur
+189,CONANP-74/2006,Rosalito I,3,Pluma Hidalgo,Oaxaca,2006,Perpetuidad,Persona física,"selva alta perennifolia, bosque mesófilo de montaña",Frontera Sur Istmo y Pacífico Sur
+190,CONANP-75/2006,"El Borbollón, La Pandura y la Yerbabuena",817,Chilpancingo de los Bravo,Guerrero,2006,Perpetuidad,"Ejido
+(Tierras de Uso Común)","bosque mesófilo de montaña, bosque de pino encino, bosque de galería, bosque de encino, selva baja caducifolia",Centro y Eje Neovolcánico
+191,CONANP-76/2006,Area de Protección del Aguila Real de la Serranía de Juan Grande,2589.45,El Llano,Aguascalientes,2006,50,"Ejido
+(Tierras de Uso Común)","pastizal-huizachal, matorral crasicaule, matorral de encino, bosque abierto de encino",Occidente y Pacífico Centro
+192,CONANP-77/2006,Area de Conservación de la Ribera del Cajonos del Ejido Nuevo Málzaga,661.27,Santa María Jacatepec,Oaxaca,2006,99,"Ejido
+(Tierras de Uso Común)","selva alta perennifolia, selva mediana subperennifolia, ecosistema cavernícola",Frontera Sur Istmo y Pacífico Sur
+193,CONANP-78/2006,Área de Conservación de la Ribera del Cajonos de la Comunidad de San Agustín,1765.07,Santa María Jacatepec,Oaxaca,2006,99,"Comunidad 
+(Bienes comunales)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola",Frontera Sur Istmo y Pacífico Sur
+194,CONANP-80/2006,Area de Conservación de la Ribera del Cajonos del Ejido Plan Mata de Caña,2033.422,Santiago Jocotepec,Oaxaca,2006,99,"Ejido
+(Tierras de Uso Común)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola",Frontera Sur Istmo y Pacífico Sur
+195,CONANP-81/2006,"El Ocotalito, El Venadario y La Antena",340.9165,Leonardo Bravo,Guerrero,2006,20,"Ejido
+(Tierras de Uso Común)","sabana de pino encino, matorral de encino ",Centro y Eje Neovolcánico
+196,CONANP-100/2007,Area de Conservación de la Ribera del Cajonos del Ejido Plan De San Luis,1360,Santiago Jocotepec,Oaxaca,2007,Perpetuidad,"Ejido
+(Tierras de Uso Común)","selva alta perennifolia, selva mediana subperennifolia, ecosistema cavernícola",Frontera Sur Istmo y Pacífico Sur
+197,CONANP-101/2007,Zona de Restauración Ecológica del Lobo Mexicano Potrero de Zamora,4417.5,Aramberri,Nuevo León,2007,99,"Ejido
+(Tierras de Uso Común)","bosque alpino, bosque de pino, bosque de pino encino, chaparral, matorral desértico rosetófilo, matorral desértico micrófilo, pastizal inducido",Noreste y Sierra Madre Oriental
+198,CONANP-102/2007,Zona de Restauración Ecológica del Lobo Mexicano San Joaquín de Soto,6405.568,Aramberri,Nuevo León,2007,99,"Ejido
+(Tierras de Uso Común)","bosque alpino, bosque de pino, bosque de pino encino, chaparral, matorral desértico rosetófilo, matorral desértico micrófilo, pastizal inducido",Noreste y Sierra Madre Oriental
+199,CONANP-103/2007,Zona de Restauración Ecológica del Lobo Mexicano Corona del Rosal,6579.2146,Galeana,Nuevo León,2007,99,"Ejido
+(Tierras de Uso Común)","bosque alpino, bosque de pino, bosque de pino encino, bosque mesófilo, bosque de galería, chaparral, matorral desértico rosetófilo, matorral desértico micrófilo, pastizal inducido",Noreste y Sierra Madre Oriental
+200,CONANP-104/2007,Zona de Restauración Ecológica del Lobo Mexicano El Saucillo,1190.745,Aramberri,Nuevo León,2007,99,"Ejido
+(Tierras de Uso Común)","bosque de pino encino, chaparral, matorral desértico rosetófilo, matorral desértico micrófilo, pastizal inducido",Noreste y Sierra Madre Oriental
+201,CONANP-121/2007,Cafetal San Juanito,32,Pluma Hidalgo,Oaxaca,2007,99,Persona física,"selva alta perennifolia, bosque mesófilo de montaña",Frontera Sur Istmo y Pacífico Sur
+202,CONANP-124/2007,Área de Conservación Ecológica Comunitaria Campo Verde,847.16,Ajuchitlan del Progreso,Guerrero,2007,99,"Ejido
+(Tierras de Uso Común)","bosque mesófilo de montaña, bosque de pino encino, bosque de galería, bosque de encino, selva mediana subcaducifolia, selva baja caducifolia",Centro y Eje Neovolcánico
+203,*CONANP-134/2007,Sierra San Vicente,14932.18078,Ocampo,Coahuila,2007,50,Persona física,"matorral xerófilo micrófilo, matorral xerófilo halófito, matorral xerófilo gipsófilo, matorral xerófilo rosetófilo, matorral xerófilo crasicaule, pradera",Noreste y Sierra Madre Oriental
+204,CONANP-149/2007,Área Comunitaria de Conservación Buenos Aires,218.01,Acatlán de Pérez Figueroa,Oaxaca,2007,99,"Ejido
+(Tierras de Uso Común)","selva alta perennifolia, selva mediana subperennifolia",Frontera Sur Istmo y Pacífico Sur
+205,CONANP-162/2007,Reserva Ecológica El Edén,1540.9525,Lázaro Cárdenas,Quintana Roo,2007,25,Persona física,"selva mediana, selva baja inundable, palmares tintales, humedales con sabana, vegetación secundaria",Península de Yucatán y Caribe Mexicano
+206,CONANP-163/2007,Paraje El Frijolillo,1014.339672,San Miguel Soyaltepec,Oaxaca,2007,25,"Ejido
+(Tierras de Uso Común)","selva alta perennifolia, selva mediana subperennifolia, pantano, vegetación acuática",Frontera Sur Istmo y Pacífico Sur
+207,CONANP-165/2007,Área de Conservación de la Ribera del Cajonos del Ejido Plan Juan Martínez,259.504,Ayotzintepec,Oaxaca,2007,99,"Ejido
+(Tierras de Uso Común)","selva alta perennifolia, selva mediana subperennifolia",Frontera Sur Istmo y Pacífico Sur
+208,CONANP-166/2007,Zona de Restauración Ecológica del Lobo Mexicano La Providencia,1399.0274,Galeana,Nuevo León,2008,99,"Ejido
+(Tierras de Uso Común)","bosque de pino-encino, matorral xerófilo",Noreste y Sierra Madre Oriental
+209,CONANP-170/2008,La Papalota 1,175.2188,Santiago Izcuintla,Nayarit,2008,99,Persona física,"matorral espinoso, manglar, vegetación costera halófita, vegetación acuática",Occidente y Pacífico Centro
+210,CONANP-171/2008,La Papalota 2,193.61,Santiago Izcuintla,Nayarit,2008,99,Persona física,"matorral espinoso, manglar, vegetación costera halófita, vegetación acuática",Occidente y Pacífico Centro
+211,CONANP-173/2008,Área de Conservación Ecológica Paraje Montero,667.853,Malinaltepec,Guerrero,2008,30,"Comunidad 
+(Bienes comunales)","bosque de pino-encino, bosque mesófilo en cañadas, selva mediana subcaducifolia",Centro y Eje Neovolcánico
+212,CONANP-175/2008,Área de Conservación Ecológica San José Vista Hermosa,459.51,San Luis Acatlán,Guerrero,2008,30,"Comunidad 
+(Bienes comunales)","bosque de pino-encino, bosque mesófilo, bosque de galería, selva mediana subcaducifolia",Centro y Eje Neovolcánico
+213,CONANP-179/2009,Área de Conservación del Faisán Real del Ejido Rancho Faisán,4208.695,Santa María Jacatepec,Oaxaca,2009,15,"Ejido
+(Tierras de Uso Común)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistema acuático",Frontera Sur Istmo y Pacífico Sur
+214,CONANP-180/2009,Área de Conservación de la Cicada y la Pata de Elefante del Ejido Leyes de Reforma,2992.11,San José Chiltepec,Oaxaca,2009,15,"Ejido
+(Tierras de Uso Común)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistema acuático",Frontera Sur Istmo y Pacífico Sur
+215,CONANP-181/2009,Área de Conservación del Mazate del Ejido Cerro Concha,1790.545,Santa María Jacatepec,Oaxaca,2009,15,"Ejido
+(Tierras de Uso Común)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistema acuático",Frontera Sur Istmo y Pacífico Sur
+216,CONANP-182/2009,Área de Conservación de la Cycada del Ejido Emiliano Zapata,713.715,Santa María Jacatepec,Oaxaca,2009,15,"Ejido
+(Tierras de Uso Común)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistema acuático",Frontera Sur Istmo y Pacífico Sur
+217,CONANP-183/2009,Zona de Uso Común I y Zona VIII,1264.8696,Santa María Chimalapa,Oaxaca,2009,30,"Ejido
+(Tierras de Uso Común)","selva alta perennifolia, selva mediana subperennifolia",Frontera Sur Istmo y Pacífico Sur
+218,CONANP-184/2009,Área de Conservación Ecológica de San Miguel del Progreso,277,Malinaltepec,Guerrero,2009,30,"Comunidad 
+(Bienes comunales)","bosque de pino-encino, bosque mesófilo de montaña",Centro y Eje Neovolcánico
+219,CONANP-185/2009,Área de Conservación Ecológica de Colombia de Guadalupe,631.189,Malinaltepec,Guerrero,2009,30,"Comunidad 
+(Bienes comunales)","bosque de pino-encino, bosque mesófilo en cañadas, selva mediana subcaducifolia",Centro y Eje Neovolcánico
+220,CONANP-186/2009,Área de Conservación Ecológica de San Lucas Teocuitlapa,1024,Atlixtac,Guerrero,2009,30,"Comunidad 
+(Bienes comunales)","bosque de encino, bosque de pino-encino, bosque alpino",Centro y Eje Neovolcánico
+221,CONANP-187/2009,Área de Conservación Ecológica de Tecoyo,1025.7052,Alpoyeca,Guerrero,2009,30,"Comunidad 
+(Bienes comunales)","selva baja caducifolia, bosque de encino, bosque de galería",Centro y Eje Neovolcánico
+222,CONANP-188/2009,Área de Conservación Ecológica de Huehuetepec,978.55,Atlamajalcingo del Monte,Guerrero,2009,30,"Comunidad 
+(Bienes comunales)","bosque de encino, bosque de pino-encino",Centro y Eje Neovolcánico
+223,CONANP-189/2009,Área de Conservación La Caverna,1414.86,Maravilla Tenejapa,Chiapas,2009,15,"Ejido
+(Tierras de Uso Común)",selva alta perennifolia,Frontera Sur Istmo y Pacífico Sur
+224,CONANP-190/2009,La Serranía,439.31,Las Margaritas,Chiapas,2009,15,"Ejido
+(Tierras de Uso Común)",selva alta perennifolia,Frontera Sur Istmo y Pacífico Sur
+225,CONANP-191/2009,Ozuma y Cuahuloma,804.1703,Hueyapan,Puebla,2009,15,Público Municipal,"bosque mesófilo de montaña, bosque de pino-encino",Planicie Costera y Golfo de México
+226,CONANP-192/2010,Área de Conservación Cerro Mirador,2500,San Juan Bautista Valle Nacional,Oaxaca,2010,20,"Ejido
+(Tierras de Uso Común)","bosque mesófilo, selva alta perennifolia, selva mediana subperennifolia, galería riparia, ecosistema cavernícola, ecosistema acuático",Frontera Sur Istmo y Pacífico Sur
+227,CONANP-193/2010,Parque Ecológico de Iguala,51.3639,Iguala de la Independencia,Guerrero,2010,99,Persona moral,selva baja caducifolia,Centro y Eje Neovolcánico
+228,CONANP-194/2010,Área de Conservación Montenegro,800,San Juan Bautista Valle Nacional,Oaxaca,2010,15,"Ejido
+(Tierras de Uso Común)","selva alta perennifolia, selva mediana subperennifolia, ecosistema cavernícola",Frontera Sur Istmo y Pacífico Sur
+229,CONANP-195/2010,Área de Conservación Paso Nuevo La Hamaca,600,San Juan Bautista Valle Nacional,Oaxaca,2010,20,"Ejido
+(Tierras de Uso Común)","selva alta perennifolia, selva mediana subperennifolia, ecosistema cavernícola",Frontera Sur Istmo y Pacífico Sur
+230,CONANP-196/2010,32 Z-1 P 1/1,7.6294,San Juan Guichicovi,Oaxaca,2010,15,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia",Frontera Sur Istmo y Pacífico Sur
+231,CONANP-197/2010,79 Z-1 P 1/1,6.0223,San Juan Guichicovi,Oaxaca,2010,15,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia",Frontera Sur Istmo y Pacífico Sur
+232,CONANP-198/2010,45 Z-1 P 1/1,11.0017,San Juan Guichicovi,Oaxaca,2010,15,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia",Frontera Sur Istmo y Pacífico Sur
+233,CONANP-199/2010,53 Z-1 P 1/1,5.3822,San Juan Guichicovi,Oaxaca,2010,15,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia",Frontera Sur Istmo y Pacífico Sur
+234,CONANP-200/2010,49 Z-1 P 1/1,4.988,San Juan Guichicovi,Oaxaca,2010,15,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia",Frontera Sur Istmo y Pacífico Sur
+235,CONANP-201/2010,68 Z-1 P 1/1,4.5415,San Juan Guichicovi,Oaxaca,2010,15,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia",Frontera Sur Istmo y Pacífico Sur
+236,CONANP-202/2010,10 Z-1 P 1/1,13.5719,San Juan Guichicovi,Oaxaca,2010,15,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia",Frontera Sur Istmo y Pacífico Sur
+237,CONANP-203/2010,13 Z-1 P 1/1,8.6649,San Juan Guichicovi,Oaxaca,2010,15,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia",Frontera Sur Istmo y Pacífico Sur
+238,CONANP-204/2010,28 Z-1 P 1/1,4.5101,San Juan Guichicovi,Oaxaca,2010,15,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia",Frontera Sur Istmo y Pacífico Sur
+239,CONANP-205/2010,73 Z-1 P 1/1,3.033,San Juan Guichicovi,Oaxaca,2010,15,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia",Frontera Sur Istmo y Pacífico Sur
+240,CONANP-206/2010,62 Z-1 P 1/1,8.2021,San Juan Guichicovi,Oaxaca,2010,15,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia",Frontera Sur Istmo y Pacífico Sur
+241,CONANP-207/2010,55 Z-1 P 1/1,7.3966,San Juan Guichicovi,Oaxaca,2010,15,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia",Frontera Sur Istmo y Pacífico Sur
+242,CONANP-208/2010,23 Z-1 P 1/1,10.619,San Juan Guichicovi,Oaxaca,2010,15,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia",Frontera Sur Istmo y Pacífico Sur
+243,CONANP-209/2010,24 Z-1 P 1/1,4.0672,San Juan Guichicovi,Oaxaca,2010,15,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia",Frontera Sur Istmo y Pacífico Sur
+244,CONANP-210/2010,64 Z-1 P 1/1,7.7201,San Juan Guichicovi,Oaxaca,2010,15,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia",Frontera Sur Istmo y Pacífico Sur
+245,CONANP-211/2010,58 Z-1 P 1/1,6.0623,San Juan Guichicovi,Oaxaca,2010,15,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia",Frontera Sur Istmo y Pacífico Sur
+246,CONANP-212/2010,61 Z-1 P 1/1,11.2153,San Juan Guichicovi,Oaxaca,2010,15,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia",Frontera Sur Istmo y Pacífico Sur
+247,CONANP-213/2010,1 Z-1 P 1/1,6.865953,San Juan Guichicovi,Oaxaca,2010,15,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia",Frontera Sur Istmo y Pacífico Sur
+248,CONANP-214/2010,7 Z-1 P 1/1,9.5377,San Juan Guichicovi,Oaxaca,2010,15,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia",Frontera Sur Istmo y Pacífico Sur
+249,CONANP-215/2010,Área de Conservación Nopalera del Rosario,4200,San Juan Bautista Valle Nacional,Oaxaca,2010,25,"Comunidad 
+(Bienes comunales)","galería riparia, bosque mesófilo de montaña, bosque de pino-encino, bosque alpino",Frontera Sur Istmo y Pacífico Sur
+250,CONANP-216/2010,Rancho Emanuel,12.1153,San Juan Mazatlán,Oaxaca,2010,99,Persona física,"selva alta perennifolia, selva mediana subperennifolia",Frontera Sur Istmo y Pacífico Sur
+251,CONANP-217/2010,Cerro El Mirador,237,Maravilla Tenejapa,Chiapas,2010,15,"Ejido
+(Tierras de Uso Común)",selva alta perennifolia,Frontera Sur Istmo y Pacífico Sur
+252,CONANP-218/2010,Reserva Las Guacamayas,1454.134211,Marqués de Comillas,Chiapas,2010,99,"Ejido
+(Tierras de Uso Común)",selva alta perennifolia,Frontera Sur Istmo y Pacífico Sur
+253,CONANP-219/2010,El Cordón del Retén,51781.9358,San Miguel Chimalapa,Oaxaca,2010,30,"Comunidad 
+(Bienes comunales)","selva baja caducifolia, selva mediana subcaducifolia, selva mediana subperennifolia, sabana de pino-encino, bosque de pino-encino, bosque mesófilo, bosque de pino",Frontera Sur Istmo y Pacífico Sur
+254,CONANP-220/2010,424 Z-4 P 1/1,16.003519,San Juan Guichicovi,Oaxaca,2010,15,"Ejido 
+(Parcela)",selva alta perennifolia,Frontera Sur Istmo y Pacífico Sur
+255,CONANP-221/2010,La Capitana,958.44,San Andrés Ixtlahuaca,Oaxaca,2010,25,"Ejido
+(Tierras de Uso Común)","bosque de pino-encino, bosque de pino, selva baja caducifolia",Frontera Sur Istmo y Pacífico Sur
+256,CONANP-222/2010,Área de Conservación San Felipe de León,3500,San Juan Bautista Valle Nacional,Oaxaca,2010,15,"Ejido
+(Tierras de Uso Común)","selva alta perennifolia, selva mediana subperennifolia, galería riparia, bosque mesófilo de montaña, bosque de pino-encino",Frontera Sur Istmo y Pacífico Sur
+257,CONANP-223/2010,70 Z-1 P 1/1,36.073447,Asunción Ixtaltepec,Oaxaca,2010,15,"Ejido 
+(Parcela)",selva mediana subcaducifolia,Frontera Sur Istmo y Pacífico Sur
+258,CONANP-224/2010,"Zonas de Uso Común I,II,III y IV",1402.16651,San Juan Guichicovi,Oaxaca,2010,30,"Ejido
+(Tierras de Uso Común)","selva alta perennifolia, selva mediana subperennifolia, galería riparia",Frontera Sur Istmo y Pacífico Sur
+259,CONANP-225/2010,Parcela 128 Z-1 P 1/2,17.115138,Santa María Chimalapa,Oaxaca,2010,15,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia",Frontera Sur Istmo y Pacífico Sur
+260,CONANP-226/2010,Parcela 129 Z-1 P 1/2,62.096304,Santa María Chimalapa,Oaxaca,2010,15,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia",Frontera Sur Istmo y Pacífico Sur
+261,CONANP-227/2010,38 Z-1 P 1/1,15.6332,San Juan Guichicovi,Oaxaca,2010,15,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia",Frontera Sur Istmo y Pacífico Sur
+262,CONANP-228/2010,30 Z-1 P 1/1,5.899,San Juan Guichicovi,Oaxaca,2010,15,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia",Frontera Sur Istmo y Pacífico Sur
+263,CONANP-229/2010,5 Z-1 P 1/1,17.851484,San Juan Guichicovi,Oaxaca,2010,15,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia",Frontera Sur Istmo y Pacífico Sur
+264,CONANP-230/2010,37 Z-1 P 1/1,6.8295,San Juan Guichicovi,Oaxaca,2010,15,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia",Frontera Sur Istmo y Pacífico Sur
+265,CONANP-231/2010,26 Z-1 P 1/1,9.3703,San Juan Guichicovi,Oaxaca,2010,15,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia",Frontera Sur Istmo y Pacífico Sur
+266,CONANP-232/2010,22 Z-1 P 1/1,7.5244,San Juan Guichicovi,Oaxaca,2010,15,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia",Frontera Sur Istmo y Pacífico Sur
+267,CONANP-233/2010,Finca Monte Carlo,161.2755,San Miguel del Puerto,Oaxaca,2010,50,Persona física,"selva alta perennifolia, bosque mesófilo de montaña, bosque de pino-encino",Frontera Sur Istmo y Pacífico Sur
+268,CONANP-234/2010,Much Kanan K'aax,1230,Felipe Carrillo Puerto,Quintana Roo,2010,25,"Ejido
+(Tierras de Uso Común)","selva mediana subcaduciifolia y subperennifolia, selva alta perennifolia, cuerpos lagunares y aguadas",Península de Yucatán y Caribe Mexicano
+269,CONANP-235/2010,Selva Nueva y El Jaguar,5.878207,Coatepec,Veracruz,2010,20,Persona física,bosque mesófilo de montaña ,Planicie Costera y Golfo de México
+270,CONANP-236/2010,Huub'Sak,50,Othón P. Blanco,Quintana Roo,2010,99,Persona física,"selva mediana/alta subperennifolia, manglar",Península de Yucatán y Caribe Mexicano
+271,CONANP-237/2010,Área Natural Protegida del Bicentenario El Pilón,237.6,Tlaxco,Tlaxcala,2010,15,Persona física,"bosque alpino de abies, bosque de pino encino",Centro y Eje Neovolcánico
+272,CONANP-238/2010,"Área Natural Protegida del Bicentenario Fracción Exhacienda Tlacotla, Lote Seis",40.3707,Tlaxco,Tlaxcala,2010,15,Persona física,"bosque alpino de abies, bosque de pino encino",Centro y Eje Neovolcánico
+273,CONANP-239/2010,Área Natural Protegida del Bicentenario Fracción Uno de San José El Manantial,41.9391,Tlaxco,Tlaxcala,2010,15,Persona física,"bosque alpino de abies, bosque de pino encino",Centro y Eje Neovolcánico
+274,CONANP-240/2010,Área Natural Protegida del Bicentenario Santa Clara El Corte,30,Nanacamilpa de Mariano Arista,Tlaxcala,2010,15,Persona física,"bosque alpino de abies, bosque de pino encino",Centro y Eje Neovolcánico
+275,CONANP-241/2010,Área Natural Protegida del Bicentenario Santa Clara El Corte,32.17,Nanacamilpa de Mariano Arista,Tlaxcala,2010,15,Persona física,"bosque alpino de abies, bosque de pino encino",Centro y Eje Neovolcánico
+276,CONANP-242/2010,Área Natural Protegida del Bicentenario Fracción II San Isidro Rancho Nuevo,137.8,Tlaxco,Tlaxcala,2010,15,Persona física,"bosque alpino de abies, bosque de pino encino",Centro y Eje Neovolcánico
+277,CONANP-245/2010,"Área Natural Protegida del Bicentenario Fracción Uno de la Exhacienda de Tlacotla, Rancho El Pardo",98.375,Tlaxco,Tlaxcala,2010,15,Persona física,"bosque alpino de abies, bosque de pino encino",Centro y Eje Neovolcánico
+278,CONANP-246/2010,"Área Natural Protegida del Bicentenario Conjunto Predial El Tecajete, Las Águilas y Santo Tomas",460,Altzayanca,Tlaxcala,2010,15,Persona física,"bosque de pino encino (relictos), matorral xerófilo de altura",Centro y Eje Neovolcánico
+279,CONANP-247/2010,Área de Conservación San Antonio Analco,2050,San Felipe Usila,Oaxaca,2010,20,"Comunidad 
+(Bienes comunales)","bosque de pino-encino, selva alta perennifolia, selva mediana subperennifolia, galería riparia, bosque mesófilo de montaña",Frontera Sur Istmo y Pacífico Sur
+280,CONANP-248/2011,Área de Conservación Ecológica de San José Buenavista,358.5454,Alpoyeca,Guerrero,2011,50,"Ejido
+(Tierras de Uso Común)",bosque de encino y selva baja caducifolia,Centro y Eje Neovolcánico
+281,*CONANP-249/2011,Reserva Bio Ventura,207.855899,Aldama,Tamaulipas,2011,15,Persona moral,"selva espinosa, selva baja caducifolia, ecosistema cavernícola, ecosistema acuático",Planicie Costera y Golfo de México
+282,CONANP-250/2011,Rancho El Aribabi Fracción A,3951,Ímuris,Sonora,2011,15,Persona física,"matorral xerófilo de mezquite/sahuaro/nopal, pastizal con yuca, galerías de sauce/platanus, sabana de pino/encino/junípero, bosque de encino, bosque de pino-encino, vegetación acuática",Noroeste y Alto Golfo de California
+283,CONANP-251/2011,Parque Ecológico Tuzandepetl,1047.19,Ixhuatlán del Sureste,Veracruz,2011,50,Empresa de Participación Estatal,"selva alta/mediana perennifolia inundable, palmar, manglar de agua dulce, tular-popal, vegetación acuática, acahual",Planicie Costera y Golfo de México
+284,CONANP-252/2011,Pequeña Propiedad del Sr. Epifanio Francisco Pacheco,5.7041,San Juan Guichicovi,Oaxaca,2011,15,Persona física,"selva alta perennifolia, selva mediana subperennifolia",Frontera Sur Istmo y Pacífico Sur
+285,CONANP-253/2011,34 Z-1 P1/1,5.924,San Juan Guichicovi,Oaxaca,2011,15,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia",Frontera Sur Istmo y Pacífico Sur
+286,CONANP-254/2011,44 Z-1 P1/1,4.8453,San Juan Guichicovi,Oaxaca,2011,15,"Ejido 
+(Parcela)","selva alta perennifolia, selva mediana subperennifolia",Frontera Sur Istmo y Pacífico Sur
+287,CONANP-255/2011,Área de Conservación Ecológica San Vicente Zoyatlan,3913.18,Alcozauca,Guerrero,2011,30,"Comunidad 
+(Bienes comunales)","bosque de encino, bosque de pino-encino, bosque mesófilo en galería",Centro y Eje Neovolcánico
+288,CONANP-256/2011,Área de Conservación Ecológica de Santa Cruz del Rincón,2379.86,Malinaltepec,Guerrero,2011,30,"Comunidad 
+(Bienes comunales)","bosque de pino-encino, bosque mesófilo, relictos selva mediana subcaducifolia ",Centro y Eje Neovolcánico
+289,CONANP-257/2011,Área de Conservación Ecológica de Pueblo Hidalgo,7907.64,San Luis Acatlán,Guerrero,2011,30,"Comunidad 
+(Bienes comunales)","bosque de pino-encino, bosque mesófilo, selva mediana subcaducifolia, selva baja caducifolia",Centro y Eje Neovolcánico
+290,CONANP-258/2011,Área de Conservación Ecológica de Acatepec,12655.7054,Acatepec,Guerrero,2011,30,"Comunidad 
+(Bienes comunales)","bosque de pino-encino, bosque mesófilo, selva mediana subcaducifolia, selva baja caducifolia",Centro y Eje Neovolcánico
+291,CONANP-259/2011,Área de Conservación Ecológica de Zitlaltepec,2648.89,Metlatonoc,Guerrero,2011,30,"Ejido
+(Tierras de Uso Común)","bosque de encino, bosque de pino-encino",Centro y Eje Neovolcánico
+292,CONANP-260/2011,Centro de Educación Ambiental Finca San Luis,14.049018,Temozón,Yucatán,2011,15,Persona física,selva mediana subcaducifolia ,Península de Yucatán y Caribe Mexicano
+293,CONANP-261/2011,Área de Conservación Ecológica de Totomixtlahuaca,4160.8735,Tlacoapa,Guerrero,2011,30,"Comunidad 
+(Bienes comunales)","bosque de pino-encino, bosque mesófilo, selva mediana subcaducifolia, selva baja caducifolia",Centro y Eje Neovolcánico
+294,CONANP-262/2011,Santuario Cañada de la Virgen,5001,San Miguel de Allende,Guanajuato,2011,99,Persona moral,"matorral desértico crasicaule, pradera, chaparral de encino, selva baja caducifolia, bosque en galería",Occidente y Pacífico Centro
+295,CONANP-263/2011,Barranca Honda 3,1,Ometepec,Guerrero,2011,99,"Ejido 
+(Parcela)",selva mediana subcaducifolia,Centro y Eje Neovolcánico
+296,CONANP-264/2011,Arroyo Mamey,1,Ometepec,Guerrero,2011,99,"Ejido 
+(Parcela)",selva mediana subcaducifolia,Centro y Eje Neovolcánico
+297,CONANP-265/2011,Paraje ,1,Ometepec,Guerrero,2011,99,"Ejido 
+(Parcela)",selva mediana subcaducifolia,Centro y Eje Neovolcánico
+298,CONANP-266/2011,El Zapote ,7.196741,Ometepec,Guerrero,2011,99,"Ejido 
+(Parcela)",selva mediana subcaducifolia,Centro y Eje Neovolcánico
+299,CONANP-267/2011,La Piedra Boluda,15,Ometepec,Guerrero,2011,99,"Ejido 
+(Parcela)",selva mediana subcaducifolia,Centro y Eje Neovolcánico
+300,CONANP-268/2011,El Ciruelo,1,Ometepec,Guerrero,2011,99,"Ejido 
+(Parcela)",selva mediana subcaducifolia,Centro y Eje Neovolcánico
+301,CONANP-269/2011,Cerro Zanate,1,Ometepec,Guerrero,2011,99,"Ejido 
+(Parcela)",selva mediana subcaducifolia,Centro y Eje Neovolcánico
+302,CONANP-270/2011,El Limón 2,1,Ometepec,Guerrero,2011,99,"Ejido 
+(Parcela)",selva mediana subcaducifolia,Centro y Eje Neovolcánico
+303,CONANP-271/2011,El Sepudo 2,1,Ometepec,Guerrero,2011,99,"Ejido 
+(Parcela)",selva mediana subcaducifolia,Centro y Eje Neovolcánico
+304,CONANP-272/2011,Barranca Honda 2,1,Ometepec,Guerrero,2011,99,"Ejido 
+(Parcela)",selva mediana subcaducifolia,Centro y Eje Neovolcánico
+305,CONANP-273/2011,Los Limos,4,Ometepec,Guerrero,2011,99,"Ejido 
+(Parcela)",selva mediana subcaducifolia,Centro y Eje Neovolcánico
+306,CONANP-274/2011,La Vainilla,1,Ometepec,Guerrero,2011,99,"Ejido 
+(Parcela)",selva mediana subcaducifolia,Centro y Eje Neovolcánico
+307,CONANP-275/2011,Toncano,1,Ometepec,Guerrero,2011,99,"Ejido 
+(Parcela)",selva mediana subcaducifolia,Centro y Eje Neovolcánico
+308,CONANP-276/2011,La Vainilla 2,1,Ometepec,Guerrero,2011,99,"Ejido 
+(Parcela)",selva mediana subcaducifolia,Centro y Eje Neovolcánico
+309,CONANP-277/2011,Área de Conservación Agua de Obispo,220,Mochitlán,Guerrero,2011,99,Persona física,"selva mediana subcaducifolia, bosque de pino encino, bosque de encino, bosque mesófilo",Centro y Eje Neovolcánico
+310,CONANP-278/2011,Tierra Perdida,1,Ometepec,Guerrero,2011,99,"Ejido 
+(Parcela)",selva mediana subcaducifolia,Centro y Eje Neovolcánico
+311,CONANP-279/2011,Cerro del Naranjo 2,2,Ometepec,Guerrero,2011,99,"Ejido 
+(Parcela)",selva mediana subcaducifolia,Centro y Eje Neovolcánico
+312,CONANP-280/2011,Arroyo Miel,1,Ometepec,Guerrero,2011,99,"Ejido 
+(Parcela)",selva mediana subcaducifolia,Centro y Eje Neovolcánico
+313,CONANP-281/2011,Arroyo Choco,1,Ometepec,Guerrero,2011,99,"Ejido 
+(Parcela)",selva mediana subcaducifolia,Centro y Eje Neovolcánico
+314,CONANP-282/2011,El Sepudo 3,3.275005,Ometepec,Guerrero,2011,99,"Ejido 
+(Parcela)",selva mediana subcaducifolia,Centro y Eje Neovolcánico
+315,CONANP-283/2011,El Pantano 2,1,Ometepec,Guerrero,2011,99,"Ejido 
+(Parcela)",selva mediana subcaducifolia,Centro y Eje Neovolcánico
+316,CONANP-284/2011,El Sepudo 4,4.178316,Ometepec,Guerrero,2011,99,"Ejido 
+(Parcela)",selva mediana subcaducifolia,Centro y Eje Neovolcánico
+317,CONANP-285/2011,Tres Cerros 2,1,Ometepec,Guerrero,2011,99,"Ejido 
+(Parcela)",selva mediana subcaducifolia,Centro y Eje Neovolcánico
+318,CONANP-286/2011,El Camalote 2,1.263889,Ometepec,Guerrero,2011,99,"Ejido 
+(Parcela)",selva mediana subcaducifolia,Centro y Eje Neovolcánico
+319,CONANP-287/2011,El Palmar 2,2,Ometepec,Guerrero,2011,99,"Ejido 
+(Parcela)",selva mediana subcaducifolia,Centro y Eje Neovolcánico
+320,CONANP-288/2011,El Palmar  ,4.647803,Ometepec,Guerrero,2011,99,"Ejido 
+(Parcela)",selva mediana subcaducifolia,Centro y Eje Neovolcánico
+321,CONANP-289/2011,El Camalote  ,2,Ometepec,Guerrero,2011,99,"Ejido 
+(Parcela)",selva mediana subcaducifolia,Centro y Eje Neovolcánico
+322,CONANP-290/2011,"Cerro El Ocote, La Parcela y El Puma Rosa",7,Ometepec,Guerrero,2011,99,"Ejido 
+(Parcela)",selva mediana subcaducifolia,Centro y Eje Neovolcánico
+323,CONANP-291/2011,El Ceibo,1,Ometepec,Guerrero,2011,99,"Ejido 
+(Parcela)",selva mediana subcaducifolia,Centro y Eje Neovolcánico
+324,CONANP-292/2011,Cerro del Naranjo  ,1,Ometepec,Guerrero,2011,99,"Ejido 
+(Parcela)",selva mediana subcaducifolia,Centro y Eje Neovolcánico
+325,CONANP-293/2011,La Barrera,2.720566,Ometepec,Guerrero,2011,99,"Ejido 
+(Parcela)",selva mediana subcaducifolia,Centro y Eje Neovolcánico
+326,CONANP-294/2011,El Zorro,1,Ometepec,Guerrero,2011,99,"Ejido 
+(Parcela)",selva mediana subcaducifolia,Centro y Eje Neovolcánico
+327,CONANP-295/2011,Barranca Honda 1,1,Ometepec,Guerrero,2011,99,"Ejido 
+(Parcela)",selva mediana subcaducifolia,Centro y Eje Neovolcánico
+328,CONANP-296/2011,El Sepudo,2,Ometepec,Guerrero,2011,99,"Ejido 
+(Parcela)",selva mediana subcaducifolia,Centro y Eje Neovolcánico
+329,CONANP-297/2011,Tres Cerros  ,1,Ometepec,Guerrero,2011,99,"Ejido 
+(Parcela)",selva mediana subcaducifolia,Centro y Eje Neovolcánico
+330,CONANP-298/2011,El Pantano  ,7,Ometepec,Guerrero,2011,99,"Ejido 
+(Parcela)",selva mediana subcaducifolia,Centro y Eje Neovolcánico
+331,CONANP-299/2011,Rincón del Limo,2,Ometepec,Guerrero,2011,99,"Ejido 
+(Parcela)",selva mediana subcaducifolia,Centro y Eje Neovolcánico
+332,CONANP-300/2011,Área de Conservación Cañada del Iris,792,Atoyac de Álvarez,Guerrero,2011,99,Persona física,"bosque mesófilo de montaña, bosque de pino encino, bosque alpino, bosque de encino, selva mediana subcaducifolia",Centro y Eje Neovolcánico
+333,CONANP-301/2011,Área Natural Protegida El Nacimiento,204.453,Tlaxco,Tlaxcala,2011,15,Persona física,"bosque alpino de abies, bosque de pino encino, pradera",Centro y Eje Neovolcánico
+334,CONANP-302/2011,El Campanario-Laacanloo Cruz,4902.97,San Pablo Villa de Mitla,Oaxaca,2011,15,"Comunidad 
+(Bienes comunales)","bosque de pino-encino, bosque de pino, selva baja caducifolia, matorral xerófilo, pastizal",Frontera Sur Istmo y Pacífico Sur
+335,CONANP-303/2011,El Fuerte,988.12,San Pablo Villa de Mitla,Oaxaca,2011,15,"Ejido
+(Tierras de Uso Común)","bosque de pino-encino, bosque de pino, selva baja caducifolia, matorral xerófilo, pastizal",Frontera Sur Istmo y Pacífico Sur
+336,CONANP-304/2011,Área Natural Protegida al Final de La Senda,19.5897,Tlaxco,Tlaxcala,2011,15,Persona física,"bosque alpino de abies, bosque de pino encino, pradera inducida",Centro y Eje Neovolcánico
+337,CONANP-306/2011,"Bosque Mágico de Piedra Canteada, Santuario de La Luciérnaga, Área Natural Protegida",632.2768,Nanacamilpa de Mariano Arista,Tlaxcala,2011,15,Persona moral,"bosque alpino de abies, bosque de pino encino",Centro y Eje Neovolcánico
+338,CONANP-307/2012,Área de Conservación Ecológica de San Bartolomé Tlaquiltepec,1537.8,Huamuxtitlán,Guerrero,2012,30,"Comunidad 
+(Bienes comunales)","selva baja caducifolia, bosque de encino, matorral gipsófilo, bosque en galería",Centro y Eje Neovolcánico
+339,CONANP-308/2012,Área de Conservación Ecológica de Cualac,6958.0449,Cualac,Guerrero,2012,30,"Comunidad 
+(Bienes comunales)","selva baja caducifolia, sabana de encino, bosque en galería",Centro y Eje Neovolcánico
+340,CONANP-309/2012,Ojo de Agua,2,Ometepec,Guerrero,2012,99,"Ejido 
+(Parcela)","selva baja caducifolia, selva mediana subcaducifolia",Centro y Eje Neovolcánico
+341,CONANP-310/2012,Rumbo a Agua Fría,2,Ometepec,Guerrero,2012,99,"Ejido 
+(Parcela)","selva baja caducifolia, selva mediana subcaducifolia",Centro y Eje Neovolcánico
+342,CONANP-311/2012,Cerro de San Marcos,2,Ometepec,Guerrero,2012,99,"Ejido 
+(Parcela)","selva baja caducifolia, selva mediana subcaducifolia",Centro y Eje Neovolcánico
+343,CONANP-312/2012,El Camalote 3,2,Ometepec,Guerrero,2012,99,"Ejido 
+(Parcela)","selva baja caducifolia, selva mediana subcaducifolia",Centro y Eje Neovolcánico
+344,CONANP-313/2012,Área Natural Protegida Santuario de La Luciernaga,195,Nanacamilpa de Mariano Arista,Tlaxcala,2012,15,Persona física,"bosque alpino de abies, bosque de pino encino",Centro y Eje Neovolcánico
+345,CONANP-315/2012,Pequeña Propiedad de Melquiades Flores Francisco denominada El Mirador,73.0179,San Juan Guichicovi,Oaxaca,2012,15,Persona física,selva alta perennifolia y selva mediana subcaducifolia,Frontera Sur Istmo y Pacífico Sur
+346,*CONANP-316/2012,Servidumbre Ecológica para La Conservación Costera y Terrestre Rancho San Cristobál-Majibén,538.501457,Mulegé,Baja California Sur,2012,99,Persona física,selva alta perennifolia y selva mediana subcaducifolia,Península de Baja California y Pacífico Norte
+347,CONANP-317/2012,El Aribabi Fracción B,3955.1836,Ímuris,Sonora,2012,15,Persona física,"matorral xerófilo de mezquite/sahuaro/nopal, pastizal con yuca, galerías de sauce/platanus, sabana de pino/encino/junípero, bosque de encino, bosque de pino-encino, vegetación acuática",Noroeste y Alto Golfo de California
+348,CONANP-318/2012,Fracción C del Predio Rústico Los Güerigos ,2698.3764,Ímuris,Sonora,2012,15,Persona moral,"matorral xerófilo de mezquite/sahuaro/nopal, pastizal con yuca, galerías de sauce/platanus, sabana de pino/encino/junípero, bosque de encino, bosque de pino-encino, vegetación acuática",Noroeste y Alto Golfo de California
+349,CONANP-319/2012,"Predio Potrero de Los silos, Potrero Los Amorosos y Predio Los Vallecitos",2195.3832,Ímuris,Sonora,2012,15,Persona moral,"matorral xerófilo de mezquite/sahuaro/nopal, pastizal con yuca, galerías de sauce/platanus, sabana de pino/encino/junípero, bosque de encino, bosque de pino-encino, vegetación acuática",Noroeste y Alto Golfo de California
+350,CONANP-320/2012,Zona de Restauración Ecológica del Lobo Mexicano La Encantada,7936.783642,General Zaragoza,Nuevo León,2012,99,"Ejido
+(Tierras de Uso Común)","bosque alpino, bosque de pino, bosque de pino encino, bosque mesófilo, bosque de galería, chaparral, matorral desértico rosetófilo, matorral desértico micrófilo,pastizal inducido",Noreste y Sierra Madre Oriental
+351,CONANP-321/2012,Zona de Restauración Ecológica del Lobo Mexicano San Francisco,3293.89213,General Zaragoza,Nuevo León,2012,99,"Ejido
+(Tierras de Uso Común)","bosque alpino, bosque de pino, bosque de pino encino, chaparral, matorral desértico rosetófilo, matorral desértico micrófilo, pastizal inducido",Noreste y Sierra Madre Oriental
+352,CONANP-322/2012,Parcela No 349 Z-1 P1/1,395.599382,Asunción Ixtaltepec,Oaxaca,2012,15,"Ejido 
+(Parcela)","selva baja caducifolia, selva mediana subcaducifolia, sabana de pino-encino, bosque de pino-encino",Frontera Sur Istmo y Pacífico Sur
+353,*CONANP-323/2012,Reserva Natural Zafiro,280.480182,La Huerta,Jalisco,2012,50,Persona moral,"selva baja caducifolia, selva mediana subcaducifolia, bosque en galería, manglar, vegetación acuática",Occidente y Pacífico Centro
+354,CONANP-325/2012,Las Maravillas Lote 21,142.2,San Juan Guichicovi,Oaxaca,2012,15,Persona física,selva alta perennifolia,Frontera Sur Istmo y Pacífico Sur
+355,CONANP-326/2012,Área de Conservación Ecológica de Santa Cruz,1014.890663,Huamuxtitlán,Guerrero,2012,30,"Comunidad 
+(Bienes comunales)","selva baja caducifolia, bosque de encino, matorral gipsófilo",Centro y Eje Neovolcánico
+356,CONANP-327/2012,Barranca del Ángel,105,Tlaxiaco,Oaxaca,2012,15,Persona física,"bosque de pino-encino, bosque de pino",Frontera Sur Istmo y Pacífico Sur
+357,CONANP-328/2012,San José de Los Amates,17.0016,Santo Domingo Zanatepec,Oaxaca,2012,15,Persona física,"pradera, chaparral, galerías de sauce/platanus, sabana de pino/encino/junípero",Frontera Sur Istmo y Pacífico Sur
+358,CONANP-330/2012,El Campanario ,26,Chiautla de Tapia,Puebla,2012,20,Persona física,"selva baja caducifolia, matorral espinoso",Centro y Eje Neovolcánico
+359,CONANP-331/2012,Palos Caídos,33.0954,Zacatlán,Puebla,2012,50,Persona física,bosque de pino-encino,Planicie Costera y Golfo de México
+360,CONANP-332/2012,Area Natural Protegida Cuarta Fracción de Santa Clara El Corte,29,Nanacamilpa de Mariano Arista,Tlaxcala,2012,15,Persona física,"bosque alpino de abies, bosque de pino encino",Centro y Eje Neovolcánico
+361,CONANP-333/2012,Area Natural Protegida Segunda Fracción de Santa Clara El Corte,28.08,Nanacamilpa de Mariano Arista,Tlaxcala,2012,15,Persona física,"bosque alpino de abies, bosque de pino encino",Centro y Eje Neovolcánico
+362,CONANP-334/2012,Area Natural Protegida Primera Fracción de Santa Clara El Corte,28.22,Nanacamilpa de Mariano Arista,Tlaxcala,2012,15,Persona física,"bosque alpino de abies, bosque de pino encino",Centro y Eje Neovolcánico
+363,CONANP-335/2012,Area Natural Protegida Tercera Fracción de Santa Clara El Corte,28.08,Nanacamilpa de Mariano Arista,Tlaxcala,2012,15,Persona física,"bosque alpino de abies, bosque de pino encino",Centro y Eje Neovolcánico
+364,CONANP-336/2012,Area Natural Protegida La Cruz,14.7263,Tlaxco,Tlaxcala,2012,15,Persona física,bosque alpino de abies,Centro y Eje Neovolcánico
+365,CONANP-337/2012,"Área de Conservación, Protección y Desarrollo Silvopastoril Acahuizotla",1998.817312,Chilpancingo de los Bravo,Guerrero,2012,99,"Ejido
+(Tierras de Uso Común)","selva baja caducifolia, selva mediana subcaducifolia, bosque mesófilo de montaña, bosque de pino encino, bosque de encino. ",Centro y Eje Neovolcánico
+366,CONANP-338/2012,Cerro de La Culebra,464,San Marcos Arteaga,Oaxaca,2012,15,"Comunidad 
+(Bienes comunales)","bosque de encino, palmar, selva baja caducifolia, matorral xerófilo",Frontera Sur Istmo y Pacífico Sur
+367,CONANP-339/2012,Área Natural Protegida Tenexac,478.794,Terrenate,Tlaxcala,2012,15,Persona física,"bosque de pino encino (relictos), matorral",Centro y Eje Neovolcánico
+368,CONANP-340/2012,Área Natural Protegida Fracción Cuatro de San José El Manantial,41.9403,Tlaxco,Tlaxcala,2012,15,Persona física,"bosque alpino de abies, bosque de pino encino",Centro y Eje Neovolcánico
+369,CONANP-341/2012,Área Natural Protegida Fracción Número Cinco de San José El Manantial,41.9346,Tlaxco,Tlaxcala,2012,15,Persona física,"bosque alpino de abies, bosque de pino encino",Centro y Eje Neovolcánico
+370,CONANP-342/2012,Área Natural Protegida Fracción Dos de San José El Manantial,41.9472,Tlaxco,Tlaxcala,2012,15,Persona física,"bosque alpino de abies, bosque de pino encino",Centro y Eje Neovolcánico
+371,CONANP-343/2012,Área de Uso Común del Núcleo Agrario El Barrio de la Soledad,3565.7984,Barrio de la Soledad,Oaxaca,2012,15,"Comunidad 
+(Bienes comunales)","selva alta perennifolia, selva mediana perennifolia",Frontera Sur Istmo y Pacífico Sur
+372,CONANP-344/2013,Tierras de Uso Común del Ejido San Juanito,324.7390652,San Juan Guichicovi,Oaxaca,2013,15,"Ejido
+(Tierras de Uso Común)","selva alta perennifolia, selva mediana subperennifolia",Frontera Sur Istmo y Pacífico Sur
+373,CONANP-345/2013,Zona de Uso Común I y II,44.5715022,San Juan Guichicovi,Oaxaca,2013,15,"Ejido
+(Tierras de Uso Común)","selva alta perennifolia, selva mediana subperennifolia",Frontera Sur Istmo y Pacífico Sur
+374,CONANP-346/2013,Reserva Ecológica Llanos de Magdalena,621.551945,Comondú,Baja California Sur,2013,99,Persona moral,"matorral xerófilo halófito, matorral xerófilo micrófilo, matorral xerófilo sarco-crasicaule, manglar",Península de Baja California y Pacífico Norte
+375,CONANP-347/2013,Reserva Natural El Portezuelo I,1323.04993,La Paz,Baja California Sur,2013,99,Persona moral,"matorral xeroripario, matorral xerófilo sarcocrasicaule, oasis y manantiales",Península de Baja California y Pacífico Norte
+376,CONANP-348/2013,Reserva Natural El Portezuelo II,925.705033,La Paz,Baja California Sur,2013,99,Persona moral,"matorral xeroripario, matorral xerófilo sarcocrasicaule, oasis y manantiales",Península de Baja California y Pacífico Norte
+377,CONANP-349/2013,Reserva Natural El Portezuelo III,384.667621,Loreto,Baja California Sur,2013,99,Persona moral,"matorral xeroripario, matorral xerófilo sarcocrasicaule, oasis y manantiales",Península de Baja California y Pacífico Norte
+378,CONANP-350/2013,El Gavilán,1130.46,Santa María Tonameca,Oaxaca,2013,15,"Comunidad 
+(Bienes comunales)","selva alta perennifolia, bosque mesófilo de montaña, bosque de pino-encino",Frontera Sur Istmo y Pacífico Sur
+379,*CONANP-351/2013,Costa Salvaje  WildLands,3469.05548,Ensenada,Baja California,2013,99,Persona moral,"matorral xerófilo sarco-crasicaule, matorral xerófilo halófito",Península de Baja California y Pacífico Norte
+380,CONANP-352/2013,Los Fresnos,3876.5447,Santa Cruz,Sonora,2013,99,Persona moral,"pradera, chaparral, galerías de sauce/platanus, sabana de pino/encino/junípero, ecosistemas acuáticos",Noroeste y Alto Golfo de California
+381,CONANP-353/2013,Ha'Bin,90,Uayma,Yucatán,2013,30,Persona física,"selva baja caducifolia, selva mediana subcaducifolia",Península de Yucatán y Caribe Mexicano
+382,CONANP-354/2013,"Área Natural Protegida Primera Fracción, de la Fracción Dos del Predio Sin Construcción Denominado Ojo de Agua",13.810686,Tlaxco,Tlaxcala,2013,15,Persona física,"bosque alpino de abies, bosque de pino encino",Centro y Eje Neovolcánico
+383,CONANP-355/2013,Kitam,47.45,Dzitas y Tinum,Yucatán,2013,30,Persona física,"selva baja caducifolia, selva mediana subcaducifolia",Península de Yucatán y Caribe Mexicano
+384,*CONANP-357/2013,Reserva Privada Moon Palace,315.731,Benito Juárez,Quintana Roo,2013,15,Persona moral,"manglar, pastizal, tasistal, selva baja caducifolia",Península de Yucatán y Caribe Mexicano
+385,CONANP-358/2013,Dos Farallones (El Vigía),108.99,Tututepec de Melchor Ocampo,Oaxaca,2013,25,Persona física,"selva baja caducifolia, selva mediana subcaducifolia, comunidad costera, manglar, matorral xerófilo",Frontera Sur Istmo y Pacífico Sur
+386,CONANP-359/2013,Área Natural Protegida Ejido El Rosario,1269.264055,Tlaxco,Tlaxcala,2013,15,"Ejido
+(Tierras de Uso Común)","bosque alpino de abies, bosque de pino-encino",Centro y Eje Neovolcánico
+387,CONANP-360/2013,Reserva Natural Valle Tranquilo,3691.204134,Ensenada,Baja California,2013,99,Persona moral,matorral rosetófilo costero,Península de Baja California y Pacífico Norte
+388,CONANP-361/2013,Danii Idoo (Cerro Iglesia),3148.44,Villa Díaz Ordaz,Oaxaca,2013,15,"Comunidad 
+(Bienes comunales)","bosque de pino, bosque de encino, matorral xerófilo, selva baja caducifolia",Frontera Sur Istmo y Pacífico Sur
+389,CONANP-362/2013,Siete Cumbres Guadalupe Cuautepec,463.4676,San Juan Bautista Suchitepec,Oaxaca,2013,15,"Comunidad 
+(Bienes comunales)","bosque de encino, sabana de tascate, selva baja caducifolia, palmar de brahea, matorral xerófilo, bosque de galería",Frontera Sur Istmo y Pacífico Sur
+390,CONANP-363/2014,ANP Loma de Enmedio y Tetzitzilica,26.975342,Tlaxco,Tlaxcala,2014,15,Persona física,"bosque alpino de abies, bosque de pino-encino",Centro y Eje Neovolcánico
+391,CONANP-364/2014,Sáta Sííka,91.1548,Ixpantepec Nieves,Oaxaca,2014,15,"Comunidad 
+(Bienes comunales)","selva baja caducifolia, bosque de encino",Frontera Sur Istmo y Pacífico Sur
+392,CONANP-365/2014,Reserva Natural El Portezuelo IV,2039.782189,La Paz,Baja California Sur,2014,99,Persona moral,"matorral xeroripario, matorral xerófilo sarcocrasicaule, oasis y manantiales",Península de Baja California y Pacífico Norte
+393,CONANP-366/2014,Parcela No 22 Z-1 P1/1,85.666777,Asunción Ixtaltepec,Oaxaca,2014,30,"Ejido 
+(Parcela)","selva baja caducifolia, selva mediana subcaducifolia, sabana de pino-encino, selva espinosa, matorral xerófilo",Frontera Sur Istmo y Pacífico Sur
+394,CONANP-367/2014,Parcela No 93 Z-1 P1/1,72.772249,Asunción Ixtaltepec,Oaxaca,2014,15,"Ejido 
+(Parcela)","selva baja caducifolia, selva mediana subcaducifolia, sabana de pino-encino, selva espinosa, matorral xerófilo",Frontera Sur Istmo y Pacífico Sur
+395,CONANP-368/2014,Reserva Ecológica Llanos de Magdalena II,445.522518,Comondú,Baja California Sur,2014,99,Persona moral,"matorral xerófilo halófito, matorral xerófilo micrófilo, matorral xerófilo sarco-crasicaule, manglar",Península de Baja California y Pacífico Norte
+396,CONANP-370/2014,Área Natural Protegida Ejido Miguel Lira y Ortega Santuario de la Luciérnaga,275.561,Nanacamilpa de Mariano Arista,Tlaxcala,2014,15,"Ejido
+(Tierras de Uso Común)","bosque alpino de abies, bosque de pino-encino",Centro y Eje Neovolcánico
+397,CONANP-371/2014,Parcela No 221 Z-1 P1/1,178.513454,Asunción Ixtaltepec,Oaxaca,2014,40,Persona física,"selva alta perennifolia, selva mediana subperennifolia, selva baja caducifolia, sabana",Frontera Sur Istmo y Pacífico Sur
+398,CONANP-372/2014,Parcela No 262 Z-1 P1/1,141.157414,Asunción Ixtaltepec,Oaxaca,2014,40,Persona física,"selva baja caducifolia, selva mediana subperennifolia, sabana",Frontera Sur Istmo y Pacífico Sur
+399,CONANP-373/2014,Sata Yuku N'daa (Atrás del Cerro de La Mano),625.028955,Tezoatlan de Segura y Luna,Oaxaca,2014,15,"Comunidad 
+(Bienes comunales)","selva baja caducifolia, bosque espinoso, bosque de encino",Frontera Sur Istmo y Pacífico Sur
+400,CONANP-374/2014,Jardín Botánico El Charco del Ingenio,66.121628,San Miguel de Allende,Guanajuato,2014,99,Persona moral,"matorral xerófilo, bosque espinoso, vegetación acuática, bosque de galería",Occidente y Pacífico Centro
+401,CONANP-375/2014,Predio San José,50,Matías Romero Avendaño,Oaxaca,2014,50,Persona física,selva alta perennifolia,Frontera Sur Istmo y Pacífico Sur
+402,*CONANP-376/2014,Reserva Privada Bosque Antiguo A.C,373.25,Bolaños,Jalisco,2014,50,Persona moral,"selva baja caducifolia, bosque de pino-encino, bosque de encino, bosque de pino",Occidente y Pacífico Centro
+403,CONANP-377/2014,Cerro del Organal,229,San Marcos Arteaga,Oaxaca,2014,15,"Ejido
+(Tierras de Uso Común)","selva baja caducifolia, matorral xerófilo",Frontera Sur Istmo y Pacífico Sur
+404,*CONANP-378/2014,CostaSalvaje WildLands II,3846.848008,Ensenada,Baja California,2014,99,Persona moral,"matorral xerófilo, sarco-crasicaule, matorral xerófilo halófito",Península de Baja California y Pacífico Norte
+405,CONANP-379/2014,Reserva Natural Punta Mazo,832.4685758,Ensenada,Baja California,2014,99,Persona moral,"matorral de dunas costeras, matorral costero, matorral halófito, pastizal halófito y marisma",Península de Baja California y Pacífico Norte
+406,CONANP-380/2014,Reserva Ecológica Bahía Santa María II,840.103088,Angostura,Sinaloa,2014,99,Persona moral,"manglar, vegetación halofita y vegetación subacuatica.",Noroeste y Alto Golfo de California
+407,CONANP-381/2014,Reserva Ecológica Bahía Santa María I,292.795552,Angostura,Sinaloa,2014,99,Persona moral,"manglar, vegetación halofita y vegetación subacuatica",Noroeste y Alto Golfo de California
+408,CONANP-382/2015,La Mariquita,2195.890575,Cananea,Sonora,2015,99,Público Federal,"pastizal-mezquite, tascate, bosque de encino, bosque de pino",Noroeste y Alto Golfo de California
+409,CONANP-383/2015,Barranca Honda,51.3493,Ocozocoautla de Espinosa,Chiapas,2015,15,Persona física,selva alta perennifolia y bosque mesófilo de montaña,Frontera Sur Istmo y Pacífico Sur
+410,CONANP-384/2015,Las Maravillas Lote 8,127.7063,San Juan Guichicovi,Oaxaca,2015,15,Persona física,selva alta perennifolia y selva mediana perennifolia,Frontera Sur Istmo y Pacífico Sur
+411,CONANP-385/2015,El Diamante,150,San Pedro Tapanatepec,Oaxaca,2015,30,Persona física,selva baja caducifolia,Frontera Sur Istmo y Pacífico Sur
+412,CONANP-386/2015,Rancho Pipos,8.4339,Palenque,Chiapas,2015,50,Persona física,selva alta perennifolia,Frontera Sur Istmo y Pacífico Sur
+413,CONANP-387/2015,Los Naranjos,150,San Pedro Tapanatepec,Oaxaca,2015,30,Persona física,selva baja caducifolia,Frontera Sur Istmo y Pacífico Sur
+414,*CONANP-388/2015,"Santuario para el Águila Real en los Bienes Comunales de San José de Gracia, Aguascalientes",6170,San José de Gracia,Aguascalientes,2015,30,"Comunidad 
+(Bienes comunales)","bosque de encino, pastizal natural, vegetación riparia, izotal, bosque de encino-pino
+",Occidente y Pacífico Centro
+415,CONANP-389/2015,La Llorona,50,Matías Romero Avendaño,Oaxaca,2015,50,Persona física,selva alta perennifolia,Frontera Sur Istmo y Pacífico Sur
+416,CONANP-390/2015,Área de Germoplasma Relevante Rancho La Puerta,1379.78,Saltillo,Coahuila,2015,15,Persona física,"sabande coníferas,  matorral desértico rosetófilo, matorral desértico micrófilo, matorral desértico crasicaule, pradera.",Noreste y Sierra Madre Oriental
+417,CONANP-391/2016,La Herradura,177,San Pedro Tapanatepec,Oaxaca,2016,30,Persona física,selva baja caducifolia,Frontera Sur Istmo y Pacífico Sur
+418,CONANP-392/2016,Santha Martha,479.02,Loreto,Baja California Sur,2016,73,Persona moral,matorral sarcocaule y vegetación riparia,Península de Baja California y Pacífico Norte
+419,*CONANP-393/2016,CostaSalvaje WildLands III,6029.608147,Ensenada,Baja California,2016,89,Persona moral,"matorral xerófilo, sarco-crasicaule, matorral xerófilo halófito",Península de Baja California y Pacífico Norte
+420,CONANP-394/2016,Las Gatas,61.3683982,Puerto Morelos,Quintana Roo,2016,99,Persona física,selva mediana subperennifolia ,Península de Yucatán y Caribe Mexicano
+421,CONANP-395/2016,Las Nubes,424.289471,Mapastepec,Chiapas,2016,15,"Comunidad 
+(Bienes comunales)",selva alta perennifolia y selva mediana subperennifolia,Frontera Sur Istmo y Pacífico Sur
+422,CONANP-396/2016,El Rosario,49.7459,Tapachula,Chiapas,2016,15,Persona física,selva baja caducifolia,Frontera Sur Istmo y Pacífico Sur
+423,CONANP-398/2016,El Quemado,1896.679298,Casas Grandes,Chihuahua,2016,99,Persona física,"pastizal natural, bosque de encino y matorral.",Norte y Sierra Madre Occidental
+424,CONANP-399/2017,Zerimar,50,Matías Romero Avendaño,Oaxaca,2017,50,Persona física,selva alta perennifolia,Frontera Sur Istmo y Pacífico Sur
+425,CONANP-400/2017,Reserva Ecológica Llanos de Magdalena III,217.692884,Comondú,Baja California Sur,2017,88,Persona moral,"matorral xerófilo halófito, matorral xerófilo micrófilo, matorral xerófilo sarco-crasicaule y manglar",Península de Baja California y Pacífico Norte
+426,CONANP-401/2017,Paco´s Reserva de Flora y Fauna,10.020644,Mazatlán,Sinaloa,2017,99,Persona física,selva baja caducifolia,Noroeste y Alto Golfo de California
+427,CONANP-402/2017,Grutas de Montecristo,7.0793852,El Parral,Chiapas,2017,15,Persona física,selva baja caducifolia,Frontera Sur Istmo y Pacífico Sur
+428,CONANP-403/2017,La Victoria,50,Matías Romero Avendaño,Oaxaca,2017,50,Persona física,selva alta perennifolia,Frontera Sur Istmo y Pacífico Sur
+429,CONANP-404/2017,Rancho Guaabñagob,116.6531,San Juan Guichicovi,Oaxaca,2017,30,Persona física,selva alta perennifolia,Frontera Sur Istmo y Pacífico Sur
+430,CONANP-405/2017,El Michoacano,50,Matías Romero Avendaño,Oaxaca,2017,50,Persona física,selva alta perennifolia,Frontera Sur Istmo y Pacífico Sur
+431,*CONANP-406/2017,Los Bordos,3153.927,Jiquipilas,Chiapas,2017,50,Público Estatal,"selva baja caducifolia, selva mediana subperennifolia, sabana y pastizal",Frontera Sur Istmo y Pacífico Sur
+432,CONANP-407/2017,Reserva Natural Monte Ceniza,803.4064,Ensenada,Baja California,2017,99,Persona moral,matorral rosetófilo costero y pastizal halófilo,Península de Baja California y Pacífico Norte
+433,CONANP-408/2017,Reserva El Chirimole,469.1078154,Elota,Sinaloa,2017,30,Persona moral,bosque de encino y selva baja caducifolia,Noroeste y Alto Golfo de California
+434,CONANP-409/2017,Reserva Ecológica Bahía Santa María III,506.157792,Angostura,Sinaloa,2017,87,Persona moral,"bosque espinoso caducifolio, manglar, pastizal halófito y humedal",Noroeste y Alto Golfo de California
+435,*CONANP-410/2017,Finca El Corinto,499.4022,Ocozocoautla de Espinosa,Chiapas,2017,99,Persona física,"selva baja espinosa perennifolia, selva baja espinosa caducifolia y selva baja subperennifolia",Frontera Sur Istmo y Pacífico Sur
+436,CONANP-411/2017,Rancho el Roble,230.351788,Asunción Ixtaltepec,Oaxaca,2017,30,Persona física,selva baja caducifolia,Frontera Sur Istmo y Pacífico Sur
+437,CONANP-412/2017,Las Palmillas de Cerro Verde,973.6708,Santiago Ayuquililla,Oaxaca,2017,99,"Ejido
+(Tierras de Uso Común)",bosque de encino y selva baja caducifolia,Frontera Sur Istmo y Pacífico Sur
+438,*CONANP-413/2017,El Paraíso del Jaguar,518.5,La Concordia,Chiapas,2017,99,Persona física,"bosque mesófilo de montaña, bosque de pino-encino, bosque de encino-pino y vegetación ribereña",Frontera Sur Istmo y Pacífico Sur
+439,CONANP-414/2017,Agua Buena,1190,Santiago Ayuquililla,Oaxaca,2017,15,"Comunidad 
+(Bienes comunales)","bosque de pino, bosque de pino-encino y bosque de encino",Frontera Sur Istmo y Pacífico Sur
+440,CONANP-415/2017,Zona de Uso Común 1 y 2,2178.308997,Juchitán de Zaragoza,Oaxaca,2017,30,"Ejido
+(Tierras de Uso Común)","selva baja caducifolia, selva mediana subcaducifolia, selva mediana subperennifolia y enclaves de matorral xerófilo, vegetación de zonas inundables y palmares",Frontera Sur Istmo y Pacífico Sur
+441,CONANP-416/2017,Rancho Los Manantiales,100,San Juan Mazatlán,Oaxaca,2017,30,Persona física,selva alta perennifolia,Frontera Sur Istmo y Pacífico Sur
+442,CONANP-417/2017,Reserva Ecológica Presa El Caldillo,68.3188765,Gudalupe y Calvo,Chihuahua,2017,99,Público Municipal,bosque de pino,Norte y Sierra Madre Occidental
+443,*CONANP-418/2017,N.C.P.E. Centauro del Norte,9722.754588,Calakmul,Campeche,2017,15,"Ejido
+(Tierras de Uso Común)",selva mediana subperennifolia,Península de Yucatán y Caribe Mexicano
+444,*CONANP-419/2017,N.C.P.E Dos Lagunas,4227.539966,Calakmul,Campeche,2017,15,"Ejido
+(Tierras de Uso Común)",selva mediana subperennifolia,Península de Yucatán y Caribe Mexicano
+445,*CONANP-420/2017,Ejido Puebla de Morelia,1696.39189,Calakmul,Campeche,2017,15,"Ejido
+(Tierras de Uso Común)",selva mediana subperennifolia,Península de Yucatán y Caribe Mexicano
+446,*CONANP-421/2017,Ejido Kilómetro 120,9113.47861,Calakmul,Campeche,2017,15,"Ejido
+(Tierras de Uso Común)",selva mediana subperennifolia,Península de Yucatán y Caribe Mexicano
+447,CONANP-422/2017,N.C.P.E Santa Rosa,4514.236396,Calakmul,Campeche,2017,15,"Ejido
+(Tierras de Uso Común)",selva mediana subperennifolia,Península de Yucatán y Caribe Mexicano
+448,CONANP-423/2017,Ejido Carlos A. Madrazo,864.030076,Calakmul,Campeche,2017,15,"Ejido
+(Tierras de Uso Común)",selva mediana subperennifolia,Península de Yucatán y Caribe Mexicano
+449,*CONANP-424/2017,Ejido Ley de Fomento Agropecuario,4276.801261,Calakmul,Campeche,2017,15,"Ejido
+(Tierras de Uso Común)",selva mediana subperennifolia,Península de Yucatán y Caribe Mexicano
+450,CONANP-425/2017,N.C.P.E. Lic. Manuel Crescencio Rejón,6205.850198,Calakmul,Campeche,2017,15,"Ejido
+(Tierras de Uso Común)",selva mediana subperennifolia,Península de Yucatán y Caribe Mexicano
+451,*CONANP-426/2017,N.C.P.E Valentín Gómez Farías,1388.55142,Calakmul,Campeche,2017,15,"Ejido
+(Tierras de Uso Común)",selva mediana subperennifolia,Península de Yucatán y Caribe Mexicano
+452,CONANP-427/2018,Cañada del Otate,450,Huajapan de León,Oaxaca,2018,15,Persona moral,"bosque de encino
+bosque de galería
+selva baja caducifolia",Frontera Sur Istmo y Pacífico Sur
+453,*CONANP-428/2018,Ejido Nuevo Becal,50689.93235,Calakmul,Campeche,2018,15,"Ejido
+(Tierras de Uso Común)",selva mediana subperennifolia,Península de Yucatán y Caribe Mexicano
+454,CONANP-429/2018,Los Mangos,332.2235,Balancán,Tabasco,2018,50,Persona física,humedales del sur del golfo de méxico,Planicie Costera y Golfo de México
+455,CONANP-430/2018,Fracción Tercera del Ex-Rancho Buenavista,7.04,Nanacamilpa de Mariano Arista,Tlaxcala,2018,15,Persona física,bosque de pino- encino,Centro y Eje Neovolcánico
+456,CONANP-431/2018,Dulce Amparo de Águila,1356.14279,Coyame del Sotol,Chihuahua,2018,99,Persona física,matorral desértico micrófilo y rosetófilo y chaparral,Norte y Sierra Madre Occidental
+457,CONANP-432/2018,Área de Conservación de San Rafael Agua Pescadito,3500,San Juan Bautista Valle Nacional,Oaxaca,2018,15,"Ejido
+(Tierras de Uso Común)",selva alta y mediana subperennifolia,Frontera Sur Istmo y Pacífico Sur
+458,CONANP-433/2018,Biól. Julio Berdegué Aznar,23.1,Puerto Morelos,Quintana Roo,2018,78,Persona moral,"manglar, humedales y petenes",Península de Yucatán y Caribe Mexicano
+459,*CONANP-434/2018,Reserva Ecológica Kanan Balam,3073.31,Carmen,Campeche,2018,50,Persona moral,selva mediana subcaducifolia,Planicie Costera y Golfo de México
+460,*CONANP-435/2018,Estación de Biología de San José del Este,542,Carmen,Campeche,2018,50,Público Estatal,"selva mediana subcaducifolia, selva baja inundable, palmar inundable, matorral espinoso inundable, matorral inerme inundable, vegetación riparia",Planicie Costera y Golfo de México
+461,CONANP-436/2018,El Guarumbo,70.25,San Juan Guichicovi,Oaxaca,2018,25,Persona física,"selva alta perennifolia con elementos de selva mediana subperennifolia, bosque mesófilo de montaña, bosque de pino-encino y chaparreras",Frontera Sur Istmo y Pacífico Sur
+462,CONANP-437/2018,Tetlalcolulco Lugar Sagrado Santa Isabel Chalma,300,Amecameca,México,2018,50,"Comunidad 
+(Bienes comunales)","bosque de oyamel, bosque de pino, bosque de cedro, bosque de latifoliadas, pastizal natural y vegetación secundaria de pino",Centro y Eje Neovolcánico
+463,CONANP-438/2018,Parque La Colorada de Álamos,109.571885,Álamos,Sonora,2018,30,Persona moral,selva baja caducifolia,Noroeste y Alto Golfo de California
+464,CONANP-439/2018,Potrero de La Lumbre,5453.2,Guadalupe y Calvo,Chihuahua,2018,99,"Ejido
+(Tierras de Uso Común)","bosque de pino, bosque de encino, selva baja caducifolia y bosque de pino-encino",Norte y Sierra Madre Occidental
+465,CONANP-440/2018,ADVC-IMTA,20.0779297,Jiutepec,Morelos,2018,15,Público Federal,selva baja caducifolia y vegetación riparia,Centro y Eje Neovolcánico
+466,CONANP-441/2019,Área de Conservación Moku,20145.26,Champotón,Campeche,2019,30,"Ejido
+(Tierras de Uso Común)",selva mediana subperennifolia y selva baja subperennifolia,Península de Yucatán y Caribe Mexicano
+467,*CONANP-442/2019,Costa Salvaje  WildLands IV,4187.364141,Ensenada,Baja California,2019,99,Persona moral,"vegetación halófila xerófila, matorral sarco-crasicaule, matorral rosetófilo costero, matorral desértico rosetófilo, parches de vegetación de dunas costeras y vegetación de galería",Península de Baja California y Pacífico Norte
+468,CONANP-443/2019,Loma del Gorrión,114,Saltillo,Coahuila,2019,20,Persona moral,"matorral desértico micrófilo, matorral desértico rosetófilo y pastizal natural",Noreste y Sierra Madre Oriental
+469,*CONANP-444/2019,Rancho Don Andrés,196.753,La Huerta,Jalisco,2019,42,Persona moral,"bosque tropical caducifolio, bosque tropical subcaducifolio, manglar, vegetación halófila costera y matorral halófilo costero",Occidente y Pacífico Centro
+470,CONANP-445/2019,Calapa,93.971573,Hueyapan,Puebla,2019,15,Persona física,"bosque mesófilo de miontaña, bosque de encino pino y vegetación riparia ",Planicie Costera y Golfo de México
+471,CONANP-446/2019,Potrero El Muerto,150,Lagos de Moreno,Jalisco,2019,15,Persona física,bosque de encino,Occidente y Pacífico Centro
+472,CONANP-447/2019,Rancho Regalo de Dios,750,Ocampo,Tamaulipas,2019,99,Persona física,"selva baja caducifolia, subcaducifolia y bosque de encino",Noreste y Sierra Madre Oriental
+473,*CONANP-448/2019,Zona de Conservación Cañada Larga,235,Puerto Vallarta,Jalisco,2019,15,"Ejido
+(Tierras de Uso Común)","selva mediana subcaducifolia, bosque de pino - encino y vegetación secundaria arbustiva de selva mediana",Occidente y Pacífico Centro
+474,CONANP-449/2019,Reserva Pajaritos,10,Compostela,Nayarit,2019,15,"Ejido
+(Tierras de Uso Común)",selva mediana subcaducifolia ,Occidente y Pacífico Centro
+475,CONANP-450/2019,Laguna Om,35000,Othón P. Blanco,Quintana Roo,2019,30,"Ejido
+(Tierras de Uso Común)","selva baja inundable, selva baja espinosa subperennifolia y selva mediana subperennifolia",Península de Yucatán y Caribe Mexicano
+476,CONANP-451/2019,Zona de Conservación Arroyo Texas,64,Puerto Vallarta,Jalisco,2019,15,"Ejido
+(Tierras de Uso Común)",selva mediana subcaducifolia y bosque de pino-encino,Occidente y Pacífico Centro
+477,CONANP-452/2019,Jalcote,31,Compostela,Nayarit,2019,15,"Ejido
+(Tierras de Uso Común)","vegetación secundaria arbórea de selva mediana subcaducifolia,",Occidente y Pacífico Centro
+478,CONANP-453/2019,Área de Conservación del Ejido Cerro de Oro,907.4592,San Lucas Ojitlán,Oaxaca,2019,20,"Ejido
+(Tierras de Uso Común)",vegetación de selva alta subperennifolia,Frontera Sur Istmo y Pacífico Sur
+479,CONANP-454/2019,Reserva Natural  El Portezuelo V,2151.97,La Paz,Baja California Sur,2019,80,Persona moral,"matorral sarcocaule, matorral sarcocrasicaule, xeroripario, palmares, manantiales, playas arenosas y  lagunas estacionales",Península de Baja California y Pacífico Norte
+480,CONANP-455/2019,Los Montes de San Pedro II,1212.325531,Ensenada,Baja California,2019,99,Persona física,"chaparral, bosque de pino y bosque de galería",Península de Baja California y Pacífico Norte
+481,CONANP-456/2019,Los Montes de San Pedro I,2554.549511,Ensenada,Baja California,2019,99,Persona física,chaparral y bosque de pino,Península de Baja California y Pacífico Norte
+482,*CONANP-457/2019,Los Montes de San Pedro III,735.692388,Ensenada,Baja California,2019,99,Persona física,chaparral y bosque de pino,Península de Baja California y Pacífico Norte
+483,CONANP-458/2019,Tecuani Piedra Cuachi,1035.656433,Salina Cruz,Oaxaca,2019,30,"Ejido
+(Tierras de Uso Común)","selva baja caducifolia, vegetación secundaria arbórea de selva baja caducifolia, vegetación secundaria arbustiva de selva baja caducifolia,  pastizal ",Frontera Sur Istmo y Pacífico Sur
+484,CONANP-459/2019,Ejido Santigo Coltzingo,141.234006,Texcoco,México,2019,15,"Ejido
+(Tierras de Uso Común)",bosque de pino y bosque de oyamel,Centro y Eje Neovolcánico
+485,*CONANP-460/2019,Reserva Ejidal Peñas Blancas,29,Puerto Vallarta,Jalisco,2019,15,"Ejido
+(Tierras de Uso Común)",bosque de pino-encino,Occidente y Pacífico Centro
+486,*CONANP-461/2019,Cerro del Negro,151,Compostela,Nayarit,2019,15,"Ejido
+(Tierras de Uso Común)",bosque de pino-encino ,Occidente y Pacífico Centro
+487,CONANP-462/2019,Área de Conservación Vallejo,104,Bahía de banderas,Nayarit,2019,15,"Ejido
+(Tierras de Uso Común)","bosque alpino de abies, bosque de pino encino",Occidente y Pacífico Centro
+488,CONANP-463/2019,Zona de Conservación Tamichilchi,50,San Blas,Nayarit,2019,15,"Ejido
+(Tierras de Uso Común)",bosque de encino y bosque mesófilo de montaña,Occidente y Pacífico Centro
+489,CONANP-464/2020,Área de Conservación de Cerro Agua Platanar,1943.08,San Miguel Soyaltepec,Oaxaca,2020,15,"Ejido
+(Tierras de Uso Común)",vegetación de selva alta o mediana subperennifolia ,Frontera Sur Istmo y Pacífico Sur
+490,CONANP-465/2020,Reserva Ejidal Vega del Sol,1823.812021,Santa María Jacatepec,Oaxaca,2020,15,"Ejido
+(Tierras de Uso Común)",vegetación de selva alta perennifolia,Frontera Sur Istmo y Pacífico Sur
+491,CONANP-466/2020,Terreno Nacional El Tinthé,98.76,Tecozautla,Hidalgo,2020,99,Público Federal,matorral crasicaule ,Centro y Eje Neovolcánico
+492,CONANP-467/2020,Flor del Bosque,687.42,Amozoc,Puebla,2020,90,Público Municipal,bosque de encino,Centro y Eje Neovolcánico
+493,CONANP-468/2021,Reserva Natural San Quintín,201,San Quintín,Baja California,2021,99,Público Estatal,matorral rosetófilo costero ,Península de Baja California y Pacífico Norte
+494,CONANP-469/2021,Ejido San Ignacio de Arareco,3917.879891,Bocoyna ,Chihuahua,2021,15,"Ejido
+(Tierras de Uso Común)","bosque de encino, bosque de encino-pino, bosque de pino y vegetación secundaria arbórea y arbustiva de bosque de pino",Norte y Sierra Madre Occidental
+495,*CONANP-470/2021,Área Ribereña Ejido Bocoyna,3070.399734,Bocoyna ,Chihuahua,2021,15,"Ejido
+(Tierras de Uso Común)","vegetación de pino, encino-pino y vegetación secundaria arbustiva de bosque de pino",Norte y Sierra Madre Occidental
+496,CONANP-471/2021,Ejido Panalachi,4100.08,Bocoyna ,Chihuahua,2021,15,"Ejido
+(Tierras de Uso Común)","vegetación de pino, vegetación secundaria arbustiva y arbórea de bosque de pino y de pino-encino",Norte y Sierra Madre Occidental
+497,CONANP-472/2021,Santa María Guienagati,29818.81,Santa María Guienagati,Oaxaca,2021,15,"Ejido
+(Tierras de Uso Común)","selva baja caducifolia y bosque mesófilo de montaña, vegetación secundaria arbórea y arbustiva de selva baja caducifolia, de bosque mesófilo de montaña y de pino-encino",Frontera Sur Istmo y Pacífico Sur
+498,CONANP-473/2021,Katab,153,Hopelchén,Campeche,2021,20,"Ejido
+(Tierras de Uso Común)",vegetación secundaria arbórea de selva mediana subcaducifolia,Península de Yucatán y Caribe Mexicano
+499,CONANP-474/2021,Ich-Ek,153,Hopelchén,Campeche,2021,23,"Ejido
+(Tierras de Uso Común)",vegetación secundaria arbórea de selva mediana subcaducifolia ,Península de Yucatán y Caribe Mexicano
+500,CONANP-475/2021,Xcupilcacab,150,Hopelchén,Campeche,2021,21,"Ejido
+(Tierras de Uso Común)",vegetación secundaria arbórea de selva mediana subcaducifolia,Península de Yucatán y Caribe Mexicano
+501,CONANP-476/2021,Ramón Corona,142,Hopelchén,Campeche,2021,26,"Ejido
+(Tierras de Uso Común)",vegetación secundaria arbórea de selva mediana subcaducifolia,Península de Yucatán y Caribe Mexicano
+502,CONANP-477/2021,Rancho Santa Elena,827.1702009,Huasca de Ocampo,Hidalgo,2021,30,Persona física,"bosque de pino-encino, bosque de pino, bosque de encino y vegetación ribereña ",Centro y Eje Neovolcánico
+503,CONANP-478/2021,Guiexoxa - Guishido Nabajni,26811.91121,Santo Domingo Petapa,Oaxaca,2021,30,"Ejido
+(Tierras de Uso Común)",selva mediana subperennifolia y bosque de pino-encino,Frontera Sur Istmo y Pacífico Sur
+504,CONANP-479/2021,Olla Verde,157,El Naranjo,San Luis Potosí,2021,15,Persona física,bosque de encino,Noreste y Sierra Madre Oriental
+505,CONANP-480/2021,Hoya Verde I,303,El Naranjo,San Luis Potosí,2021,15,Persona física,bosque de encino,Noreste y Sierra Madre Oriental
+506,CONANP-481/2021,Hoya Verde II,711,El Naranjo,San Luis Potosí,2021,15,Persona física,bosque de encino,Noreste y Sierra Madre Oriental
+507,CONANP-482/2022,Atzingo,1635.37,Ocuilán,México,2022,20,"Ejido
+(Tierras de Uso Común)",bosque mesófilo de montaña y bosque de pino,Centro y Eje Neovolcánico
+508,CONANP-483/2022,Ejido Emiliano Zapata,59.496186,Amecameca,México,2022,50,"Ejido 
+(Tierras de Uso Común y Parcelas)",bosque de pino y bosque de encino,Centro y Eje Neovolcánico
+509,CONANP-484/2022,Rancho Xcalot Akal,136,Hopelchén,Campeche,2022,27,"Ejido
+(Tierras de Uso Común)",vegetación secundaria arbórea de selva mediana subcaducifolia ,Península de Yucatán y Caribe Mexicano
+510,CONANP-485/2022,San Juan Bautista Sahcabchén,144,Hopelchén,Campeche,2022,24,"Ejido
+(Tierras de Uso Común)",vegetación secundaria arbórea de selva mediana subcaducifolia ,Península de Yucatán y Caribe Mexicano
+511,CONANP-486/2022,Ejido Gral. Heriberto Jara,1995.55,Calakmul,Campeche,2022,15,"Ejido
+(Tierras de Uso Común)","selva mediana subperennifolia, vegetación secundaria arbórea y arbustiva de selva mediana subperennifolia y selva baja espinosa subperennifolia",Península de Yucatán y Caribe Mexicano
+512,CONANP-487/2022,Ejido La Nueva Vida,2387.792881,Calakmul,Campeche,2022,15,"Ejido
+(Tierras de Uso Común)","selva mediana subperennifolia, vegetación secundaria arbórea de selva mediana subperennifolia y vegetación arbustiva de selva baja espinosa subperennifolia",Península de Yucatán y Caribe Mexicano
+513,CONANP-488/2022,Ing. Eugenio Echeverría Castellot no. 2,1009.31,Calakmul,Campeche,2022,15,"Ejido
+(Tierras de Uso Común)",vegetación secundaria arbórea y arbustiva de selva mediana subperennifolia,Península de Yucatán y Caribe Mexicano
+514,CONANP-489/2022,Xpujil,5579.648712,Calakmul,Campeche,2022,15,"Ejido
+(Tierras de Uso Común)","selva mediana subperennifolia, vegetación secundaria arbórea y arbustiva de selva baja subperennifolia",Península de Yucatán y Caribe Mexicano
+515,CONANP-490/2022,Narciso Mendoza,2775,Calakmul,Campeche,2022,50,"Ejido
+(Tierras de Uso Común)",selva mediana subperennifolia y vegetación secundaria arbórea y arbustiva de selva mediana subperennifolia,Península de Yucatán y Caribe Mexicano
+516,CONANP-491/2022,El Porvenir,1353.21,Calakmul,Campeche,2022,15,"Ejido
+(Tierras de Uso Común)",vegetación secundaria arbórea y arbustiva de selva baja espinosa subperennifolia,Península de Yucatán y Caribe Mexicano
+517,CONANP-492/2022,El Refugio,854.1,Calakmul,Campeche,2022,50,"Ejido
+(Tierras de Uso Común)",vegetación secundaria arbórea y arbustiva de selva alta y mediana subperennifolia,Península de Yucatán y Caribe Mexicano
+518,CONANP-493/2022,Ejido El Chichonal,1003.764775,Calakmul,Campeche,2022,15,"Ejido
+(Tierras de Uso Común)",selva mediana subperennifolia y vegetación secundaria arbórea de selva mediana subperennifolia,Península de Yucatán y Caribe Mexicano
+519,CONANP-494/2022,Cordón Grande,8573,Técpan de Galeana,Guerrero,2022,50,"Ejido
+(Tierras de Uso Común)","bosque mesófilo de montaña, bosque de pino-encino, bosque de encino-pino y selva mediana subcaducifolia",Centro y Eje Neovolcánico
+520,CONANP-495/2022,Non-Such,80,La Paz,Baja California Sur,2022,20,Persona física,matorral crasicaule y matorral sarco-crasicaule,Península de Baja California y Pacífico Norte
+521,CONANP-496/2022,Reserva Ecológica Bahía de Santa María V,69.56,Angostura,Sinaloa,2022,82,Persona moral,vegetación halófila hidrófila y manglar,Noroeste y Alto Golfo de California
+522,CONANP-497/2022,Reserva Ecológica Llanos de Magdalena IV,292.162028,Comondú,Baja California Sur,2022,82,Persona moral,matorral sarcocrasicaule de niebla y vegetación halófila gipsófila,Península de Baja California y Pacífico Norte
+523,CONANP-498/2022,Caborachi,852,Guachochi,Chihuahua,2022,15,"Ejido
+(Tierras de Uso Común)","bosque de pino, bosque de pino-encino",Norte y Sierra Madre Occidental
+524,CONANP-499/2022,Reserva Natural Geococcyx,70,Reynosa,Tamaulipas,2022,20,Persona física,vegetación secundaria arbustiva de matorral espinoso tamaulipeco,Noreste y Sierra Madre Oriental
+525,CONANP-500/2022,Norogachi,15558,Guachochi,Chihuahua,2022,15,"Ejido
+(Tierras de Uso Común)","bosque de pino, bosque de pino-encino",Norte y Sierra Madre Occidental
+526,CONANP-501/2022,Cerro El Chilar,796.559349,San Miguel Chimalapa,Oaxaca,2022,30,"Ejido
+(Tierras de Uso Común)",selva baja caducifolia,Frontera Sur Istmo y Pacífico Sur
+527,CONANP-502/2023,Cordillera Molina,18034.3557,Ensenada,Baja California,2023,15,"Ejido
+(Tierras de Uso Común)","matorral desértico micrófilo, bosque de pino, chaparral, matorral desértico rosetófilo, vegetación de galería y pastizal natural",Península de Baja California y Pacífico Norte
+528,CONANP-503/2023,La Cañada San Antonio,438.205711,Acatlán de Pérez Figueroa,Oaxaca,2023,15,"Ejido
+(Tierras de Uso Común)",selva alta perennifolia y vegetación secundaria arbustiva de selva alta perennifolia,Frontera Sur Istmo y Pacífico Sur
+529,CONANP-505/2023,Bios Petempich,236.14,Benito Juárez,Quintana Roo,2023,83,Persona moral,manglar,Península de Yucatán y Caribe Mexicano
+530,CONANP-506/2023,Ovando La Piñuela,2790.8054,Escuintla,Chiapas,2023,15,"Ejido
+(Tierras de Uso Común)","bosque de pino, bosque mesófilo de montaña, selva alta perennifolia y vegetación secundaria de selva alta perennifolia",Frontera Sur Istmo y Pacífico Sur
+531,CONANP-507/2023,Rancho Evergreen,37.041245,Teopisca,Chiapas,2023,15,Persona física,"vegetación secundaria arbustiva de bosque de encino-pino, vegetación secundaria arbustiva de bosque de pino-encino y bosque de pino-encino",Frontera Sur Istmo y Pacífico Sur
+532,CONANP-508/2023,El Fénix,801.352719,Champotón,Campeche,2023,15,Persona física,"selva mediana subperennifolia, selva baja espinosa subperennifolia y vegetación secundaria arbórea de selva mediana subperennifolia",Península de Yucatán y Caribe Mexicano
+533,CONANP-509/2023,La Ocotera,17.59,Mascota,Jalisco,2023,15,Persona física,vegetación secundaria arbustiva de bosque de pino-encino,Occidente y Pacífico Centro
+534,CONANP-510/2023,La Moza,5000.009559,Calakmul,Campeche,2023,15,"Ejido
+(Tierras de Uso Común)","selva mediana subperennifolia, vegetación secundaria arbustiva de la selva baja espinosa subperennifolia, vegetación secundaria arbórea de la selva mediana subperennifolia",Península de Yucatán y Caribe Mexicano
+535,CONANP-511/2023,Área de Conservación de Los Cactus,60,La Paz,Baja California Sur,2023,15,"Ejido
+(Tierras de Uso Común)",selva baja caducifolia,Península de Baja California y Pacífico Norte
+536,CONANP-512/2023,Tabernillas,39,Cabo Corrientes,Jalisco,2023,15,"Ejido
+(Tierras de Uso Común)",vegetación secundaria arbórea de bosque de encino,Occidente y Pacífico Centro
+537,*CONANP-513/2023,AU’DAM Refugio Silvestre,6700,Pueblo Nuevo,Durango,2023,30,"Comunidad 
+(Bienes comunales)","bosque de pino, bosque de pino-encino, bosque de ayarín, selva baja caducifolia, vegetación secundaria arbustivas de bosque de encino-pino, ",Norte y Sierra Madre Occidental
+538,CONANP-514/2023,Reserva Comunal Tres Picos,224204.38,Santa María Chimalapa,Oaxaca,2023,30,"Comunidad 
+(Bienes comunales)","vegetación secundaria arbustiva de selva mediana subperennifolia, selva alta perennifolia y bosque mesófilo de montaña; así como vegetación secundaría arbórea de selva alta perennifolia, selva mediana subperennifolia, selva alta perennifolia, pastizal inducido y cultivado; bosque de pino-encino, bosque de pino, bosque de encino, bosque de encino-pino ",Frontera Sur Istmo y Pacífico Sur
+539,CONANP-515/2023,Reserva Comunal Cerro Azul,3555.33,Santa María Chimalapa,Oaxaca,2023,30,"Comunidad 
+(Bienes comunales)","vegetación secundaria arbórea de selva alta perennifolia,  secundaria arbustiva de selva alta perennifolia, selva alta perennifolia ",Frontera Sur Istmo y Pacífico Sur
+540,CONANP-516/2023,"Reserva Comunal
+La Gringa Zona Oriente",107119.19,Santa María Chimalapa,Oaxaca,2023,30,"Comunidad 
+(Bienes comunales)","vegetación secundaria arbustiva de selva alta perennifolia, de bosque mesófilo de montaña y de bosque de pino-encino; así como vegetación secundaria arbórea de selva alta perennifolia y de bosque de pino-encino; selva alta perennifolia, pastizal cultivado, bosque mesófilo de montaña, bosque de pino-encino, bosque de pino, bosque de encino-pino",Frontera Sur Istmo y Pacífico Sur
+541,CONANP-517/2023,Reserva Comunal Cerro Atravezado,25701.47,San Miguel Chimalapa,Oaxaca,2023,30,"Comunidad 
+(Bienes comunales)","vegetación bosque de encino, bosque de encino-pino, bosque de pino, bosque de pino-encino, pastizal cultivado, pastizal inducido, selva mediana subperennifolia, vegetación secundaria arbórea de selva baja caducifolia, vegetación secundaria arbórea de selva mediana subperennifolia, vegetación secundaria arbustiva de bosque de encino, vegetación secundaria arbustiva de bosque de pino, vegetación secundaria arbustiva de bosque mesófilo de montaña, vegetación secundaria arbustiva de selva baja caducifolia y vegetación secundaria arbustiva de selva mediana subperennifolia ",Frontera Sur Istmo y Pacífico Sur
+542,CONANP-518/2023,Reserva Comunal Cerro Prieto,24159.71,San Miguel Chimalapa,Oaxaca,2023,30,"Comunidad 
+(Bienes comunales)","vegetación bosque de encino, bosque de encino-pino, bosque de pino, bosque de pino-encino, pastizal cultivado, pastizal inducido, selva mediana subperennifolia, vegetación secundaria arbórea de selva baja caducifolia, vegetación secundaria arbórea de selva mediana subperennifolia, vegetación secundaria arbustiva de bosque de encino, vegetación secundaria arbustiva de bosque de pino, vegetación secundaria arbustiva de bosque mesófilo de montaña, vegetación secundaria arbustiva de selva baja caducifolia y vegetación secundaria arbustiva de selva mediana subperennifolia ",Frontera Sur Istmo y Pacífico Sur
+543,CONANP-519/2023,Guievea - Flor del Río,20424,Guevea de Humboldt,Oaxaca,2023,30,"Comunidad 
+(Bienes comunales)","bosque de pino-encino, bosque mesófilo de montaña, pastizal cultivado, vegetación secundaria arbórea de bosque de pino-encino, vegetación secundaria arbórea de bosque mesófilo de montaña, vegetación secundaria arbustiva de bosque de pino-encino, vegetación secundaria arbustiva de bosque mesófilo de montaña",Frontera Sur Istmo y Pacífico Sur
+544,CONANP-520/2023,San José de Los Olivos,1350.978738,Petatlán,Guerrero,2023,60,"Ejido
+(Tierras de Uso Común)","bosque de pino, bosque de pino-encino, pastizal cultivado, vegetación secundaria arbórea de selva mediana subcaducifolia vegetación secundaria arbustiva de bosque de pino y vegetación secundaria arbustiva de selva mediana subcaducifolia",Centro y Eje Neovolcánico
+545,CONANP-521/2023,Río Frío de los Fresnos,13185,Coyuca de Catalán,Guerrero,2023,50,"Ejido
+(Tierras de Uso Común)","bosque de encino, bosque de encino-pino, bosque de pino, bosque de pino-encino, bosque mesófilo de montaña, pastizal cultivado, pastizal inducido, vegetación secundaria arbórea de bosque de encino, vegetación secundaria arbustiva de bosque de encino-pino, vegetación secundaria arbustiva de bosque de pino y vegetación secundaria arbustiva de bosque de pino-encino",Centro y Eje Neovolcánico
+546,CONANP-522/2023,Ejido El Porvenir y Anexo El Limón,1992.2704,Atoyac de Álvarez,Guerrero,2023,99,"Ejido
+(Tierras de Uso Común)","selva mediana subperennifolia, secundaria arbustiva de bosque mesófilo de montaña, secundaria arbórea de bosque mesófilo de montaña, bosque mesófilo de montaña y bosque de pino-encino",Centro y Eje Neovolcánico
+547,CONANP-524/2023,Cerro de la Garza,207.52,San Pedro Comitancillo,Oaxaca,2023,99,"Ejido
+(Tierras de Uso Común)","bosque de pino, bosque de pino-encino, bosque de ayarín, selva baja caducifolia, vegetación secundaria arbustivas de bosque de encino-pino, ",Frontera Sur Istmo y Pacífico Sur
+548,CONANP-525/2023,Cerro El Manantial de Mazín Grande,1492.012628,San Lucas Ojitlán,Oaxaca,2023,15,"Ejido
+(Tierras de Uso Común)","selva alta perennifolia, vegetación secundaria arbórea de selva alta perennifolia, vegetación secundaria arbustiva de selva alta perennifolia y agricultura de temporal anual y semipermanente",Frontera Sur Istmo y Pacífico Sur
+549,CONANP-526/2023,Ejido Lic. Benito Juárez no. 3,3000,Escárcega,Campeche,2023,15,"Ejido
+(Tierras de Uso Común)","selva baja espinosa subperennifolia, selva mediana subperennifolia, vegetación secundaria arbórea de selva mediana subperennifolia, vegetación secundaria arbustiva de selva mediana subperennifolia",Península de Yucatán y Caribe Mexicano
+550,CONANP-527/2023,Reserva Ecológica Bahía de Santa María IV,242.329133,Angostura,Sinaloa,2023,57,Persona moral,vegetación halófila hidrófila y manglar,Península de Baja California y Pacífico Norte
+551,CONANP-528/2023,San Francisco del Tibor,308.8,Atoyac de Álvarez,Guerrero,2023,99,"Ejido
+(Tierras de Uso Común)",selva mediana subperennifolia,Centro y Eje Neovolcánico
+552,CONANP-529/2023,Verde es Vida,5326.27,Petatlán,Guerrero,2023,20,"Ejido
+(Tierras de Uso Común)","bosque de pino-encino, bosque de encino, pastizal cultivado, selva mediana subcaducifolia, vegetación secundaria arbustiva de bosque de pino, vegetación secundaria arbustiva de bosque de pino-encino, vegetación secundaria arbórea y arbustiva de selva mediana subcaducifolia ",Centro y Eje Neovolcánico
+553,CONANP-530/2023,Ley Federal de Reforma Agraria,4079.9163,Champotón,Campeche,2023,15,"Ejido 
+(Tierras de Uso Común y Parcelas)","vegetación secundaria arbórea y arbustiva, selva mediana subperennifolia, manglar, tular ",Península de Yucatán y Caribe Mexicano
+554,CONANP-531/2023,Santiago de la Unión,101.96,Atoyac de Álvarez,Guerrero,2023,99,"Ejido
+(Tierras de Uso Común)","bosque mesófilo de montaña, vegetación secundaria arbórea y arbustiva de selva mediana subperennifolia",Centro y Eje Neovolcánico
+555,CONANP-536/2023,Ejido El Bajío,2460.444329,Caborca,Sonora,2023,15,"Ejido
+(Tierras de Uso Común)","vegetación de desiertos arenosos, matorral sarcocaule, matorral desértico micrófilo",Noroeste y Alto Golfo de California
+556,CONANP-537/2023,Estación Salado,35441.30268,Vanegas,San Luis Potosí,2023,99,"Ejido
+(Tierras de Uso Común)","matorral desértico micrófilo, pastizal halófilo, vegetación halófila xerófila",Noreste y Sierra Madre Oriental
+557,CONANP-538/2023,El Angostillo,473.432263,Tlaltetela,Veracruz,2023,15,"Ejido
+(Tierras de Uso Común)","vegetación secundaria arbórea de bosque de encino, vegetación arbóreas y arbustiva de selva baja caducifolia",Planicie Costera y Golfo de México
+558,CONANP-539/2023,Ejido Arellano,1010,Champotón,Campeche,2023,15,"Ejido
+(Tierras de Uso Común)","selva baja espinosa subperennifolia, selva mediana subperennifolia, vegetación secundaria arbórea de selva mediana subperennifolia, vegetación secundaria arbustiva de selva mediana subperennifolia",Península de Yucatán y Caribe Mexicano
+559,CONANP-540/2023,Tzsicao,1100,La Trinitaria,Chiapas,2023,15,"Ejido
+(Tierras de Uso Común)","bosque mesófilo de montaña, selva alta perennifolia, vegetación secundaria arbórea de bosque de pino y vegetación secundaria arbustiva de selva alta perennifolia",Frontera Sur Istmo y Pacífico Sur
+560,CONANP-541/2023,Rancho Tres Papalotes,12643,Janos,Chihuahua,2023,15,Persona física,"matorral desértico micrófilo, pastizal natural, vegetación halófila xerófila y pastizal halófilo",Norte y Sierra Madre Occidental
+561,CONANP-542/2023,Ejido Crucero de San Luis,1959,Hopelchén,Campeche,2023,30,"Ejido
+(Tierras de Uso Común)","vegetación secundaria arbórea de selva mediana subcaducifolia, bosque cultivado y agricultura de riego anual",Península de Yucatán y Caribe Mexicano
+562,CONANP-543/2023,Parque Guanacastle,148,Tuxtla Gutiérrez,Chiapas,2023,15,Persona física,vegetación secundaria arbustiva de selva baja caducifolia,Frontera Sur Istmo y Pacífico Sur
+563,CONANP-544/2023,El Tecolote,70,San Luis Acatlán,Guerrero,2023,99,Persona física,vegetación secundaria arbórea y arbustiva de selva mediana subcaducifolia y pastizal cultivado,Centro y Eje Neovolcánico
+564,CONANP-545/2023,Balcón de la Bandera,3942.488365,Petatlán,Guerrero,2023,60,"Ejido
+(Tierras de Uso Común)","bosque de pino, bosque de pino-encino, bosque mesófilo de montaña, pastizal cultivado, vegetación secundaria arbustiva de bosque de pino, vegetación secundaria arbustiva de bosque de pino-encino y vegetación secundaria arbustiva de selva baja caducifolia ",Centro y Eje Neovolcánico
+565,CONANP-546/2023,Majada del Catrín,10,Puerto Vallarta,Jalisco,2023,15,"Ejido
+(Tierras de Uso Común)",vegetación secundaria arbustiva de selva mediana subcaducifolia,Occidente y Pacífico Centro
+566,CONANP-547/2023,Centenario del Ejido,323.33,San Antonio de la Cal,Oaxaca,2023,30,"Ejido
+(Tierras de Uso Común)",vegetación secundaria arbustiva de bosque de encino y pastizal inducido,Frontera Sur Istmo y Pacífico Sur
+567,CONANP-548/2023,Yuuk'am,714,Totontepec Villa de Morelos,Oaxaca,2023,15,"Comunidad 
+(Bienes comunales)",bosque mesófilo de montaña y vegetación secundaria arbórea de bosque mesófilo de montaña,Frontera Sur Istmo y Pacífico Sur
+568,CONANP-549/2023,Tembladeras de Vista Hermosa,1143.52,Acatlán de Pérez Figueroa,Oaxaca,2023,50,"Ejido
+(Tierras de Uso Común)","selva alta perennifolia, vegetación secundaria arbórea de selva alta perennifolia y agricultura de temporal semipermanente",Frontera Sur Istmo y Pacífico Sur
+569,CONANP-550/2023,Haramara Retreat,4.17568,Bahía de Banderas,Nayarit,2023,30,Persona física,vegetación secundaria arbustiva de selva mediana subcaducifolia,Occidente y Pacífico Centro
+570,CONANP-551/2023,Rancho El Tucán,403.2552,Aldama,Tamaulipas,2023,15,Persona moral,pastizal cultivado,Planicie Costera y Golfo de México
+571,CONANP-552/2023,El Rincon del Limón,1772.3,Atoyac de Álvarez,Guerrero,2023,99,"Ejido
+(Tierras de Uso Común)","selva mediana subperennifolia,bosque mesófilo de montaña y bosque de pino-encino",Centro y Eje Neovolcánico
+572,CONANP-553/2024,San Juan de Alima,165.871216,Aquila,Michoacán,2024,15,Persona moral,vegetación secundaria arbórea y arbustiva de selva baja caducifolia ,Occidente y Pacífico Centro
+573,CONANP-554/2024,Lomas del Arcángel,0.835179,Bahía de Banderas,Nayarit,2024,20,Persona física,vegetación secundaria arbustiva de selva mediana subcaducifolia,Occidente y Pacífico Centro
+574,CONANP-555/2024,Montaña Color Cobre,5.3269,Bahía de Banderas,Nayarit,2024,20,Persona física,selva mediana subcaducifolia,Occidente y Pacífico Centro
+575,CONANP-556/2024,La Siempre Viva,1298,San Juan Bautista Guelache,Oaxaca,2024,15,"Comunidad 
+(Bienes comunales)",bosque de pino-encino,Frontera Sur Istmo y Pacífico Sur
+576,CONANP-557/2024,La Mina,795,Santa María del Tule,Oaxaca,2024,15,"Comunidad 
+(Bienes comunales)",bosque de encino,Frontera Sur Istmo y Pacífico Sur
+577,CONANP-558/2024,Tolistoque-La Venta,1306.95,Juchitán de Zaragoza,Oaxaca,2024,30,"Ejido
+(Tierras de Uso Común)","pastizal halófilo, selva baja caducifolia y vegetación secundaria arbustiva de selva baja caducifolia",Frontera Sur Istmo y Pacífico Sur
+578,CONANP-559/2024,Ejido Cinco de Febrero,16000,Champotón,Campeche,2024,15,"Ejido
+(Tierras de Uso Común)","vegetación secundaria arbórea de selva mediana subcaducifolia, bosque cultivado y agricultura de riego anual",Península de Yucatán y Caribe Mexicano
+579,CONANP-560/2024,Ejido Matamoros,3000,Escárcega,Campeche,2024,15,"Ejido
+(Tierras de Uso Común)",selva baja espinosa subperennifolia y selva mediana subperennifolia,Península de Yucatán y Caribe Mexicano
+580,CONANP-561/2024,San Mateo Yetla,5745.428656,San Juan Bautista Valle Nacional,Oaxaca,2024,99,"Comunidad 
+(Bienes comunales)","selva alta perennifolia, bosque mesofilo de montaña, agricultura de temporal anual y permanente, vegetación secundaria arbustiva y arbórea de selva alta perennifolia",Frontera Sur Istmo y Pacífico Sur
+581,CONANP-562/2024,Cerro de Guinas,1327.975342,San Luis Amatlán,Oaxaca,2024,99,"Comunidad 
+(Bienes comunales)",Bosque de encino,Frontera Sur Istmo y Pacífico Sur
+582,CONANP-563/2024,Las Cuevas del Jaguar,160.737894,San Ignacio,Sinaloa,2024,99,Persona física,Selva baja caducifolia y vegetación secundaria de selva baja caducifolia, Noroeste y Alto Golfo de California
+583,CONANP-564/2024,Ejido Pixoyal,10000,Champotón,Campeche,2024,15,"Ejido
+(Tierras de Uso Común)","Selva baja espinosa subperennifolia, selva mediana subperennifolia, vegetación secundaria arbórea de selva mediana subperennifolia",Península de Yucatán y Caribe Mexicano
+584,CONANP-565/2024,Atecomoni,76.812634,Teziutlán,Puebla,2024,99,Público Municipal,Bosque mesófilo de montaña,Planicie Costera y Golfo de México
+585,CONANP-566/2024,Área Comunal del Ejido Santa Juana Altamira,459.844704,Altamira,Tamaulipas,2024,15,"Ejido
+(Tierras de Uso Común)",Selva baja y matorral espinoso,Planicie Costera y Golfo de México
+586,CONANP-567/2024,El Mexicano,155.770525,Ixtlahuacán del Río,Jalisco,2024,15,Persona física,Selva baja caducifolia,Occidente y Pacífico Centro
+587,CONANP-568/2024,Cerro de las Flores,0.597578,Xochistlahuaca,Guerrero,2024,30,"Ejido
+(Tierras de Uso Común)","Encino-pino, Selvas medianas subcaducifolias",Centro y Eje Neovolcánico
+588,CONANP-569/2024,Veinte Cerros,1500,Santiago Jocotepec,Oaxaca,2024,15,"Ejido
+(Tierras de Uso Común)",Selva alta perennifolia,Frontera Sur Istmo y Pacífico Sur
+589,CONANP-570/2024,La Estropajera,3.729719,Bahía de Banderas,Nayarit,2024,30,Persona física,Selva mediana subcaducifolia,Occidente y Pacífico Centro
+590,CONANP-571/2024,SNA,7.270518,San Pedro Mixtepec,Oaxaca,2024,15,Persona física,"Vegetación de duna costera, Selva baja caducifolia y Manglar",Frontera Sur Istmo y Pacífico Sur
+591,CONANP-572/2024,Piedras Primeras,4,La Paz,Baja California Sur,2024,15,Persona moral,Selva baja caducifolia,Península de Baja California y Pacífico Norte
+592,CONANP-573/2024,Jaguar del Norte-Tres Corrientes,1427.56,Sahuaripa,Sonora,2024,65,Persona moral,"Matorral subtropical, Boque de mezquite, Selva baja caducifolia y Vegetación secundaria arbustiva de matorral subtropical",Noroeste y Alto Golfo de California
+593,CONANP-574/2024,Bienes Comunales Tlanchinol,727.88,Tlanchinol,Hidalgo,2024,15,"Comunidad 
+(Bienes comunales)","bosque mesófilo de montaña, bosque de encino y bosque de pino",Centro y Eje Neovolcánico
+594,CONANP-575/2024,Territorio Ancestral Indígena Tzucan Uxuxubi,2115.2801,Solidaridad,Quintana Roo,2024,15,Comunidad,selva mediana subperennifolia,Península de Yucatán y Caribe Mexicano
+595,CONANP-576/2024,Santa Catarina Juquila,37406.6216,Santa Catarina Juquila,Oaxaca,2024,15,"Comunidad 
+(Bienes comunales)",bosques de pino densos y bosques de transición,Frontera Sur Istmo y Pacífico Sur

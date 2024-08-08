@@ -3,8 +3,6 @@ format: html
 ---
 
 
-
-
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 #library
 rm(list=ls())
@@ -22,130 +20,78 @@ colores_identidad = c("#3E7C24", "#8e44ad","#CEBA92","#B53C0D",  "#123757")
 library(scales)
 library(htmlwidgets)
 library(readxl)
-```
-
-
-```{r echo=FALSE, message=FALSE, warning=FALSE}
-###### frontend cards
-library(bslib)
-library(shiny)
 library(htmltools)
-library(ggplot2)
-library(bsicons)
-```
+library(bslib)
 
 
-```{r echo=FALSE, message=FALSE, warning=FALSE}
-layout_columns(
-  fill = TRUE,
-  value_box(
-    title = HTML("<p style='text-align: center; color: white;'><b><h1></h1></b></p>"),
-    value = HTML("<p style='text-align: center; color: white;'><b><h1>581</h1></b></p>"),
-    showcase = bs_icon("tree-fill", style = "color: white;"),
-    theme = "success",
-    HTML("<p style='text-align: center; color: white;'><b>Número de ADVC certificadas</b></p>")
-  ),
-  value_box(
-    title = "",#HTML("<p style='text-align: center; color: white;'><b><h1></h1></b></p>"),,
-    value = HTML("<p style='text-align: center; color: white;'><b><h3>1,137,650.30 ha</h3></b></p>"),
-    showcase = tags$span(bs_icon("globe-americas", style = "color: white;")),
-    HTML("<p style='text-align: center; color: white;'><b>Superficie total certificada</b></p>"),
-    theme = "success"
-  ),
-  value_box(
-    title = HTML(" "),
-    value = HTML("<p style='text-align: center; color: white;'><b><h3>1,137,650.30 ha</h3></b></p>"),
-    showcase = bs_icon("geo-alt", style = "color: white;"),
-    HTML("<p style='text-align: center; color: white;'><b>Superficie sin traslape con las ANP federales</b></p>"),
-    theme = "success"
-  )
-)
+## suburst
+
+
+library(data.table)
+library(dplyr)
+library(plotly)
 
 
 ```
-
-```{r include=FALSE}
- 
-
-vbs <- list(
-  value_box(
-    title =  HTML("<b>Número de ADVC certificadas</b>"),
-    value = HTML("<b> 581</b>"),
-    showcase = bs_icon("tree-fill")#,
-    #color = "#58B097"#,
-   # p("The 1st detail")
-  ),
-  value_box(
-    title = HTML("<b>Superficie total certificada</b>"),
-    value = HTML("<b>1,137,650.30 ha</b>"),
-    
-    showcase = tags$span(bs_icon("globe-americas",
-                                 style = "color: #58B097;")
-    ),
-    #bs_icon("globe-americas")#,
-    theme = "teal"
-    #p("The 3rd detail")
-  ),
-  value_box(
-    title = HTML("<b>Superficie sin traslape</b>"),
-    value = HTML("<b>1,137,650.30 ha</b>"),
-    showcase = bs_icon("geo-alt"),
-    HTML("<i>*Sin traslape con las ANP federales</i>")#,
-    #p("The 6th detail")
-  )
-)
-
-layout_columns(
-  fill = FALSE,
-  width = "150px",
-  value_box(
-    title =  HTML("<b>Número de ADVC certificadas</b>"),
-    value = HTML("<b> 581</b>"),
-    showcase = bs_icon("tree-fill")#,
-    #color = "#58B097"#,
-   # p("The 1st detail")
-  ),
-  value_box(
-    title = HTML("<b>Superficie total certificada</b>"),
-    value = HTML("<b>1,137,650.30 ha</b>"),
-    
-    showcase = bs_icon("globe-americas"),
-    #bs_icon("globe-americas")#,
-    theme = "teal-100"
-    #p("The 3rd detail")
-  ),
-  value_box(
-    title = HTML("<b>Superficie sin traslape</b>"),
-    value = HTML("<b>1,137,650.30 ha</b>"),
-    showcase = bs_icon("geo-alt"),
-    HTML("<i>*Sin traslape con las ANP federales</i>")#,
-    #p("The 6th detail")
-  )
-)
-```
-
-
-
-
-
-
 
 
 ```{r echo=FALSE}
-#df_advc <- read_excel("lista_advc_24.xlsx")
+
+# library(RPostgreSQL)
+# 
+# 
+# library(DBI)
+# library(RSQLite)
+# library(RMySQL)
+# 
+# library(DBI)
+# library(RMySQL)
+
+
+# host <- "172.26.212.202"
+# dbname <- "db_simec2"
+# user <- "des.salomon"
+# password <- "Syj22Ai5CAQE"
+# port <- 60012  
+# 
+# 
+# 
+# con <- dbConnect(
+#   RMySQL::MySQL(),
+#   host = host,
+#   dbname = dbname,
+#   user = user,
+#   password = password,
+#   port = port
+# )
+# 
+# dbListTables(con)
+# 
+# 
+# query <- "SELECT * FROM tb_advc"
+# df_tabla_1 <- dbGetQuery(con, query)
+# 
+#  
+# head(df_tabla_1)
 
 
 
-df_advc <- read_csv("C:/Users/israel.monjaraz/OneDrive - Food and Agriculture Organization/Documentos/DailyTasks/Numeralia/ADVC/data/datasets/advc_abril24.csv",
-                     show_col_types = FALSE)
 
-
-
+#dbDisconnect(con)
 
 ```
 
 
-<p><h2 font-size: 28px; align ='center'><br><b> Número de certificaciones de ADVC <br> por año (2002 - 2024) </p></h2><br></b>
+```{r echo=FALSE}
+df_advc <- read_csv("C:/Users/israel.monjaraz/OneDrive - Food and Agriculture Organization/Documentos/DailyTasks/Numeralia/ADVC/data/datasets/update_august24.csv",
+                     show_col_types = FALSE)
+
+df_advc <- read_csv("C:/Users/israel.monjaraz/OneDrive - Food and Agriculture Organization/Documentos/DailyTasks/Numeralia/ADVC/data/datasets/copia_agosto24.csv",
+                     show_col_types = FALSE)
+```
+
+
+<p><h2 font-size: 28px; align ='center'><br><b> Número de ADVC establecidas por año </p></h2><br></b>
 
 
 ```{r echo=FALSE}
@@ -178,7 +124,7 @@ hc <- highchart() %>%
     list(title = list(text = 'Superficie certificada (ha)'), opposite = FALSE, zeroline = FALSE),
     list(title = list(text = 'Número de ADVC'), opposite = TRUE, zeroline = FALSE)
   ) %>%
-  hc_add_series(name = 'Superficie total (ha)', 
+  hc_add_series(name = 'Superficie total', 
                 data = df_cert_year$total_superficie, 
                 type = 'column', 
                 color = colores_identidad[1]) %>%
@@ -213,7 +159,14 @@ hc <- highchart() %>%
 #  )
 ```
 
-
+<p><div style="font-size: 12px; text-align: justify; color:gray">
+<b>Nota:</b>
+<ul>
+<li>En 2002 se estableció la primera ADVC en virtud del reconocimiento de las ADVC como ANP de carácter Federal.</li>  
+<li>La información del 2024 corresponde a las ADVC establecidas al corte de Julio de 2024.</li> 
+</ul> 
+</div>
+</p>
 
 ```{r echo=FALSE}
 df_bubble <- df_advc %>%
@@ -226,70 +179,188 @@ df_bubble$region_conanp <- as.factor(df_bubble$region_conanp)
 
 
 ```{r echo=FALSE}
-propiedad_social <- c("Ejido\r\n(Tierras de Uso Común)", 
-                      "Comunidad \r\n(Bienes comunales)",
-                      "Ejido \r\n(Parcela)", 
-                      "Empresa de Participación Estatal",
-                      "Ejido\r\n((Tierras de Uso Común y Parcelas)"
+propiedad_social <- c("Ejido (Tierras de Uso Común)", 
+                      "Comunidad  (Bienes comunales)",
+                      "Ejido  (Parcela)", 
+                      "Comunidad",
+                      "Ejido (Tierras de Uso Común y Parcelas)"
                       )
-propiedad_privada <- c("Persona física", "Persona moral")
-propiedad_publica <- c("Público Municipal", "Público Federal", "Público Estatal")
+propiedad_privada <- c("Persona física", "Persona moral",
+                      "Empresa de Participación Estatal")
+propiedad_publica <- c("Público Municipal", 
+                       "Público Federal", 
+                       "Público Estatal")
 
-# Crear la nueva columna basada en las categorías
 df_advc <- df_advc %>%
   mutate(
     categoria_propiedad = case_when(
-      tipo_propietario %in% propiedad_social ~ "Propiedad_social",
-      tipo_propietario %in% propiedad_privada ~ "Propiedad_privada",
-      tipo_propietario %in% propiedad_publica ~ "Propiedad_publica",
-      TRUE ~ "Otra"
+      tipo_propietario %in% propiedad_social ~ "Propiedad social",
+      tipo_propietario %in% propiedad_privada ~ "Propiedad privada",
+      tipo_propietario %in% propiedad_publica ~ "Propiedad publica",
+      TRUE ~ "Propiedad social"
     )
   )
 
-```
-
-
-```{r echo=FALSE}
 library(rbokeh)
 df_advc$categoria_propiedad <- as.factor(df_advc$categoria_propiedad)
-```
 
-```{r echo=FALSE}
+
+total_superficie =  sum(df_advc$superficie_certificada)
 df_propiedad <- df_advc %>%
   group_by(categoria_propiedad) %>%
-  summarise(Count = n()) %>%
+  summarise(Count = n(),
+            superficie = sum(superficie_certificada),
+            porc_propiedad = round(sum(superficie_certificada)/total_superficie*100,2)
+            ) %>%
   ungroup()
-
+ 
+#df_advc[df_advc$categoria_propiedad =="Propiedad_social",]
  
 ```
 
 
 
+
+
+
+<p><h2 font-size: 28px; align ='center'><br><b> Protección de ecosistemas </p></h2><br></b>
+
+```{r echo=FALSE, include=FALSE}
+ecosistema <-c("<span style=\"font-size: 10px\"> <b>Selva perennifolia</span></b>",
+               "<span style=\"font-size: 10px\"> <b>Bosque de pino</span></b>",
+               "<span style=\"font-size: 10px\"> <b>Matorral</span></b>",
+               "<span style=\"font-size: 10px\"> <b>Bosque de encino</span></b>",
+               "<span style=\"font-size: 10px\"> <b>Selva caducifolia</span></b>",
+               "<span style=\"font-size: 10px\"> <b>Bosque mesófilo de montaña</span></b>",
+               "<span style=\"font-size: 10px\"> <b>Agroecosistemas</span></b>", 
+               "<span style=\"font-size: 10px\"> <b>Pastizal</span></b>",
+               "<span style=\"font-size: 10px\"> <b>Otros tipos de vegetación</span></b>",
+               "<span style=\"font-size: 10px\"> <b>Manglar</span></b>",
+               "<span style=\"font-size: 10px\"> <b>Vegetación hidrófila</span></b>"
+               )
+porcentaje_protegido = c(44.63,17.25,7.96,6.86,6.49,6.28,4.37,4.16,1.75,0.14,0.11)
+
+color = c("#2E8B57",
+          "#548B54",
+          "#CDAF95",
+          "#7CCD7C",
+          "#B4EEB4",
+          "#BCEE68",
+          "#CDAA7D",
+          "gray"
+          )
+
+color =c(      "#155e29", "#107631",
+               "#008f39", "#48a259",
+               "#179740", "#259f48", 
+              "#31a84f", "#70b578",
+              "#93C799", "#A7D1AC",
+              "#CAE4CD"
+              
+              
+              
+         ) 
+
+
+df_ecosistema <- data.frame(name = ecosistema,
+                            y=porcentaje_protegido,
+                            color = color
+                            )
+
+ 
+
+#card( 
+#  full_screen = TRUE,
+
+
+#)
+highchart() %>%
+ # hc_title(text = 'Fruits pie') %>%
+  #hc_subtitle(text = 'My favourite fruits') %>%
+  hc_chart(type = 'pie',
+           polar = FALSE,
+           inverted = FALSE) %>%
+  hc_xAxis(categories = df_ecosistema$name) %>%
+  hc_add_series(df_ecosistema, name = 'Fruits', showInLegend = TRUE,
+                   dataLabels =list(enabled =TRUE,
+                     format = '{point.name}: {point.percentage:.1f}%'
+                      )
+                
+                
+                ) %>%
+  hc_plotOptions(series = list(animation = TRUE),
+                  pie = list(
+    ignoreHiddenPoint = FALSE,  
+      animation = TRUE
+    ))
+# %>%
+#     hc_tooltip(
+#      useHTML =TRUE,
+#      pointFormat ='{point.hover_text}'
+#    )
+
+
+```
+
 ```{r echo=FALSE}
+#library(lubridate)
+
+# df_ecosistema$hover_text <-paste("Actualmente cuenta con <b>", sup_certificada$num_ADVC, " </b> ADVC",
+#                                    "<br>Porcentaje del total protegido por ADVC <b>", sup_certificada$y, "</b> %",
+#                                    "<br>Superficie protegida:<b>", scales::comma(sup_certificada$superficie), "</b>ha") 
+
+highchart() %>%
+  hc_chart(type = 'bar', polar = TRUE) %>%
+  hc_xAxis(categories = df_ecosistema$name) %>%
+  hc_add_series(df_ecosistema, name = 'Porcentaje protegido', 
+                dataLabels = list(enabled = TRUE,         
+                                  format = '{point.y:.1f} %',
+                                  position_dodge = "outside",
+                                  align = 'left'#,
+                                 #alignTo = 'plotEdges'
+                                  
+                ),
+                showInLegend = FALSE ) %>%
+  hc_exporting(enabled = TRUE) %>%
+  hc_pane(endAngle = 270) %>%
+  hc_plotOptions(series = list(animation = TRUE, 
+                               pointWidth = 22)) 
+
+```
+
+<p><h2 font-size: 28px; align ='center'><br><b> Porcentaje de superficie certificada <br> según su tipo de propiedad </p></h2><br></b>
+
+
+```{r echo=FALSE}
+df_cert_year <- df_advc %>%
+  group_by(certification_year) %>%
+  summarise(count = n(),
+            total_superficie = sum(superficie_certificada, na.rm = TRUE),
+            .groups = 'drop')
+
+
 sup_certificada = data.frame(
   tipo_propiedad =c("<span style=\"font-size: 12px\"> <b>Social</span></b>", 
                     "<span style=\"font-size: 12px\"> <b>Privada</span></b>",
                     "<span style=\"font-size: 12px\"> <b>Pública</span></b>"),
-  num_ADVC = c(397,175,9),
-  superficie = c(1075345.59,191373.41, 7771.56),
-  porc_cert=c(84.37,15.02,0.61)
+  num_ADVC = c(405,180,10),
+  superficie = c("1,090,112.44","98,201.03", "4,695.07"),
+  porc_cert=c(91.38,8.23,0.39)
 )
-tot = 1137650.30
+tot =  1193008.54 #1137650.30
 #sup_certificada$porc_certif =  round((sup_certificada$superficie/tot)*100,5)
 ```
 
-<p><h2 font-size: 28px; align ='center'><br><b> Porcentaje de superficie de las ADVC certificadas <br> por tipo de propiedad </p></h2><br></b>
 
 ```{r echo=FALSE}
 colnames(sup_certificada)[1] <- "name"
 colnames(sup_certificada)[4] <- "y"
 sup_certificada$color <- c("#123757","#B53C0D",  "#CEBA92")
 
-
 df <-select(sup_certificada, name, y,color,num_ADVC )
-df$hover_text <-paste("Actualmente cuenta con <b>", sup_certificada$num_ADVC, " </b> ADVC",
+df$hover_text <-paste("Cuenta con <b>", sup_certificada$num_ADVC, " </b> ADVC",
                                    "<br>Porcentaje del total protegido por ADVC <b>", sup_certificada$y, "</b> %",
-                                   "<br>Superficie protegida:<b>", scales::comma(sup_certificada$superficie), "</b>ha") 
+                                   "<br>Superficie protegida:<b>", (sup_certificada$superficie), "</b>ha") #<scales::comma
   
   
 
@@ -314,10 +385,10 @@ propiedades.plt<-highchart() %>%
   )%>%
   hc_plotOptions( pie = list(
     ignoreHiddenPoint = FALSE,  
-      animation = FALSE
+      animation = TRUE
     ),
     
-    series = list(animation =FALSE)
+    series = list(animation =TRUE)
                  
                  )%>%
   hc_exporting(enabled = TRUE)%>%
@@ -335,183 +406,240 @@ propiedades.plt<-highchart() %>%
 ```
 
 
+<p><h2 font-size: 28px; align ='center'><br><b> Entidades federativas con mayor superficie certificada </p></h2><br></b>
 
-<p><h2 font-size: 28px; align ='center'><br><b> Protección de ecosistemas por las ADVC </p></h2><br></b>
+
+```{r echo=FALSE}
+df_advc <- read_csv("C:/Users/israel.monjaraz/OneDrive - Food and Agriculture Organization/Documentos/DailyTasks/Numeralia/ADVC/data/datasets/update_august24.csv",
+                     show_col_types = FALSE)
+
+df_advc <- df_advc %>%
+  mutate(
+    categoria_propiedad = case_when(
+      tipo_propietario %in% propiedad_social ~ "Propiedad_social",
+      tipo_propietario %in% propiedad_privada ~ "Propiedad_privada",
+      tipo_propietario %in% propiedad_publica ~ "Propiedad_publica",
+      TRUE ~ "Propiedad_social"
+    )
+  )
+
+```
 
 ```{r echo=FALSE, include=FALSE}
-ecosistema <-c("<span style=\"font-size: 12px\"> <b>Selva</span></b>",
-               "<span style=\"font-size: 12px\"> <b>Bosque de encino</span></b>",
-               "<span style=\"font-size: 12px\"> <b>Pastizal</span></b>",
-               "<span style=\"font-size: 12px\"> <b>Bosque de coníferas</span></b>",
-               "<span style=\"font-size: 12px\"> <b>Bosque mesófilo de montaña</span></b>",
-               "<span style=\"font-size: 12px\"> <b>Agroecosistemas</span></b>", 
-               "<span style=\"font-size: 12px\"> <b>Matorral xerófilo</span></b>",
-               "<span style=\"font-size: 12px\"> <b>Otros tipos de vegetación</span></b>"
-               )
-porcentaje_protegido = c(47, 17, 8, 8, 6,6,4,4)
+library(dplyr)
+library(tidyr)
 
-color = c("#2E8B57",
-          "#548B54",
-          "#CDAF95",
-          "#7CCD7C",
-          "#B4EEB4",
-          "#BCEE68",
-          "#CDAA7D",
-          "gray"
-          
-          )
+# Definir el orden específico de los estados
+orden_estados <- c("Oaxaca", "Campeche", "Guerrero", "Sonora", "Coahuila",
+                    "Chihuahua", "Baja California", "Quintana Roo", "San Luis Potosí", "Nuevo León")
 
 
-df_ecosistema <- data.frame(name = ecosistema,
-                            y=porcentaje_protegido,
-                            color = color
-                            )
+df_filtered <- df_advc %>%
+  filter(estado %in% orden_estados)
 
- 
-
-#card(
-#  full_screen = TRUE,
-
-
-#)
-highchart() %>%
- # hc_title(text = 'Fruits pie') %>%
-  #hc_subtitle(text = 'My favourite fruits') %>%
-  hc_chart(type = 'pie',
-           polar = FALSE,
-           inverted = FALSE) %>%
-  hc_xAxis(categories = df_ecosistema$name) %>%
-  hc_add_series(df_ecosistema, name = 'Fruits', showInLegend = TRUE,
-                   dataLabels =list(enabled =TRUE,
-                     format = '{point.name}: {point.percentage:.1f}%'
-                      )
-                
-                
-                ) %>%
-  hc_plotOptions(series = list(animation = FALSE),
-                  pie = list(
-    ignoreHiddenPoint = FALSE,  
-      animation = FALSE
-    ))
-# %>%
-#     hc_tooltip(
-#      useHTML =TRUE,
-#      pointFormat ='{point.hover_text}'
-#    )
+df_count <- df_filtered %>%
+  group_by(estado, categoria_propiedad) %>%
+  summarise(num_advc = n(), 
+            superficie=sum(superficie_certificada),
+            .groups = 'drop') %>%
+  pivot_wider(names_from = categoria_propiedad, values_from = superficie, values_fill = list(superficie = 0))
 
 
-```
+df_count <- df_count %>%
+  rename(
+    name = estado,
+    Propiedad_social = `Propiedad_social`,
+    Propiedad_privada = `Propiedad_privada`,
+    Propiedad_publica = `Propiedad_publica`
+  ) %>%
+  mutate(name = factor(name, levels = orden_estados)) 
 
-```{r echo=FALSE}
-library(lubridate)
-
-# df_ecosistema$hover_text <-paste("Actualmente cuenta con <b>", sup_certificada$num_ADVC, " </b> ADVC",
-#                                    "<br>Porcentaje del total protegido por ADVC <b>", sup_certificada$y, "</b> %",
-#                                    "<br>Superficie protegida:<b>", scales::comma(sup_certificada$superficie), "</b>ha") 
-#   
-#   
-
- highchart() %>%
-  hc_chart(type = 'bar', polar = TRUE) %>%
-  hc_xAxis(categories = df_ecosistema$name) %>%
-  hc_add_series(df_ecosistema, name = 'Porcentaje protegido', 
-                dataLabels = list(enabled = TRUE,         
-                                  format = '{point.y:.0f} %'
-                ),
-                showInLegend = FALSE ) %>%
-  hc_exporting(enabled = TRUE) %>%
-  hc_pane(endAngle = 270) %>%
-  hc_plotOptions(series = list(animation = FALSE, 
-                               pointWidth = 20)) 
-
-```
+# Ordenar el dataframe según el factor
+df_count <- df_count %>%
+  arrange(name)
 
 
-
-
-
-
-<p><h2 font-size: 28px; align ='center'><br><b> Superficie certificada por las ADVC <br> en las entidad federativa </p></h2><br></b>
-
-```{r echo=FALSE}
-
-df_surface_state <- df_advc %>%
-  group_by(estado) %>%
-  summarise(superficie = sum(superficie_certificada),
-            num_advc = n())
-
-
-
-df_surface_state <- df_surface_state %>%
-  arrange(desc(superficie))
-
-df_surface_state$hover_text <- paste("<b>",df_surface_state$estado,"</b>",
-                                "cuenta con <b>", df_surface_state$num_advc, "</b> ADVC,"
-                                ,"con una superficie total protegida de <b>", 
-                                scales::comma(df_surface_state$superficie),"</b>ha"
-                                     )
-
-
-colnames(df_surface_state)[1] <- "name"
-colnames(df_surface_state)[2] <- "y"
-
-df3 = select(df_surface_state, name, y, hover_text)
-
+library(highcharter)
 
 
 hc_surf_state <- highchart() %>%
   hc_title(text = '') %>%
-  hc_yAxis(title = list(text = "(Hectáreas)")) %>%
-  hc_xAxis(categories = df3$name,
+  hc_yAxis(title = list(text = "(Conteo)")) %>%
+  hc_xAxis(categories = df_count$name,
            title = list(text = ""),
            reversed = TRUE) %>%
-  hc_add_series(df3, name = 'Superficie (ha)', 
-               # data = df3$y, 
+  hc_add_series(name = 'Propiedad_social', 
+                data = df_count$Propiedad_social, 
                 type = 'bar', 
-                color = "darkgreen")%>%  
-  hc_tooltip(#shared = TRUE, crosshairs = TRUE,
-    useHTML = TRUE,
-    formatter = JS("function() {
-      return this.point.hover_text;
-    }")) %>%
+                color = "#123757", 
+                stack = 'total') %>%
+  hc_add_series(name = 'Propiedad_privada', 
+                data = df_count$Propiedad_privada, 
+                type = 'bar', 
+                color = "#B53C0D", 
+                stack = 'total') %>%
+  hc_add_series(name = 'Propiedad_publica', 
+                data = df_count$Propiedad_publica, 
+                type = 'bar', 
+                color = "#CEBA92", 
+                stack = 'total') %>%
+  hc_tooltip(useHTML = TRUE, 
+             formatter = JS("function() {
+               return '<b>' + this.x + '</b><br/>' +
+                      'Propiedad_social: ' + this.points[0].y + '<br/>' +
+                      'Propiedad_privada: ' + this.points[1].y + '<br/>' +
+                      'Propiedad_publica: ' + this.points[2].y;
+             }")) %>%
   hc_plotOptions(series = list(
-    dataLabels = list(enabled = FALSE),
-    showInLegend = FALSE
-  ),
-  pointWidth = 18)%>%
+    dataLabels = list(enabled = TRUE),
+    showInLegend = TRUE,
+    stacking = 'normal'
+  )) %>%
   hc_exporting(enabled = TRUE)
+
  
 
-card(
-  full_screen = TRUE,
-hc_surf_state
-)
-
-
-  # hc_navigator(enabled = FALSE,
-  #              xAxis = list(
-  #              labels = list(enabled = FALSE),
-  #              title = list(text = "Zoom", color ="black")
-  #            )
-  #              
-  #              ) %>%
-  #hc_rangeSelector(enabled = TRUE) %>%
-  #,
-               #buttons = list(contextButton = list(
-                 #menuItems = c("zoomIn", "zoomOut"))
-                 #)
- 
-# Mostrar el gráfico
-
-#saveWidget(as_widget(plt_surf_state), "plot-superficiesadvc-estados.html")
 ```
 
 
 
-<p><h2 font-size: 28px; align ='center'><br><b> Distribución del número de Áreas Destinadas Voluntariamente a la Conservación por entidad federativa </p></h2><br></b>
+```{r echo=FALSE}
+orden_estados <- c("Oaxaca", "Campeche", "Guerrero", "Sonora", "Coahuila",
+                   "Chihuahua", "Baja California", "Quintana Roo", "San Luis Potosí", "Nuevo León")
+
+df_filtered <- df_advc %>%
+  filter(estado %in% orden_estados)
+
+# Agrupar por estado y categoria_propiedad y tomar la superficie acumulada por categoria_propiedad
+df_count <- df_filtered %>%
+  group_by(estado, categoria_propiedad) %>%
+  summarise(num_advc = n(), 
+            superficie = sum(superficie_certificada),
+            .groups = 'drop')
+
+# Calcular la superficie total por entidad
+df_total_superficie <- df_count %>%
+  group_by(estado) %>%
+  summarise(superficie_total = sum(superficie)) %>%
+  arrange(desc(superficie_total))
+
+# Unir con el dataframe original para obtener el orden correcto
+df_count <- df_count %>%
+  inner_join(df_total_superficie, by = "estado") %>%
+  arrange(desc(superficie_total), estado)
+
+# Renombrar columnas
+df_count <- df_count %>%
+  rename(
+    entidad = estado,
+    propiedad = categoria_propiedad
+  )
+
+# Añadir columna de texto de hover
+df_count <- df_count %>%
+  mutate(hover_text = paste("<b>", entidad,
+                            "<br></b> Cuenta con un total de <b>",
+                            scales::comma(superficie_total),
+                            "</b> ha. <br>De las cuales la <b>", 
+                            gsub("_", " ", propiedad), "</b> tiene certificadas <b>",
+                            scales::comma(superficie), "</b> ha, <br>distribuidas en <b>", 
+                            num_advc, "</b> ADVC.<b>"
+                            ))
+
+series_data <- df_count %>%
+  group_by(propiedad) %>%
+  summarise(data = list(
+    list_parse(
+      tibble(
+        y = superficie,
+        hover_text = hover_text
+      )
+    )
+  ))
+
+propiedad_social <- df_count %>% 
+  filter(propiedad == "Propiedad_social")
+
+propiedad_privada <- df_count %>% 
+  filter(propiedad == "Propiedad_privada")
 
 
+propiedad_publica <- df_count %>% 
+  filter(propiedad == "Propiedad_publica")
 
+
+# Crear el gráfico
+hc_surf_state <- highchart() %>%
+  hc_yAxis(title = list(text = "(Hectáreas)")) %>%
+  hc_xAxis(categories = unique(df_count$entidad),
+           title = list(text = ""),
+           reversed = TRUE) %>%
+  hc_add_series(name = 'Propiedad pública', 
+                data = propiedad_publica,
+                  #series_data$data[series_data$propiedad == 'Propiedad_publica'][[1]], 
+                type = 'bar', 
+                color = "#CEBA92", 
+                stack = 'total') %>%
+  hc_add_series(name = 'Propiedad privada', 
+                data = propiedad_privada,
+                  #series_data$data[series_data$propiedad == 'Propiedad_privada'][[1]], 
+                type = 'bar', 
+                color = "#B53C0D", 
+                stack = 'total') %>%
+  hc_add_series(name = 'Propiedad social', 
+                data = propiedad_social,
+                  #series_data$data[series_data$propiedad == 'Propiedad_social'][[1]], 
+                type = 'bar', 
+                color = "#123757", 
+                stack = 'total') %>%
+  hc_tooltip(useHTML = TRUE, 
+             formatter = JS("function() { return this.point.hover_text; }")
+            ) %>%
+  hc_plotOptions(series = list(
+    dataLabels = list(enabled = FALSE),
+    showInLegend = TRUE,
+    stacking = 'normal',
+    pointWidth = 25
+  )) %>%
+  hc_exporting(enabled = TRUE)
+ 
+
+```
+ 
+
+```{r echo=FALSE}
+#este ya funciona bi
+df_count$propiedad <- gsub("_", " ", df_count$propiedad)
+#df_count$propiedad <- gsub("u", "ú", df_count$propiedad[df_count$propiedad=="Propiedad publica",] )
+
+
+hc <- df_count %>% 
+  hchart(
+    'bar', hcaes(x = 'entidad', y = 'superficie', group = 'propiedad'),
+    stacking = "normal"
+    ) %>%
+  hc_colors(c("#B53C0D", "#CEBA92", "#123757")) %>%
+  hc_tooltip(useHTML = TRUE, 
+             formatter = JS("function() { return this.point.hover_text; }")
+            )%>% 
+  hc_yAxis(title = list(text = "Superficie en hectáreas (k: miles)"),
+           reversedStacks =TRUE
+           
+           )%>%
+  hc_xAxis(#categories = unique(df_count$entidad),
+           title = list(text = ""),
+           reversed = TRUE)%>%
+  hc_plotOptions(series = list(
+    dataLabels = list(enabled = FALSE),
+    showInLegend = TRUE,
+    pointWidth = 25
+  ))%>%
+  hc_legend(reversedOrder = FALSE)%>%
+  hc_exporting(enabled = TRUE)
+hc
+```
+
+<p><h2 font-size: 28px; align ='center'><br><b> Distribución de la superficie certificada en México </p></h2><br></b>
 
 
 ```{r echo=FALSE, warning=FALSE, message=FALSE}
@@ -524,10 +652,6 @@ df_surface_state <- df_advc %>%
   summarise(superficie = sum(superficie_certificada),
             num_advc = n())
 
-
-
-
-
 data_advc_mexico <- df_surface_state %>% 
   select(Entidad = estado, superficie, num_advc)
 
@@ -536,12 +660,14 @@ data_advc_mexico$hover_text <- paste("<b>",data_advc_mexico$Entidad,"</b>",
                                 ,"con una superficie total protegida de <b>", 
                                 scales::comma(data_advc_mexico$superficie),"</b>ha"
                                      )
+states_zeros = rbind("Zacatecas", "Querétaro",
+                     "Distrito Federal", "Colima")
 
 new_data <- tibble(
-  Entidad = c("Zacatecas", "Querétaro", "Distrito Federal"),
-  superficie = c(0, 0,0),
-  num_advc = c(0, 0,0),
-  hover_text = c("La entidad actualmente no cuenta con ADVC")
+  Entidad = states_zeros,
+  superficie = c(0, 0,0,0),
+  num_advc = c(0, 0,0,0),
+  hover_text = paste0(states_zeros," no cuenta con ADVC")
 )
 
 
@@ -549,7 +675,7 @@ data_advc_mexico <- bind_rows(data_advc_mexico, new_data)
 
 hcmap(mexico_json, 
       data = data_advc_mexico, 
-      value = "num_advc",
+      value = "superficie",#"num_advc",
       joinBy = c("woe-name", "Entidad"),
       name ="Superficie protegida",
       dataLabels = list(enabled = TRUE, 
@@ -569,10 +695,12 @@ hcmap(mexico_json,
                  style = list(color = "#000000", 
                               fontWeight = "bold"))%>%
         hc_colorAxis(stops = list(
-  list(0, "#C1FFC1"),   
-  list(0.035, "#76C76B"),  
-  list(0.5, "#48A73A"),  
-  list(1, "#008B45")      
+  list(0, "#FFF0F5"), #"#FFE1FF"
+  
+  list(0.005,"#FFBBFF"),  #C1FFC1   
+  list(0.035,"#FF83FA" ),  #"#76C76B"
+  list(0.5, "#CD69C9"), #"#48A73A"  
+  list(1,"#8B4789")      #"#008B45"
 ))%>%
   hc_credits(enabled =FALSE) %>%
   hc_exporting(enabled = TRUE)
@@ -580,30 +708,31 @@ hcmap(mexico_json,
 
 
 ```{r echo=FALSE, include=FALSE}
-library(mxmaps)
-library(ggpubr)
-library(jsonlite)
+# library(mxmaps)
+# library(ggpubr)
+# library(jsonlite)
+# 
+# data("df_mxstate_2020")
+# df <- rbind(df_mxstate_2020, df_mxstate_2020)
+# 
+# df$genero <- rep(c("m", "f"), each= 32)
+# df$value <- ifelse(df$genero == "m", df$pop_male, df$pop_female)
+# 
+# 
+# df$value <- cut(df$value, breaks = c(0, 5e4, 1e6, 2e6, 4e6, 20e7))
+# 
+# f <- mxstate_choropleth(subset(df, genero == "f"),
+#                         title = "F population, by state",
+#                         num_colors = 5) 
+# m <- mxstate_choropleth(subset(df, genero == "m"),
+#                         title = "M population, by state",
+#                         num_colors = 5)
+# 
+#  
+# ggarrange(f, m,
+#           labels = c("", ""),
+#           ncol = 1, nrow = 2)
 
-data("df_mxstate_2020")
-df <- rbind(df_mxstate_2020, df_mxstate_2020)
-
-df$genero <- rep(c("m", "f"), each= 32)
-df$value <- ifelse(df$genero == "m", df$pop_male, df$pop_female)
-
-
-df$value <- cut(df$value, breaks = c(0, 5e4, 1e6, 2e6, 4e6, 20e7))
-
-f <- mxstate_choropleth(subset(df, genero == "f"),
-                        title = "F population, by state",
-                        num_colors = 5) 
-m <- mxstate_choropleth(subset(df, genero == "m"),
-                        title = "M population, by state",
-                        num_colors = 5)
-
- 
-ggarrange(f, m,
-          labels = c("", ""),
-          ncol = 1, nrow = 2)
 ```
 
 
@@ -612,42 +741,42 @@ ggarrange(f, m,
 
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
-
-library(mxmaps) 
-library(ggpubr)  
-library(jsonlite) 
-
-
-data("df_mxstate_2020", package = "mxmaps")
-df <- rbind(df_mxstate_2020, df_mxstate_2020)
-df$genero <- rep(c("m", "f"), each = 32)
-df$value <- ifelse(df$genero == "m", df$pop_male, df$pop_female)
-
-
-df$value <- cut(df$value, breaks = c(0, 5e4, 1e6, 2e6, 4e6, 20e7))
-
-# Función para crear mapa con highcharter
-create_map <- function(data, title) {
-  hcmap(
-        data = data, 
-        value = "value",
-        joinBy = c("woe-name", "state_name"),
-        name = "Population",
-        dataLabels = list(enabled = TRUE, format = '{point.name}'),
-        borderColor = "white", 
-        borderWidth = 0.5) %>%
-    hc_mapNavigation(enabled = TRUE) %>%
-    hc_title(text = title, align = "center",
-             style = list(color = "#000000", fontWeight = "bold")) %>%
-    hc_colorAxis(minColor = "#B4EEB4", maxColor = "#2A6C5C") %>%
-    hc_credits(enabled = FALSE) %>%
-    hc_exporting(enabled = TRUE)
-}
-
-# Crea los mapas para población femenina y masculina
-map_f <- create_map(subset(df, genero == "f"), "F population, by state")
-map_m <- create_map(subset(df, genero == "m"), "M population, by state")
-
+# 
+# library(mxmaps) 
+# library(ggpubr)  
+# library(jsonlite) 
+# 
+# 
+# data("df_mxstate_2020", package = "mxmaps")
+# df <- rbind(df_mxstate_2020, df_mxstate_2020)
+# df$genero <- rep(c("m", "f"), each = 32)
+# df$value <- ifelse(df$genero == "m", df$pop_male, df$pop_female)
+# 
+# 
+# df$value <- cut(df$value, breaks = c(0, 5e4, 1e6, 2e6, 4e6, 20e7))
+# 
+# # Función para crear mapa con highcharter
+# create_map <- function(data, title) {
+#   hcmap(
+#         data = data, 
+#         value = "value",
+#         joinBy = c("woe-name", "state_name"),
+#         name = "Population",
+#         dataLabels = list(enabled = TRUE, format = '{point.name}'),
+#         borderColor = "white", 
+#         borderWidth = 0.5) %>%
+#     hc_mapNavigation(enabled = TRUE) %>%
+#     hc_title(text = title, align = "center",
+#              style = list(color = "#000000", fontWeight = "bold")) %>%
+#     hc_colorAxis(minColor = "#B4EEB4", maxColor = "#2A6C5C") %>%
+#     hc_credits(enabled = FALSE) %>%
+#     hc_exporting(enabled = TRUE)
+# }
+# 
+# # Crea los mapas para población femenina y masculina
+# map_f <- create_map(subset(df, genero == "f"), "F population, by state")
+# map_m <- create_map(subset(df, genero == "m"), "M population, by state")
+# 
 
 
 ```

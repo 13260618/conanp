@@ -1055,7 +1055,7 @@ hc_map
   #            )%>%
 
 
-#saveWidget(as_widget(hc_map), "plt-mapcanp.html")
+saveWidget(as_widget(hc_map), "plt-mapcanp.html")
 #saveWidget(hc3, "hc3.html", selfcontained = TRUE)
 #webshot("plt-mapcanp.html", file = "hc3.jpg")
 ```
