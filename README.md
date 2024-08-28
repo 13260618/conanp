@@ -1,2 +1,2 @@
 # conanp
-Programa de Consultor en Estadística en FAO México
+Programa de Consultor en FAO México
